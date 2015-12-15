@@ -1,0 +1,6 @@
+framework module BMGAdFramework {
+  umbrella header "BMGAdFramework.h"
+
+  export *
+  module * { export * }
+}
