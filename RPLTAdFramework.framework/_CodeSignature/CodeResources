@@ -16,53 +16,61 @@
 		<data>
 		BUE8D/Wtb0lEkQr1ihkkR9Jm0qc=
 		</data>
-		<key>BMGAdStoryboard.storyboardc/BMGAdFullscreenViewController.nib</key>
+		<key>Check_mark72.png</key>
 		<data>
-		8yE6IhUk36yxn0CpZuPbIag0SQA=
+		k0ISVzeP9J5umE5dmzmL/6vmBSo=
 		</data>
-		<key>BMGAdStoryboard.storyboardc/BMGAdGridViewController.nib</key>
+		<key>Headers/RPLTAdController.h</key>
 		<data>
-		FTWluBIuNcfEl7j5lcxOpCEzIaE=
+		Q2lKiDOCj7r+F/qCsuY4wtq1w+o=
 		</data>
-		<key>BMGAdStoryboard.storyboardc/BMGAdSingleViewController.nib</key>
+		<key>Headers/RPLTAdFramework.h</key>
 		<data>
-		jmPdwZEQ14ZV60Yne6QcJmj3T0s=
+		E/03FlNUfQM83q45Uefyq5Jx3iI=
 		</data>
-		<key>BMGAdStoryboard.storyboardc/Info.plist</key>
+		<key>Headers/RPLTAdViewController.h</key>
 		<data>
-		CL+/fg18Ajllgt3/OB2bw7ziQjU=
+		KM6G3FYztWK7uWjmAGj8fVlp/OI=
 		</data>
-		<key>BMGAdStoryboard.storyboardc/UsW-13-atM-view-UJC-bX-fjZ.nib</key>
+		<key>Headers/RPLTConstans.h</key>
 		<data>
-		HXHGrmITLYEO5iQh7tFYn9ndz2s=
-		</data>
-		<key>BMGAdStoryboard.storyboardc/d8J-YW-9cs-view-DtQ-i0-EhW.nib</key>
-		<data>
-		aP9dQD/FRL1Usn/tiYmjIKez66o=
-		</data>
-		<key>BMGAdStoryboard.storyboardc/qm2-jj-vfJ-view-Vdj-WR-dza.nib</key>
-		<data>
-		hLx5G9XX4peZ4B9ATb8vsuMhl/Q=
-		</data>
-		<key>Headers/BMGAdController.h</key>
-		<data>
-		iZMc/V92yKJwxwDHVQR37/UXHc4=
-		</data>
-		<key>Headers/BMGAdFramework.h</key>
-		<data>
-		6L2hTKlvbnyiYNo+P9A21Ie0kM0=
-		</data>
-		<key>Headers/BMGAdvertisement.h</key>
-		<data>
-		1nE2E9asfGyCqQzT8InKoTsFAgI=
+		oqUb2rx+MT+zGeVVpwYf0SeSBUg=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		MnF1WW1krqSGSzjruccYHa1Cjso=
+		AtFsEo3d7Ro/FTeZrwiA2QXt+UI=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		HxBVDqvrTBCJ0jHsfHYl0Do4iMA=
+		cQt9GtHwpLaGn0+CcIkL1V5H4gw=
+		</data>
+		<key>RPLTAdStoryboard.storyboardc/BMGAdFullscreenViewController.nib</key>
+		<data>
+		PJiYqeXpvSSljIMjCmGxqGVbitM=
+		</data>
+		<key>RPLTAdStoryboard.storyboardc/BMGAdGridViewController.nib</key>
+		<data>
+		Mlsyy3eJ+ZPCU47E15JFamW5d7A=
+		</data>
+		<key>RPLTAdStoryboard.storyboardc/BMGAdSingleViewController.nib</key>
+		<data>
+		mNnnFRRCy4HDPTYpIcoks/EsVkE=
+		</data>
+		<key>RPLTAdStoryboard.storyboardc/Info.plist</key>
+		<data>
+		EXCdjwwE4CgR3vNOBo+cjNGtxSU=
+		</data>
+		<key>RPLTAdStoryboard.storyboardc/UsW-13-atM-view-UJC-bX-fjZ.nib</key>
+		<data>
+		Ye/N6EJ+VjM80QCo2Qn/b21OOec=
+		</data>
+		<key>RPLTAdStoryboard.storyboardc/d8J-YW-9cs-view-DtQ-i0-EhW.nib</key>
+		<data>
+		/lsBio3fkYd3xnm7Ly7t21cKw8I=
+		</data>
+		<key>RPLTAdStoryboard.storyboardc/qm2-jj-vfJ-view-Vdj-WR-dza.nib</key>
+		<data>
+		AizX1L+60kmv5UydtZ4q1PTgcik=
 		</data>
 		<key>Replay_logo.png</key>
 		<data>
@@ -75,10 +83,6 @@
 		<key>Star34-half.png</key>
 		<data>
 		BGHf7MSitij4I0MvwygqPvi+WJo=
-		</data>
-		<key>Stars.ttf</key>
-		<data>
-		h4trtwOYevUqFeXnSsFJ30jw/r0=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -95,49 +99,57 @@
 		<data>
 		BUE8D/Wtb0lEkQr1ihkkR9Jm0qc=
 		</data>
-		<key>BMGAdStoryboard.storyboardc/BMGAdFullscreenViewController.nib</key>
+		<key>Check_mark72.png</key>
 		<data>
-		8yE6IhUk36yxn0CpZuPbIag0SQA=
+		k0ISVzeP9J5umE5dmzmL/6vmBSo=
 		</data>
-		<key>BMGAdStoryboard.storyboardc/BMGAdGridViewController.nib</key>
+		<key>Headers/RPLTAdController.h</key>
 		<data>
-		FTWluBIuNcfEl7j5lcxOpCEzIaE=
+		Q2lKiDOCj7r+F/qCsuY4wtq1w+o=
 		</data>
-		<key>BMGAdStoryboard.storyboardc/BMGAdSingleViewController.nib</key>
+		<key>Headers/RPLTAdFramework.h</key>
 		<data>
-		jmPdwZEQ14ZV60Yne6QcJmj3T0s=
+		E/03FlNUfQM83q45Uefyq5Jx3iI=
 		</data>
-		<key>BMGAdStoryboard.storyboardc/Info.plist</key>
+		<key>Headers/RPLTAdViewController.h</key>
 		<data>
-		CL+/fg18Ajllgt3/OB2bw7ziQjU=
+		KM6G3FYztWK7uWjmAGj8fVlp/OI=
 		</data>
-		<key>BMGAdStoryboard.storyboardc/UsW-13-atM-view-UJC-bX-fjZ.nib</key>
+		<key>Headers/RPLTConstans.h</key>
 		<data>
-		HXHGrmITLYEO5iQh7tFYn9ndz2s=
-		</data>
-		<key>BMGAdStoryboard.storyboardc/d8J-YW-9cs-view-DtQ-i0-EhW.nib</key>
-		<data>
-		aP9dQD/FRL1Usn/tiYmjIKez66o=
-		</data>
-		<key>BMGAdStoryboard.storyboardc/qm2-jj-vfJ-view-Vdj-WR-dza.nib</key>
-		<data>
-		hLx5G9XX4peZ4B9ATb8vsuMhl/Q=
-		</data>
-		<key>Headers/BMGAdController.h</key>
-		<data>
-		iZMc/V92yKJwxwDHVQR37/UXHc4=
-		</data>
-		<key>Headers/BMGAdFramework.h</key>
-		<data>
-		6L2hTKlvbnyiYNo+P9A21Ie0kM0=
-		</data>
-		<key>Headers/BMGAdvertisement.h</key>
-		<data>
-		1nE2E9asfGyCqQzT8InKoTsFAgI=
+		oqUb2rx+MT+zGeVVpwYf0SeSBUg=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		HxBVDqvrTBCJ0jHsfHYl0Do4iMA=
+		cQt9GtHwpLaGn0+CcIkL1V5H4gw=
+		</data>
+		<key>RPLTAdStoryboard.storyboardc/BMGAdFullscreenViewController.nib</key>
+		<data>
+		PJiYqeXpvSSljIMjCmGxqGVbitM=
+		</data>
+		<key>RPLTAdStoryboard.storyboardc/BMGAdGridViewController.nib</key>
+		<data>
+		Mlsyy3eJ+ZPCU47E15JFamW5d7A=
+		</data>
+		<key>RPLTAdStoryboard.storyboardc/BMGAdSingleViewController.nib</key>
+		<data>
+		mNnnFRRCy4HDPTYpIcoks/EsVkE=
+		</data>
+		<key>RPLTAdStoryboard.storyboardc/Info.plist</key>
+		<data>
+		EXCdjwwE4CgR3vNOBo+cjNGtxSU=
+		</data>
+		<key>RPLTAdStoryboard.storyboardc/UsW-13-atM-view-UJC-bX-fjZ.nib</key>
+		<data>
+		Ye/N6EJ+VjM80QCo2Qn/b21OOec=
+		</data>
+		<key>RPLTAdStoryboard.storyboardc/d8J-YW-9cs-view-DtQ-i0-EhW.nib</key>
+		<data>
+		/lsBio3fkYd3xnm7Ly7t21cKw8I=
+		</data>
+		<key>RPLTAdStoryboard.storyboardc/qm2-jj-vfJ-view-Vdj-WR-dza.nib</key>
+		<data>
+		AizX1L+60kmv5UydtZ4q1PTgcik=
 		</data>
 		<key>Replay_logo.png</key>
 		<data>
@@ -150,10 +162,6 @@
 		<key>Star34-half.png</key>
 		<data>
 		BGHf7MSitij4I0MvwygqPvi+WJo=
-		</data>
-		<key>Stars.ttf</key>
-		<data>
-		h4trtwOYevUqFeXnSsFJ30jw/r0=
 		</data>
 	</dict>
 	<key>rules</key>

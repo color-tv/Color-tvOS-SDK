@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		17704F5B1C1F73370061D7EF /* BMGAdFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17704F4E1C1F6F290061D7EF /* BMGAdFramework.framework */; };
-		17704F5C1C1F73370061D7EF /* BMGAdFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 17704F4E1C1F6F290061D7EF /* BMGAdFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1769B1981C26234E000E2E6A /* RPLTAdFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1769B1971C26234E000E2E6A /* RPLTAdFramework.framework */; };
+		1769B19A1C2623B5000E2E6A /* RPLTAdFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1769B1971C26234E000E2E6A /* RPLTAdFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1789ED0E1C1F56C200B3B50A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1789ED0D1C1F56C200B3B50A /* main.m */; };
 		1789ED111C1F56C200B3B50A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1789ED101C1F56C200B3B50A /* AppDelegate.m */; };
 		1789ED141C1F56C200B3B50A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1789ED131C1F56C200B3B50A /* ViewController.m */; };
@@ -23,7 +23,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				17704F5C1C1F73370061D7EF /* BMGAdFramework.framework in Embed Frameworks */,
+				1769B19A1C2623B5000E2E6A /* RPLTAdFramework.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -31,7 +31,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		17704F4E1C1F6F290061D7EF /* BMGAdFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BMGAdFramework.framework; sourceTree = "<group>"; };
+		1769B1971C26234E000E2E6A /* RPLTAdFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RPLTAdFramework.framework; sourceTree = "<group>"; };
 		1789ED091C1F56C200B3B50A /* Replayt Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Replayt Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1789ED0D1C1F56C200B3B50A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1789ED0F1C1F56C200B3B50A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -48,7 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17704F5B1C1F73370061D7EF /* BMGAdFramework.framework in Frameworks */,
+				1769B1981C26234E000E2E6A /* RPLTAdFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,7 +58,7 @@
 		1789ED001C1F56C200B3B50A = {
 			isa = PBXGroup;
 			children = (
-				17704F4E1C1F6F290061D7EF /* BMGAdFramework.framework */,
+				1769B1971C26234E000E2E6A /* RPLTAdFramework.framework */,
 				1789ED0B1C1F56C200B3B50A /* Replayt Example */,
 				1789ED0A1C1F56C200B3B50A /* Products */,
 			);

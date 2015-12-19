@@ -18,7 +18,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    [[BMGAdController sharedAdController] startWithAppIdentifier:@"566dbd1a326aeb750132fdfb"];
+    [[RPLTAdController sharedAdController] startWithAppIdentifier:@"566dbd1a326aeb750132fdfb"];
     
     return YES;
 }

@@ -7,7 +7,7 @@
 //
 
 @import UIKit;
-@import BMGAdFramework;
+@import RPLTAdFramework;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

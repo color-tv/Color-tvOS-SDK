@@ -26,7 +26,7 @@
 
 
 -(IBAction)showRandomAd:(id)sender {
-    [[BMGAdController sharedAdController] adViewControllerWithCompletion:^(UIViewController * _Nullable vc, NSError * _Nullable error) {
+    [[RPLTAdController sharedAdController] adViewControllerWithCompletion:^(UIViewController * _Nullable vc, NSError * _Nullable error) {
         
         NSLog(@"ViewController: %@", vc);
         NSLog(@"Error: %@", error);
@@ -38,7 +38,7 @@
 }
 
 -(IBAction)showAppWall:(id)sender {
-    [[BMGAdController sharedAdController] adViewControllerOfType:BMGAdFrameworkAdTypeAppWall withCompletion:^(UIViewController * _Nullable vc, NSError * _Nullable error) {
+    [[RPLTAdController sharedAdController] adViewControllerOfType:RPLTAdFrameworkAdTypeAppWall withCompletion:^(UIViewController * _Nullable vc, NSError * _Nullable error) {
         NSLog(@"ViewController: %@", vc);
         
         if(vc) {
@@ -59,7 +59,7 @@
 }
 
 -(IBAction)showInterstitialAd:(id)sender {
-    [[BMGAdController sharedAdController] adViewControllerOfType:BMGAdFrameworkAdTypeAppSingle withCompletion:^(UIViewController * _Nullable vc, NSError * _Nullable error) {
+    [[RPLTAdController sharedAdController] adViewControllerOfType:RPLTAdFrameworkAdTypeAppSingle withCompletion:^(UIViewController * _Nullable vc, NSError * _Nullable error) {
         NSLog(@"ViewController: %@", vc);
         NSLog(@"Error: %@", error);
         
@@ -71,7 +71,7 @@
 
 -(IBAction)showFullscreenAd:(id)sender {
     NSLog(@"::>> showFullscreenAd");
-    [[BMGAdController sharedAdController] adViewControllerOfType:BMGAdFrameworkAdTypeFullscreen withCompletion:^(UIViewController * _Nullable vc, NSError * _Nullable error) {
+    [[RPLTAdController sharedAdController] adViewControllerOfType:RPLTAdFrameworkAdTypeFullscreen withCompletion:^(UIViewController * _Nullable vc, NSError * _Nullable error) {
         NSLog(@"ViewController: %@", vc);
         NSLog(@"Error: %@", error);
         
