@@ -8,6 +8,8 @@
 
 @import Foundation;
 
+#import "RPLTAdFrameworkLogger.h"
+
 #ifndef constans_h
 #define constans_h
 

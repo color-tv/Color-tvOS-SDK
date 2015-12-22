@@ -32,36 +32,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L3u-ua-oSS">
-                                <rect key="frame" x="639" y="497" width="416" height="88"/>
-                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                <state key="normal" title="Discovery Center"/>
-                                <connections>
-                                    <action selector="showAppWall:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="MJN-ko-JGt"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xvz-Md-jBz">
-                                <rect key="frame" x="253" y="497" width="344" height="88"/>
-                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                <state key="normal" title="Fulscreen Ad"/>
-                                <connections>
-                                    <action selector="showFullscreenAd:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="pOd-0p-New"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dP8-im-WXv">
-                                <rect key="frame" x="639" y="656" width="419" height="88"/>
+                                <rect key="frame" x="612" y="296" width="419" height="88"/>
                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                                 <state key="normal" title="Random Ad Type"/>
                                 <connections>
                                     <action selector="showRandomAd:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="GmV-yU-2at"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UNo-cG-YvD">
-                                <rect key="frame" x="1087" y="497" width="359" height="88"/>
-                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                <state key="normal" title="Interstitial Ad"/>
-                                <connections>
-                                    <action selector="showInterstitialAd:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="C5r-qZ-lm4"/>
                                 </connections>
                             </button>
                         </subviews>

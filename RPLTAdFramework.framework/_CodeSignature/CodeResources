@@ -22,11 +22,15 @@
 		</data>
 		<key>Headers/RPLTAdController.h</key>
 		<data>
-		Q2lKiDOCj7r+F/qCsuY4wtq1w+o=
+		WKxTtMwG2o3Ia6fDV35A1FxLTdY=
 		</data>
 		<key>Headers/RPLTAdFramework.h</key>
 		<data>
 		E/03FlNUfQM83q45Uefyq5Jx3iI=
+		</data>
+		<key>Headers/RPLTAdFrameworkLogger.h</key>
+		<data>
+		pxSBVwgCp2d0qEMZIdbm3ibFndI=
 		</data>
 		<key>Headers/RPLTAdViewController.h</key>
 		<data>
@@ -34,7 +38,7 @@
 		</data>
 		<key>Headers/RPLTConstans.h</key>
 		<data>
-		oqUb2rx+MT+zGeVVpwYf0SeSBUg=
+		PVrJvy174O/nzTkYb+vPvFUmNdc=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -46,31 +50,31 @@
 		</data>
 		<key>RPLTAdStoryboard.storyboardc/BMGAdFullscreenViewController.nib</key>
 		<data>
-		PJiYqeXpvSSljIMjCmGxqGVbitM=
+		8VJKss5u/bS14tCNdBtK/ZD9NTs=
 		</data>
 		<key>RPLTAdStoryboard.storyboardc/BMGAdGridViewController.nib</key>
 		<data>
-		Mlsyy3eJ+ZPCU47E15JFamW5d7A=
+		pA0KVaf2WNe1cjnPCoso36urJo8=
 		</data>
 		<key>RPLTAdStoryboard.storyboardc/BMGAdSingleViewController.nib</key>
 		<data>
-		mNnnFRRCy4HDPTYpIcoks/EsVkE=
+		2F6JHZ9sbXyv38bUC6DHnzQcGkQ=
 		</data>
 		<key>RPLTAdStoryboard.storyboardc/Info.plist</key>
 		<data>
-		EXCdjwwE4CgR3vNOBo+cjNGtxSU=
+		CL+/fg18Ajllgt3/OB2bw7ziQjU=
 		</data>
 		<key>RPLTAdStoryboard.storyboardc/UsW-13-atM-view-UJC-bX-fjZ.nib</key>
 		<data>
-		Ye/N6EJ+VjM80QCo2Qn/b21OOec=
+		l1hNBjBfHt7hCZ7C0LLHBt2afck=
 		</data>
 		<key>RPLTAdStoryboard.storyboardc/d8J-YW-9cs-view-DtQ-i0-EhW.nib</key>
 		<data>
-		/lsBio3fkYd3xnm7Ly7t21cKw8I=
+		47H0YDIEQ1je/ggRvZYn4VuEOUE=
 		</data>
 		<key>RPLTAdStoryboard.storyboardc/qm2-jj-vfJ-view-Vdj-WR-dza.nib</key>
 		<data>
-		AizX1L+60kmv5UydtZ4q1PTgcik=
+		6etnVd19goIAyzUzdD6XUQdBQd8=
 		</data>
 		<key>Replay_logo.png</key>
 		<data>
@@ -83,6 +87,14 @@
 		<key>Star34-half.png</key>
 		<data>
 		BGHf7MSitij4I0MvwygqPvi+WJo=
+		</data>
+		<key>icon_email.png</key>
+		<data>
+		3yjQ3oiBRAOiVw9ypE8e0SltJ/s=
+		</data>
+		<key>icon_phone.png</key>
+		<data>
+		XH9agbombHWTJ022vzEULy4DxhU=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -105,11 +117,15 @@
 		</data>
 		<key>Headers/RPLTAdController.h</key>
 		<data>
-		Q2lKiDOCj7r+F/qCsuY4wtq1w+o=
+		WKxTtMwG2o3Ia6fDV35A1FxLTdY=
 		</data>
 		<key>Headers/RPLTAdFramework.h</key>
 		<data>
 		E/03FlNUfQM83q45Uefyq5Jx3iI=
+		</data>
+		<key>Headers/RPLTAdFrameworkLogger.h</key>
+		<data>
+		pxSBVwgCp2d0qEMZIdbm3ibFndI=
 		</data>
 		<key>Headers/RPLTAdViewController.h</key>
 		<data>
@@ -117,7 +133,7 @@
 		</data>
 		<key>Headers/RPLTConstans.h</key>
 		<data>
-		oqUb2rx+MT+zGeVVpwYf0SeSBUg=
+		PVrJvy174O/nzTkYb+vPvFUmNdc=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -125,31 +141,31 @@
 		</data>
 		<key>RPLTAdStoryboard.storyboardc/BMGAdFullscreenViewController.nib</key>
 		<data>
-		PJiYqeXpvSSljIMjCmGxqGVbitM=
+		8VJKss5u/bS14tCNdBtK/ZD9NTs=
 		</data>
 		<key>RPLTAdStoryboard.storyboardc/BMGAdGridViewController.nib</key>
 		<data>
-		Mlsyy3eJ+ZPCU47E15JFamW5d7A=
+		pA0KVaf2WNe1cjnPCoso36urJo8=
 		</data>
 		<key>RPLTAdStoryboard.storyboardc/BMGAdSingleViewController.nib</key>
 		<data>
-		mNnnFRRCy4HDPTYpIcoks/EsVkE=
+		2F6JHZ9sbXyv38bUC6DHnzQcGkQ=
 		</data>
 		<key>RPLTAdStoryboard.storyboardc/Info.plist</key>
 		<data>
-		EXCdjwwE4CgR3vNOBo+cjNGtxSU=
+		CL+/fg18Ajllgt3/OB2bw7ziQjU=
 		</data>
 		<key>RPLTAdStoryboard.storyboardc/UsW-13-atM-view-UJC-bX-fjZ.nib</key>
 		<data>
-		Ye/N6EJ+VjM80QCo2Qn/b21OOec=
+		l1hNBjBfHt7hCZ7C0LLHBt2afck=
 		</data>
 		<key>RPLTAdStoryboard.storyboardc/d8J-YW-9cs-view-DtQ-i0-EhW.nib</key>
 		<data>
-		/lsBio3fkYd3xnm7Ly7t21cKw8I=
+		47H0YDIEQ1je/ggRvZYn4VuEOUE=
 		</data>
 		<key>RPLTAdStoryboard.storyboardc/qm2-jj-vfJ-view-Vdj-WR-dza.nib</key>
 		<data>
-		AizX1L+60kmv5UydtZ4q1PTgcik=
+		6etnVd19goIAyzUzdD6XUQdBQd8=
 		</data>
 		<key>Replay_logo.png</key>
 		<data>
@@ -162,6 +178,14 @@
 		<key>Star34-half.png</key>
 		<data>
 		BGHf7MSitij4I0MvwygqPvi+WJo=
+		</data>
+		<key>icon_email.png</key>
+		<data>
+		3yjQ3oiBRAOiVw9ypE8e0SltJ/s=
+		</data>
+		<key>icon_phone.png</key>
+		<data>
+		XH9agbombHWTJ022vzEULy4DxhU=
 		</data>
 	</dict>
 	<key>rules</key>
