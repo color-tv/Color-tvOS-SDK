@@ -26,10 +26,16 @@
 
 
 -(IBAction)showRandomAd:(id)sender {
-    [[RPLTAdController sharedAdController] adViewControllerWithCompletion:^(UIViewController * _Nullable vc, NSError * _Nullable error) {
+    [[RPLTAdController sharedAdController] adViewControllerWithCompletion:^(RPLTAdViewController * _Nullable vc, NSError * _Nullable error) {
         
         NSLog(@"ViewController: %@", vc);
         NSLog(@"Error: %@", error);
+        
+        vc.adCompleted = ^{
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.navigationController popViewControllerAnimated:YES];
+            });
+        };
         
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.navigationController pushViewController:vc animated:YES];
