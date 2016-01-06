@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1769B1981C26234E000E2E6A /* RPLTAdFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1769B1971C26234E000E2E6A /* RPLTAdFramework.framework */; };
 		1769B19A1C2623B5000E2E6A /* RPLTAdFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1769B1971C26234E000E2E6A /* RPLTAdFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1779FD891C3C7FBE00FE1FC1 /* demo-app-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 1779FD881C3C7FBE00FE1FC1 /* demo-app-bg.png */; };
 		1789ED0E1C1F56C200B3B50A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1789ED0D1C1F56C200B3B50A /* main.m */; };
 		1789ED111C1F56C200B3B50A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1789ED101C1F56C200B3B50A /* AppDelegate.m */; };
 		1789ED141C1F56C200B3B50A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1789ED131C1F56C200B3B50A /* ViewController.m */; };
@@ -32,7 +33,8 @@
 
 /* Begin PBXFileReference section */
 		1769B1971C26234E000E2E6A /* RPLTAdFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RPLTAdFramework.framework; sourceTree = "<group>"; };
-		1789ED091C1F56C200B3B50A /* Replayt Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Replayt Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1779FD881C3C7FBE00FE1FC1 /* demo-app-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "demo-app-bg.png"; sourceTree = "<group>"; };
+		1789ED091C1F56C200B3B50A /* Replay Test App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Replay Test App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1789ED0D1C1F56C200B3B50A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1789ED0F1C1F56C200B3B50A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1789ED101C1F56C200B3B50A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -67,7 +69,7 @@
 		1789ED0A1C1F56C200B3B50A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1789ED091C1F56C200B3B50A /* Replayt Example.app */,
+				1789ED091C1F56C200B3B50A /* Replay Test App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -79,6 +81,7 @@
 				1789ED101C1F56C200B3B50A /* AppDelegate.m */,
 				1789ED121C1F56C200B3B50A /* ViewController.h */,
 				1789ED131C1F56C200B3B50A /* ViewController.m */,
+				1779FD881C3C7FBE00FE1FC1 /* demo-app-bg.png */,
 				1789ED151C1F56C200B3B50A /* Main.storyboard */,
 				1789ED181C1F56C200B3B50A /* Assets.xcassets */,
 				1789ED1A1C1F56C200B3B50A /* Info.plist */,
@@ -98,9 +101,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1789ED081C1F56C200B3B50A /* Replayt Example */ = {
+		1789ED081C1F56C200B3B50A /* Replay Test App */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1789ED1D1C1F56C200B3B50A /* Build configuration list for PBXNativeTarget "Replayt Example" */;
+			buildConfigurationList = 1789ED1D1C1F56C200B3B50A /* Build configuration list for PBXNativeTarget "Replay Test App" */;
 			buildPhases = (
 				1789ED051C1F56C200B3B50A /* Sources */,
 				1789ED061C1F56C200B3B50A /* Frameworks */,
@@ -111,9 +114,9 @@
 			);
 			dependencies = (
 			);
-			name = "Replayt Example";
+			name = "Replay Test App";
 			productName = "Replayt Example";
-			productReference = 1789ED091C1F56C200B3B50A /* Replayt Example.app */;
+			productReference = 1789ED091C1F56C200B3B50A /* Replay Test App.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -131,7 +134,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 1789ED041C1F56C200B3B50A /* Build configuration list for PBXProject "Replayt Example" */;
+			buildConfigurationList = 1789ED041C1F56C200B3B50A /* Build configuration list for PBXProject "Replay Test App" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -144,7 +147,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1789ED081C1F56C200B3B50A /* Replayt Example */,
+				1789ED081C1F56C200B3B50A /* Replay Test App */,
 			);
 		};
 /* End PBXProject section */
@@ -154,6 +157,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1779FD891C3C7FBE00FE1FC1 /* demo-app-bg.png in Resources */,
 				1789ED191C1F56C200B3B50A /* Assets.xcassets in Resources */,
 				1789ED171C1F56C200B3B50A /* Main.storyboard in Resources */,
 			);
@@ -280,7 +284,7 @@
 				INFOPLIST_FILE = "Replayt Example/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "aero.skyisthelimit.Replayt-Example";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Replay Test App";
 				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
@@ -299,7 +303,7 @@
 				INFOPLIST_FILE = "Replayt Example/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "aero.skyisthelimit.Replayt-Example";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Replay Test App";
 				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
@@ -307,7 +311,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1789ED041C1F56C200B3B50A /* Build configuration list for PBXProject "Replayt Example" */ = {
+		1789ED041C1F56C200B3B50A /* Build configuration list for PBXProject "Replay Test App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1789ED1B1C1F56C200B3B50A /* Debug */,
@@ -316,7 +320,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1789ED1D1C1F56C200B3B50A /* Build configuration list for PBXNativeTarget "Replayt Example" */ = {
+		1789ED1D1C1F56C200B3B50A /* Build configuration list for PBXNativeTarget "Replay Test App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1789ED1E1C1F56C200B3B50A /* Debug */,

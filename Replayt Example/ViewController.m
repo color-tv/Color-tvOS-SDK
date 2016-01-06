@@ -33,12 +33,18 @@
         
         vc.adCompleted = ^{
             dispatch_async(dispatch_get_main_queue(), ^{
-                [self.navigationController popViewControllerAnimated:YES];
+//                [self.navigationController popViewControllerAnimated:YES];
+                [self dismissViewControllerAnimated:YES completion:^{
+                    
+                }];
             });
         };
         
         dispatch_async(dispatch_get_main_queue(), ^{
-            [self.navigationController pushViewController:vc animated:YES];
+            [self presentViewController:vc animated:YES completion:^{
+                
+            }];
+            //[self.navigationController pushViewController:vc animated:YES];
         });
     }];
 }

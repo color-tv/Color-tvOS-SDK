@@ -32,8 +32,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dP8-im-WXv">
-                                <rect key="frame" x="612" y="296" width="419" height="88"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="demo-app-bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="Vjl-82-PJO">
+                                <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dP8-im-WXv">
+                                <rect key="frame" x="774" y="894" width="372" height="86"/>
                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                                 <state key="normal" title="Random Ad Type"/>
                                 <connections>
@@ -42,6 +45,13 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Vjl-82-PJO" secondAttribute="bottom" id="9yg-Ve-Kkf"/>
+                            <constraint firstItem="Vjl-82-PJO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="I59-u0-ZQU"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dP8-im-WXv" secondAttribute="bottom" constant="100" id="Lmj-VQ-hop"/>
+                            <constraint firstItem="dP8-im-WXv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fy8-YX-LIv"/>
+                            <constraint firstAttribute="trailing" secondItem="Vjl-82-PJO" secondAttribute="trailing" id="ipO-dZ-RtA"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="tBR-f0-d6f"/>
                 </viewController>
@@ -50,4 +60,7 @@
             <point key="canvasLocation" x="1913" y="131"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="demo-app-bg.png" width="1920" height="1080"/>
+    </resources>
 </document>
