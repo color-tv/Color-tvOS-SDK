@@ -36,9 +36,9 @@
                                 <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dP8-im-WXv">
-                                <rect key="frame" x="774" y="894" width="372" height="86"/>
+                                <rect key="frame" x="830" y="894" width="261" height="86"/>
                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                <state key="normal" title="Random Ad Type"/>
+                                <state key="normal" title="Display Ad"/>
                                 <connections>
                                     <action selector="showRandomAd:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="GmV-yU-2at"/>
                                 </connections>
