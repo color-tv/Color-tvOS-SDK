@@ -36,7 +36,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dP8-im-WXv">
-                                <rect key="frame" x="830" y="894" width="261" height="86"/>
+                                <rect key="frame" x="830" y="1080" width="261" height="86"/>
                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                                 <state key="normal" title="Display Ad"/>
                                 <connections>
@@ -44,7 +44,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Gh-qE-QNb">
-                                <rect key="frame" x="760" y="708" width="400" height="86"/>
+                                <rect key="frame" x="760" y="894" width="400" height="86"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="400" id="6dP-ua-mnT"/>
                                     <constraint firstAttribute="height" constant="86" id="V7I-69-n1n"/>
@@ -56,7 +56,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bwu-b2-YWM">
-                                <rect key="frame" x="160" y="708" width="400" height="86"/>
+                                <rect key="frame" x="160" y="894" width="400" height="86"/>
                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                                 <state key="normal" title="Discovery Center"/>
                                 <connections>
@@ -64,7 +64,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="61N-Lw-Ujo">
-                                <rect key="frame" x="1360" y="708" width="400" height="86"/>
+                                <rect key="frame" x="1360" y="894" width="400" height="86"/>
                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                                 <state key="normal" title="Fullscreen Ad"/>
                                 <connections>
@@ -78,7 +78,7 @@
                             <constraint firstItem="8Gh-qE-QNb" firstAttribute="width" secondItem="Bwu-b2-YWM" secondAttribute="width" id="C4t-6z-lat"/>
                             <constraint firstItem="61N-Lw-Ujo" firstAttribute="centerY" secondItem="Bwu-b2-YWM" secondAttribute="centerY" id="FHa-Hj-uJG"/>
                             <constraint firstItem="Vjl-82-PJO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="I59-u0-ZQU"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dP8-im-WXv" secondAttribute="bottom" constant="100" id="Lmj-VQ-hop"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dP8-im-WXv" secondAttribute="bottom" constant="-86" id="Lmj-VQ-hop"/>
                             <constraint firstItem="8Gh-qE-QNb" firstAttribute="leading" secondItem="Bwu-b2-YWM" secondAttribute="trailing" constant="200" id="ZVk-VU-Z6E"/>
                             <constraint firstItem="8Gh-qE-QNb" firstAttribute="centerY" secondItem="Bwu-b2-YWM" secondAttribute="centerY" id="bHe-3B-Jl3"/>
                             <constraint firstItem="61N-Lw-Ujo" firstAttribute="width" secondItem="8Gh-qE-QNb" secondAttribute="width" id="bPX-TY-Rvi"/>
