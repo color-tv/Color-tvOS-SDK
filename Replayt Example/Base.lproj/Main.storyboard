@@ -43,14 +43,52 @@
                                     <action selector="showRandomAd:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="GmV-yU-2at"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Gh-qE-QNb">
+                                <rect key="frame" x="760" y="708" width="400" height="86"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="400" id="6dP-ua-mnT"/>
+                                    <constraint firstAttribute="height" constant="86" id="V7I-69-n1n"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Interstitial"/>
+                                <connections>
+                                    <action selector="showInterstitial:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="OLB-IM-hRx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bwu-b2-YWM">
+                                <rect key="frame" x="160" y="708" width="400" height="86"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Discovery Center"/>
+                                <connections>
+                                    <action selector="showDiscoveryCenter:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="qVg-aO-oeN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="61N-Lw-Ujo">
+                                <rect key="frame" x="1360" y="708" width="400" height="86"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Fullscreen Ad"/>
+                                <connections>
+                                    <action selector="showFullscreenAd:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="Euc-RL-9vG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Vjl-82-PJO" secondAttribute="bottom" id="9yg-Ve-Kkf"/>
+                            <constraint firstItem="8Gh-qE-QNb" firstAttribute="width" secondItem="Bwu-b2-YWM" secondAttribute="width" id="C4t-6z-lat"/>
+                            <constraint firstItem="61N-Lw-Ujo" firstAttribute="centerY" secondItem="Bwu-b2-YWM" secondAttribute="centerY" id="FHa-Hj-uJG"/>
                             <constraint firstItem="Vjl-82-PJO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="I59-u0-ZQU"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dP8-im-WXv" secondAttribute="bottom" constant="100" id="Lmj-VQ-hop"/>
+                            <constraint firstItem="8Gh-qE-QNb" firstAttribute="leading" secondItem="Bwu-b2-YWM" secondAttribute="trailing" constant="200" id="ZVk-VU-Z6E"/>
+                            <constraint firstItem="8Gh-qE-QNb" firstAttribute="centerY" secondItem="Bwu-b2-YWM" secondAttribute="centerY" id="bHe-3B-Jl3"/>
+                            <constraint firstItem="61N-Lw-Ujo" firstAttribute="width" secondItem="8Gh-qE-QNb" secondAttribute="width" id="bPX-TY-Rvi"/>
                             <constraint firstItem="dP8-im-WXv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fy8-YX-LIv"/>
+                            <constraint firstItem="61N-Lw-Ujo" firstAttribute="leading" secondItem="8Gh-qE-QNb" secondAttribute="trailing" constant="200" id="gD6-eY-zQ2"/>
+                            <constraint firstItem="61N-Lw-Ujo" firstAttribute="height" secondItem="8Gh-qE-QNb" secondAttribute="height" id="hfK-M3-V7B"/>
                             <constraint firstAttribute="trailing" secondItem="Vjl-82-PJO" secondAttribute="trailing" id="ipO-dZ-RtA"/>
+                            <constraint firstItem="8Gh-qE-QNb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jnf-N2-fSe"/>
+                            <constraint firstItem="8Gh-qE-QNb" firstAttribute="height" secondItem="Bwu-b2-YWM" secondAttribute="height" id="ki0-d0-Gfl"/>
+                            <constraint firstItem="dP8-im-WXv" firstAttribute="top" secondItem="8Gh-qE-QNb" secondAttribute="bottom" constant="100" id="vxh-7j-50B"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="tBR-f0-d6f"/>

@@ -50,15 +50,15 @@
 		</data>
 		<key>RPLTAdStoryboard.storyboardc/BMGAdFullscreenViewController.nib</key>
 		<data>
-		DZ1lWUIX+gA5fHT51Gvp8SJcOnA=
+		LQRLOmJVh2nNCIgxIKZa/YRIAf0=
 		</data>
 		<key>RPLTAdStoryboard.storyboardc/BMGAdGridViewController.nib</key>
 		<data>
-		KQLSh9BvLMMCrvdiwNFK+N0B0vY=
+		PP7HhE4MQJwEHQH+80BWaev2YdQ=
 		</data>
 		<key>RPLTAdStoryboard.storyboardc/BMGAdSingleViewController.nib</key>
 		<data>
-		EWXa0//XpOkjcYFxHMEv416gu1M=
+		GgUorNNKpoPrzeUOG7EK65e1gjk=
 		</data>
 		<key>RPLTAdStoryboard.storyboardc/Info.plist</key>
 		<data>
@@ -66,15 +66,15 @@
 		</data>
 		<key>RPLTAdStoryboard.storyboardc/UsW-13-atM-view-UJC-bX-fjZ.nib</key>
 		<data>
-		/hBbIS2M4UWWEVNaIfUhLlt+9nw=
+		SsnjDqG3yQAol51bkY67Gu8ckYE=
 		</data>
 		<key>RPLTAdStoryboard.storyboardc/d8J-YW-9cs-view-DtQ-i0-EhW.nib</key>
 		<data>
-		q7oUjFGVaQjNMf+z/vc2XdNMvu4=
+		svd/wxkp5uAAFnNQfBwD8/FyrZU=
 		</data>
 		<key>RPLTAdStoryboard.storyboardc/qm2-jj-vfJ-view-Vdj-WR-dza.nib</key>
 		<data>
-		3PPotXgHEhdMyGsush+ExFjJ/98=
+		lZIMezDpflKSrhHPswit3v0LxW4=
 		</data>
 		<key>Replay_logo.png</key>
 		<data>
@@ -92,6 +92,10 @@
 		<data>
 		J0HcOjDBEgb+7Snj4N3uRNSfcsQ=
 		</data>
+		<key>fullscreen_close.png</key>
+		<data>
+		Xo9ILT6ONqpSsWCGA+FE0Opb2+s=
+		</data>
 		<key>icon_email.png</key>
 		<data>
 		3yjQ3oiBRAOiVw9ypE8e0SltJ/s=
@@ -107,6 +111,10 @@
 		<key>poweredbyr-black.png</key>
 		<data>
 		p4yJ59m0rKlXeq2fokQDfs4HMVM=
+		</data>
+		<key>poweredbyr-grey.png</key>
+		<data>
+		RXZHEZjO1R3s7OHfH3az9unA8ew=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -153,15 +161,15 @@
 		</data>
 		<key>RPLTAdStoryboard.storyboardc/BMGAdFullscreenViewController.nib</key>
 		<data>
-		DZ1lWUIX+gA5fHT51Gvp8SJcOnA=
+		LQRLOmJVh2nNCIgxIKZa/YRIAf0=
 		</data>
 		<key>RPLTAdStoryboard.storyboardc/BMGAdGridViewController.nib</key>
 		<data>
-		KQLSh9BvLMMCrvdiwNFK+N0B0vY=
+		PP7HhE4MQJwEHQH+80BWaev2YdQ=
 		</data>
 		<key>RPLTAdStoryboard.storyboardc/BMGAdSingleViewController.nib</key>
 		<data>
-		EWXa0//XpOkjcYFxHMEv416gu1M=
+		GgUorNNKpoPrzeUOG7EK65e1gjk=
 		</data>
 		<key>RPLTAdStoryboard.storyboardc/Info.plist</key>
 		<data>
@@ -169,15 +177,15 @@
 		</data>
 		<key>RPLTAdStoryboard.storyboardc/UsW-13-atM-view-UJC-bX-fjZ.nib</key>
 		<data>
-		/hBbIS2M4UWWEVNaIfUhLlt+9nw=
+		SsnjDqG3yQAol51bkY67Gu8ckYE=
 		</data>
 		<key>RPLTAdStoryboard.storyboardc/d8J-YW-9cs-view-DtQ-i0-EhW.nib</key>
 		<data>
-		q7oUjFGVaQjNMf+z/vc2XdNMvu4=
+		svd/wxkp5uAAFnNQfBwD8/FyrZU=
 		</data>
 		<key>RPLTAdStoryboard.storyboardc/qm2-jj-vfJ-view-Vdj-WR-dza.nib</key>
 		<data>
-		3PPotXgHEhdMyGsush+ExFjJ/98=
+		lZIMezDpflKSrhHPswit3v0LxW4=
 		</data>
 		<key>Replay_logo.png</key>
 		<data>
@@ -195,6 +203,10 @@
 		<data>
 		J0HcOjDBEgb+7Snj4N3uRNSfcsQ=
 		</data>
+		<key>fullscreen_close.png</key>
+		<data>
+		Xo9ILT6ONqpSsWCGA+FE0Opb2+s=
+		</data>
 		<key>icon_email.png</key>
 		<data>
 		3yjQ3oiBRAOiVw9ypE8e0SltJ/s=
@@ -210,6 +222,10 @@
 		<key>poweredbyr-black.png</key>
 		<data>
 		p4yJ59m0rKlXeq2fokQDfs4HMVM=
+		</data>
+		<key>poweredbyr-grey.png</key>
+		<data>
+		RXZHEZjO1R3s7OHfH3az9unA8ew=
 		</data>
 	</dict>
 	<key>rules</key>
