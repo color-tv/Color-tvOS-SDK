@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" initialViewController="i1J-Fr-kVK">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Y1t-OM-hw5">
+            <objects>
+                <navigationController id="i1J-Fr-kVK" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dPi-UD-zWs">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="145"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="EnB-Sb-dtJ" kind="relationship" relationship="rootViewController" id="drK-BI-NXN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3J4-lv-Hfc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2283" y="429"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="XQG-uw-ti6">
+            <objects>
+                <viewController id="EnB-Sb-dtJ" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YuY-1l-BoH"/>
+                        <viewControllerLayoutGuide type="bottom" id="OnH-Jc-Xif"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dqS-4y-3ri">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="demo-app-bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="FeH-g6-ncc">
+                                <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mS5-Zm-DWp">
+                                <rect key="frame" x="1550" y="894" width="300" height="86"/>
+                                <color key="backgroundColor" red="0.76862745098039209" green="0.5725490196078431" blue="0.85882352941176465" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="27"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Random Ad"/>
+                                <connections>
+                                    <action selector="showRandomAd:" destination="EnB-Sb-dtJ" eventType="primaryActionTriggered" id="NOv-Gh-iHH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DmY-aq-8He">
+                                <rect key="frame" x="460" y="894" width="280" height="86"/>
+                                <color key="backgroundColor" red="0.99607843137254903" green="0.77254901960784317" blue="0.31372549019607843" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="86" id="Ajl-QW-vcM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="27"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Game Trailer"/>
+                                <connections>
+                                    <action selector="showInterstitial:" destination="EnB-Sb-dtJ" eventType="primaryActionTriggered" id="LfJ-Js-VLP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hx3-yx-SYO">
+                                <rect key="frame" x="90" y="894" width="300" height="86"/>
+                                <color key="backgroundColor" red="0.8901960784313725" green="0.31372549019607843" blue="0.31372549019607843" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="27"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Discovery Center"/>
+                                <connections>
+                                    <action selector="showDiscoveryCenter:" destination="EnB-Sb-dtJ" eventType="primaryActionTriggered" id="sth-Ww-zhE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CF1-80-cRu">
+                                <rect key="frame" x="810" y="894" width="300" height="86"/>
+                                <color key="backgroundColor" red="0.68627450980392157" green="0.84313725490196079" blue="0.22352941176470587" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="PR5-WS-ta2"/>
+                                    <constraint firstAttribute="width" constant="300" id="alB-Ip-1vc"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="86" id="gPb-Ed-aeP"/>
+                                    <constraint firstAttribute="height" constant="86" id="q6p-ki-hOc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="27"/>
+                                <inset key="contentEdgeInsets" minX="20" minY="20" maxX="20" maxY="20"/>
+                                <state key="normal" title="Brand Engagement"/>
+                                <connections>
+                                    <action selector="showFullscreenAd:" destination="EnB-Sb-dtJ" eventType="primaryActionTriggered" id="5mj-Hc-3Qw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f8b-vW-BjN">
+                                <rect key="frame" x="1180" y="894" width="300" height="86"/>
+                                <color key="backgroundColor" red="0.47450980392156861" green="0.80000000000000004" blue="0.92549019607843142" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="27"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Video"/>
+                                <connections>
+                                    <action selector="showVideoAd:" destination="EnB-Sb-dtJ" eventType="primaryActionTriggered" id="QUg-y6-G5z"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="CF1-80-cRu" firstAttribute="centerX" secondItem="dqS-4y-3ri" secondAttribute="centerX" id="1VU-0a-eaz"/>
+                            <constraint firstItem="f8b-vW-BjN" firstAttribute="width" secondItem="CF1-80-cRu" secondAttribute="width" id="1iG-s8-Ujl"/>
+                            <constraint firstItem="f8b-vW-BjN" firstAttribute="height" secondItem="CF1-80-cRu" secondAttribute="height" id="5Pu-tt-JKg"/>
+                            <constraint firstItem="CF1-80-cRu" firstAttribute="leading" secondItem="DmY-aq-8He" secondAttribute="trailing" constant="70" id="8sx-cR-tt1"/>
+                            <constraint firstItem="mS5-Zm-DWp" firstAttribute="height" secondItem="CF1-80-cRu" secondAttribute="height" id="DkR-Dj-Fj5"/>
+                            <constraint firstItem="f8b-vW-BjN" firstAttribute="leading" secondItem="CF1-80-cRu" secondAttribute="trailing" constant="70" id="JOK-NZ-7MC"/>
+                            <constraint firstItem="OnH-Jc-Xif" firstAttribute="top" secondItem="CF1-80-cRu" secondAttribute="bottom" constant="100" id="JhN-gh-M0d"/>
+                            <constraint firstItem="OnH-Jc-Xif" firstAttribute="top" secondItem="DmY-aq-8He" secondAttribute="bottom" constant="100" id="KgN-IL-GF9"/>
+                            <constraint firstItem="DmY-aq-8He" firstAttribute="centerY" secondItem="hx3-yx-SYO" secondAttribute="centerY" id="MZt-0g-IP1"/>
+                            <constraint firstItem="mS5-Zm-DWp" firstAttribute="leading" secondItem="f8b-vW-BjN" secondAttribute="trailing" constant="70" id="QAe-op-kfB"/>
+                            <constraint firstItem="DmY-aq-8He" firstAttribute="leading" secondItem="hx3-yx-SYO" secondAttribute="trailing" constant="70" id="TKZ-zA-3NF"/>
+                            <constraint firstItem="FeH-g6-ncc" firstAttribute="leading" secondItem="dqS-4y-3ri" secondAttribute="leading" id="W7s-ce-ynK"/>
+                            <constraint firstItem="CF1-80-cRu" firstAttribute="centerY" secondItem="DmY-aq-8He" secondAttribute="centerY" id="Yq0-Ft-7mm"/>
+                            <constraint firstItem="CF1-80-cRu" firstAttribute="width" secondItem="hx3-yx-SYO" secondAttribute="width" id="a71-Ch-cJj"/>
+                            <constraint firstItem="mS5-Zm-DWp" firstAttribute="centerY" secondItem="CF1-80-cRu" secondAttribute="centerY" id="cez-SB-ov9"/>
+                            <constraint firstItem="CF1-80-cRu" firstAttribute="height" secondItem="hx3-yx-SYO" secondAttribute="height" id="cil-Dd-82m"/>
+                            <constraint firstAttribute="trailing" secondItem="FeH-g6-ncc" secondAttribute="trailing" id="iDs-Ep-zvc"/>
+                            <constraint firstItem="OnH-Jc-Xif" firstAttribute="top" secondItem="FeH-g6-ncc" secondAttribute="bottom" id="moM-Ma-ns8"/>
+                            <constraint firstItem="f8b-vW-BjN" firstAttribute="centerY" secondItem="CF1-80-cRu" secondAttribute="centerY" id="n9x-gh-y74"/>
+                            <constraint firstAttribute="trailing" secondItem="mS5-Zm-DWp" secondAttribute="trailing" constant="70" id="ns0-cu-VS0"/>
+                            <constraint firstItem="CF1-80-cRu" firstAttribute="centerY" secondItem="hx3-yx-SYO" secondAttribute="centerY" id="ntB-uH-8nH"/>
+                            <constraint firstItem="mS5-Zm-DWp" firstAttribute="width" secondItem="CF1-80-cRu" secondAttribute="width" id="ohD-8a-Ldc"/>
+                            <constraint firstItem="hx3-yx-SYO" firstAttribute="leading" secondItem="dqS-4y-3ri" secondAttribute="leadingMargin" constant="70" id="rlH-gK-FLO"/>
+                            <constraint firstItem="DmY-aq-8He" firstAttribute="leading" secondItem="hx3-yx-SYO" secondAttribute="trailing" constant="70" id="wc7-iX-Wnx"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="A2U-mb-2hY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sj0-Oo-Ud5" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4505" y="429"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="demo-app-bg.png" width="1920" height="1080"/>
+    </resources>
+</document>
