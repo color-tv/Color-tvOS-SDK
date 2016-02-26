@@ -1,0 +1,529 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CB04E4691C6B898C000AE6E3 /* RPLTAdFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB9659951C6B7E7E00E17DE2 /* RPLTAdFramework.framework */; };
+		CB04E46A1C6B898C000AE6E3 /* RPLTAdFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB9659951C6B7E7E00E17DE2 /* RPLTAdFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CB96596B1C6B7DF800E17DE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB96596A1C6B7DF800E17DE2 /* AppDelegate.swift */; };
+		CB96596D1C6B7DF800E17DE2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB96596C1C6B7DF800E17DE2 /* ViewController.swift */; };
+		CB9659701C6B7DF800E17DE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB96596E1C6B7DF800E17DE2 /* Main.storyboard */; };
+		CB9659721C6B7DF800E17DE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB9659711C6B7DF800E17DE2 /* Assets.xcassets */; };
+		CB96597D1C6B7DF800E17DE2 /* ColorTV_Test_App_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB96597C1C6B7DF800E17DE2 /* ColorTV_Test_App_SwiftTests.swift */; };
+		CB9659881C6B7DF800E17DE2 /* ColorTV_Test_App_SwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9659871C6B7DF800E17DE2 /* ColorTV_Test_App_SwiftUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CB9659791C6B7DF800E17DE2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CB96595F1C6B7DF800E17DE2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CB9659661C6B7DF800E17DE2;
+			remoteInfo = "ColorTV Test App Swift";
+		};
+		CB9659841C6B7DF800E17DE2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CB96595F1C6B7DF800E17DE2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CB9659661C6B7DF800E17DE2;
+			remoteInfo = "ColorTV Test App Swift";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CB04E46B1C6B898C000AE6E3 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CB04E46A1C6B898C000AE6E3 /* RPLTAdFramework.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		CB9659671C6B7DF800E17DE2 /* ColorTV Test App Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ColorTV Test App Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB96596A1C6B7DF800E17DE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CB96596C1C6B7DF800E17DE2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CB96596F1C6B7DF800E17DE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CB9659711C6B7DF800E17DE2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CB9659731C6B7DF800E17DE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB9659781C6B7DF800E17DE2 /* ColorTV Test App SwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ColorTV Test App SwiftTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB96597C1C6B7DF800E17DE2 /* ColorTV_Test_App_SwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTV_Test_App_SwiftTests.swift; sourceTree = "<group>"; };
+		CB96597E1C6B7DF800E17DE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB9659831C6B7DF800E17DE2 /* ColorTV Test App SwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ColorTV Test App SwiftUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB9659871C6B7DF800E17DE2 /* ColorTV_Test_App_SwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTV_Test_App_SwiftUITests.swift; sourceTree = "<group>"; };
+		CB9659891C6B7DF800E17DE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB9659951C6B7E7E00E17DE2 /* RPLTAdFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RPLTAdFramework.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CB9659641C6B7DF800E17DE2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB04E4691C6B898C000AE6E3 /* RPLTAdFramework.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB9659751C6B7DF800E17DE2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB9659801C6B7DF800E17DE2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CB96595E1C6B7DF800E17DE2 = {
+			isa = PBXGroup;
+			children = (
+				CB9659951C6B7E7E00E17DE2 /* RPLTAdFramework.framework */,
+				CB9659691C6B7DF800E17DE2 /* ColorTV Test App Swift */,
+				CB96597B1C6B7DF800E17DE2 /* ColorTV Test App SwiftTests */,
+				CB9659861C6B7DF800E17DE2 /* ColorTV Test App SwiftUITests */,
+				CB9659681C6B7DF800E17DE2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CB9659681C6B7DF800E17DE2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CB9659671C6B7DF800E17DE2 /* ColorTV Test App Swift.app */,
+				CB9659781C6B7DF800E17DE2 /* ColorTV Test App SwiftTests.xctest */,
+				CB9659831C6B7DF800E17DE2 /* ColorTV Test App SwiftUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CB9659691C6B7DF800E17DE2 /* ColorTV Test App Swift */ = {
+			isa = PBXGroup;
+			children = (
+				CB96596A1C6B7DF800E17DE2 /* AppDelegate.swift */,
+				CB96596C1C6B7DF800E17DE2 /* ViewController.swift */,
+				CB96596E1C6B7DF800E17DE2 /* Main.storyboard */,
+				CB9659711C6B7DF800E17DE2 /* Assets.xcassets */,
+				CB9659731C6B7DF800E17DE2 /* Info.plist */,
+			);
+			path = "ColorTV Test App Swift";
+			sourceTree = "<group>";
+		};
+		CB96597B1C6B7DF800E17DE2 /* ColorTV Test App SwiftTests */ = {
+			isa = PBXGroup;
+			children = (
+				CB96597C1C6B7DF800E17DE2 /* ColorTV_Test_App_SwiftTests.swift */,
+				CB96597E1C6B7DF800E17DE2 /* Info.plist */,
+			);
+			path = "ColorTV Test App SwiftTests";
+			sourceTree = "<group>";
+		};
+		CB9659861C6B7DF800E17DE2 /* ColorTV Test App SwiftUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CB9659871C6B7DF800E17DE2 /* ColorTV_Test_App_SwiftUITests.swift */,
+				CB9659891C6B7DF800E17DE2 /* Info.plist */,
+			);
+			path = "ColorTV Test App SwiftUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CB9659661C6B7DF800E17DE2 /* ColorTV Test App Swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB96598C1C6B7DF800E17DE2 /* Build configuration list for PBXNativeTarget "ColorTV Test App Swift" */;
+			buildPhases = (
+				CB9659631C6B7DF800E17DE2 /* Sources */,
+				CB9659641C6B7DF800E17DE2 /* Frameworks */,
+				CB9659651C6B7DF800E17DE2 /* Resources */,
+				CB04E46B1C6B898C000AE6E3 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ColorTV Test App Swift";
+			productName = "ColorTV Test App Swift";
+			productReference = CB9659671C6B7DF800E17DE2 /* ColorTV Test App Swift.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CB9659771C6B7DF800E17DE2 /* ColorTV Test App SwiftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB96598F1C6B7DF800E17DE2 /* Build configuration list for PBXNativeTarget "ColorTV Test App SwiftTests" */;
+			buildPhases = (
+				CB9659741C6B7DF800E17DE2 /* Sources */,
+				CB9659751C6B7DF800E17DE2 /* Frameworks */,
+				CB9659761C6B7DF800E17DE2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CB96597A1C6B7DF800E17DE2 /* PBXTargetDependency */,
+			);
+			name = "ColorTV Test App SwiftTests";
+			productName = "ColorTV Test App SwiftTests";
+			productReference = CB9659781C6B7DF800E17DE2 /* ColorTV Test App SwiftTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CB9659821C6B7DF800E17DE2 /* ColorTV Test App SwiftUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB9659921C6B7DF800E17DE2 /* Build configuration list for PBXNativeTarget "ColorTV Test App SwiftUITests" */;
+			buildPhases = (
+				CB96597F1C6B7DF800E17DE2 /* Sources */,
+				CB9659801C6B7DF800E17DE2 /* Frameworks */,
+				CB9659811C6B7DF800E17DE2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CB9659851C6B7DF800E17DE2 /* PBXTargetDependency */,
+			);
+			name = "ColorTV Test App SwiftUITests";
+			productName = "ColorTV Test App SwiftUITests";
+			productReference = CB9659831C6B7DF800E17DE2 /* ColorTV Test App SwiftUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CB96595F1C6B7DF800E17DE2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Jordan Jasinski";
+				TargetAttributes = {
+					CB9659661C6B7DF800E17DE2 = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = MRE2S3DP28;
+					};
+					CB9659771C6B7DF800E17DE2 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = CB9659661C6B7DF800E17DE2;
+					};
+					CB9659821C6B7DF800E17DE2 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = CB9659661C6B7DF800E17DE2;
+					};
+				};
+			};
+			buildConfigurationList = CB9659621C6B7DF800E17DE2 /* Build configuration list for PBXProject "ColorTV Test App Swift" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CB96595E1C6B7DF800E17DE2;
+			productRefGroup = CB9659681C6B7DF800E17DE2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CB9659661C6B7DF800E17DE2 /* ColorTV Test App Swift */,
+				CB9659771C6B7DF800E17DE2 /* ColorTV Test App SwiftTests */,
+				CB9659821C6B7DF800E17DE2 /* ColorTV Test App SwiftUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CB9659651C6B7DF800E17DE2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB9659721C6B7DF800E17DE2 /* Assets.xcassets in Resources */,
+				CB9659701C6B7DF800E17DE2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB9659761C6B7DF800E17DE2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB9659811C6B7DF800E17DE2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CB9659631C6B7DF800E17DE2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB96596D1C6B7DF800E17DE2 /* ViewController.swift in Sources */,
+				CB96596B1C6B7DF800E17DE2 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB9659741C6B7DF800E17DE2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB96597D1C6B7DF800E17DE2 /* ColorTV_Test_App_SwiftTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB96597F1C6B7DF800E17DE2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB9659881C6B7DF800E17DE2 /* ColorTV_Test_App_SwiftUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CB96597A1C6B7DF800E17DE2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CB9659661C6B7DF800E17DE2 /* ColorTV Test App Swift */;
+			targetProxy = CB9659791C6B7DF800E17DE2 /* PBXContainerItemProxy */;
+		};
+		CB9659851C6B7DF800E17DE2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CB9659661C6B7DF800E17DE2 /* ColorTV Test App Swift */;
+			targetProxy = CB9659841C6B7DF800E17DE2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CB96596E1C6B7DF800E17DE2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CB96596F1C6B7DF800E17DE2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CB96598A1C6B7DF800E17DE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = appletvos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Debug;
+		};
+		CB96598B1C6B7DF800E17DE2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.1;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CB96598D1C6B7DF800E17DE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = "ColorTV Test App Swift/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.colortv.ColorTV-Test-App-Swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CB96598E1C6B7DF800E17DE2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = "ColorTV Test App Swift/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.colortv.ColorTV-Test-App-Swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		CB9659901C6B7DF800E17DE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "ColorTV Test App SwiftTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.colortv.ColorTV-Test-App-SwiftTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ColorTV Test App Swift.app/ColorTV Test App Swift";
+			};
+			name = Debug;
+		};
+		CB9659911C6B7DF800E17DE2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "ColorTV Test App SwiftTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.colortv.ColorTV-Test-App-SwiftTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ColorTV Test App Swift.app/ColorTV Test App Swift";
+			};
+			name = Release;
+		};
+		CB9659931C6B7DF800E17DE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "ColorTV Test App SwiftUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.colortv.ColorTV-Test-App-SwiftUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "ColorTV Test App Swift";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		CB9659941C6B7DF800E17DE2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "ColorTV Test App SwiftUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.colortv.ColorTV-Test-App-SwiftUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "ColorTV Test App Swift";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CB9659621C6B7DF800E17DE2 /* Build configuration list for PBXProject "ColorTV Test App Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB96598A1C6B7DF800E17DE2 /* Debug */,
+				CB96598B1C6B7DF800E17DE2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CB96598C1C6B7DF800E17DE2 /* Build configuration list for PBXNativeTarget "ColorTV Test App Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB96598D1C6B7DF800E17DE2 /* Debug */,
+				CB96598E1C6B7DF800E17DE2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CB96598F1C6B7DF800E17DE2 /* Build configuration list for PBXNativeTarget "ColorTV Test App SwiftTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB9659901C6B7DF800E17DE2 /* Debug */,
+				CB9659911C6B7DF800E17DE2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CB9659921C6B7DF800E17DE2 /* Build configuration list for PBXNativeTarget "ColorTV Test App SwiftUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB9659931C6B7DF800E17DE2 /* Debug */,
+				CB9659941C6B7DF800E17DE2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CB96595F1C6B7DF800E17DE2 /* Project object */;
+}

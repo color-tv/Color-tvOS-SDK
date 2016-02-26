@@ -31,7 +31,7 @@
 
 -(void)startWithAppIdentifier:(NSString* _Nonnull)appIdentifier;
 
--(void)adViewControllerWithCompletion:(RPLTAdFrameworkAdRequestCompletion _Nonnull)completion;
+-(void)adViewControllerForPlacement:(NSString* _Nonnull)placenemt withCompletion:(RPLTAdFrameworkAdRequestCompletion _Nonnull)completion;
 -(void)adViewControllerOfType:(RPLTAdFrameworkAdType)type withCompletion:(RPLTAdFrameworkAdRequestCompletion _Nonnull)completion;
 
 @end
