@@ -1,0 +1,6 @@
+framework module RPLTAdFramework {
+  umbrella header "RPLTAdFramework.h"
+
+  export *
+  module * { export * }
+}
