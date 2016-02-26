@@ -210,7 +210,7 @@
 				TargetAttributes = {
 					CB9659661C6B7DF800E17DE2 = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = MRE2S3DP28;
+						DevelopmentTeam = W9KFF4SEK8;
 					};
 					CB9659771C6B7DF800E17DE2 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -414,7 +414,7 @@
 				);
 				INFOPLIST_FILE = "ColorTV Test App Swift/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.colortv.ColorTV-Test-App-Swift";
+				PRODUCT_BUNDLE_IDENTIFIER = com.colortv.ColorTVTestSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -431,7 +431,7 @@
 				);
 				INFOPLIST_FILE = "ColorTV Test App Swift/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.colortv.ColorTV-Test-App-Swift";
+				PRODUCT_BUNDLE_IDENTIFIER = com.colortv.ColorTVTestSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
