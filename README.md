@@ -63,6 +63,12 @@ Remember to import COLORAdFramework module. Add following line of code above cla
 @import COLORAdFramework;
 ```
 
+Swift:
+
+```Swift
+@import COLORAdFramework
+```
+
 ---
 
 ##Displaying ads
@@ -90,6 +96,31 @@ ColorTV offers lot of different types of advertisement which are automatically p
     }];
 ```
 
+Swift:
+
+```Swift
+    RPLTAdController.sharedAdController().adViewControllerWithCompletion({ (vc , error) in
+            
+        if((error) != nil) {
+            NSLog("ERROR: %@", error!);
+        }
+            
+        if((vc) != nil) {
+            vc?.adCompleted = {
+                self.dismissViewControllerAnimated(true, completion: { () -> Void in
+                        
+                });
+            };
+                
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                self.presentViewController(vc!, animated: true, completion: { () -> Void in
+                        
+                });
+            });
+        }
+    });
+```
+
 We understand how imporant user experience is to your app's performance. Nobody wants to wait a few seconds to see an advertisement regardless how relevant it's content is, so we developed the method `adViewControllerWithCompletion` for optimal performance. Call `adViewControllerWithCompletion` whenever you think an ad is likely to be shown. We highly reccommend invoking this method in all potential places you will show an ad. By doing this you can decide to either stop or start showing ads at specific placements in your app via our dashboard without pushing updates to your users! 
 
 Completion block is called when some elements of ad are loaded. It provides you two arguments, `viewController` and `error`. The framework generates `viewController` which is to be displayed in the manner which matches your application's structure. In most cases modal view controller is OK but sometimes navigation view controller or some kind if embedded view controller will be better. It is up to you.
@@ -108,7 +139,36 @@ When showing an ad you must provide the context inside your app where you are sh
 [[COLORAdController sharedAdController] setCurrentPlacement:COLORAdFrameworkPlacementStageOpen];
 ```
 
+Swift:
+
+```Swift
+RPLTAdController.sharedAdController().currentPlacement = RPLTAdFrameworkPlacementMainMenu;
+```
+
 The predefined values available as constants whose names start with COLORAdFrameworkPlacement... 
+
+---
+
+##User Profile
+
+Another way to provide valuable information which allows us to provide suitable ads to your audience is user profile. You can provide basic information which characterise specific user by setting properties of `COLORUserProfile` Singleton. If for some reason you believe that user of your application has changed, e.g. account is switched call `-(void)reset` method and set new values.
+Property `age` is an unsigned integer which represent number of years elapsed since user was born. If you do not know exact value but you are able to predict age range pass number in the middle of predicted range.
+Property `gender` is a string literal which should contain `male` of `female`.
+Additionally set of keywords may be added in order to let us know something more about user of your app. You can manipulate keywords by calling methods `-(void)addKeyword:(NSString*)keyword` and `-(void)removeKeyword:(NSString*)keyword`. If profile is reseted collection of keywords becomes empty.
+
+```objective-c
+COLORUserProfile *profile = [COLORUserProfile sharedProfile];
+
+[profile reset]; //reset current profile if user is switched in your application.
+
+profile.age = 30;
+profile.gender = @"female"; //male or female are expected here
+
+//keywords which may charactirize your audience. It is used to better target ad.
+[profile addKeyword:@"aviation"];
+[profile addKeyword:@"airplane"];
+[profile addKeyword:@"airport"];
+```
 
 ---
 
