@@ -31,7 +31,7 @@ After adding this value, run `pod install` and the latest version of our tvOS SD
 
 ####Download & Unzip SDK 
 
-Drag and drop the RPLTAdFramework.framework directory into Xcode under *Frameworks*.
+Drag and drop the COLORAdFramework.framework directory into Xcode under *Frameworks*.
 Open your project in Xcode and go to project settings. Select *General* and choose proper target, it name in most cases corresponds to name of your project.
 
 ![Xcode configuration](https://www.filepicker.io/api/file/ncUuqdGR1GSOBtTaoUE3)
@@ -113,7 +113,7 @@ Each time positive conversion is registered (usually when application returns to
 
 ####Delegate
 
-If you prefer to use delegates please remember to set desired class as compliant to RPLTAdControllerDelegate protocol. Then set the delegate.
+If you prefer to use delegates please remember to set desired class as compliant to COLORAdControllerDelegate protocol. Then set the delegate.
 
 ```objective-c
 [COLORAdController sharedAdController].delegate = self;
@@ -136,7 +136,7 @@ Whenever conversion is registered following method is to be called. Details cont
 You can inform us about the place in your application user interacts with at the time. It will allow us to target ads more effectively thus you can earn more.
 
 ```objective-c
-[[COLORAdController sharedAdController] setCurrentPlacement:RPLTAdFrameworkPlacementStageOpen];
+[[COLORAdController sharedAdController] setCurrentPlacement:COLORAdFrameworkPlacementStageOpen];
 ```
 
 The argument may be any object of class NSString. There is lot of predefined values available as constants whose names start with COLORAdFrameworkPlacement... .
