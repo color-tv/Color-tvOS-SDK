@@ -34,7 +34,7 @@ After adding this value, run `pod install` and the latest version of our tvOS SD
 Drag and drop the RPLTAdFramework.framework directory into Xcode under *Frameworks*.
 Open your project in Xcode and go to project settings. Select *General* and choose proper target, it name in most cases corresponds to name of your project.
 
-![Xcode configuration](https://www.filepicker.io/api/file/7K5NGBJaT6ewGlYp3Apy)
+![Xcode configuration](https://www.filepicker.io/api/file/ncUuqdGR1GSOBtTaoUE3)
 
 Expand *Embedded Binaries* section and click + icon. Add COLORAdFramework to your project. Please note that the framework will be automatically added to *Linked Frameworks and Libraries*. It will **not** happen if you add it to Linked Frameworks and Libraries first.
 
@@ -67,24 +67,24 @@ Remember to import COLORAdFramework module. Add following line of code above cla
 Color offers lot of different types of advertisement which are automatically provided by our server in order to attract you audience. You do not need to care about proper ad and its content. We do it for you. All you need to do is to type a few lines of code to have the ad displayed wherever and whenever you want.
 
 ```objective-c
-[[COLORAdController sharedAdController] adViewControllerWithCompletion:^(COLORAdViewController * _Nullable vc, NSError * _Nullable error) {
-if(vc) {
-
-vc.adCompleted = ^{
-dispatch_async(dispatch_get_main_queue(), ^{
-[self dismissViewControllerAnimated:YES completion:nil];
-});
-};
-
-dispatch_async(dispatch_get_main_queue(), ^{                
-[self presentViewController:vc animated:YES completion:^{
-
-}];
-});
-} else {
-NSLog(@"Error: %@", error);
-}        
-}];
+    [[COLORAdController sharedAdController] adViewControllerForPlacement:COLORAdFrameworkPlacementAppLaunch withCompletion:^(COLORAdViewController * _Nullable vc, NSError * _Nullable error) {
+        if(vc) {
+            
+            vc.adCompleted = ^{
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [self dismissViewControllerAnimated:YES completion:nil];
+                });
+            };
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self presentViewController:vc animated:YES completion:^{
+                    
+                }];
+            });
+        } else {
+            NSLog(@"Error: %@", error);
+        }        
+    }];
 ```
 
 A few words of explanation are probably required here. We care about user experience a lot. Nobody wants to wait a few seconds just to see an advertisement regardless how attractive its content is. Call a method named `adViewControllerWithCompletion` whenever you think an ad is likely to be shown. Completion block is called when some elements of ad are loaded.
@@ -96,7 +96,7 @@ Please note that majority of operations are done on the background threads while
 
 ---
 
-Earning Virtual Currency
+##Earning Virtual Currency
 
 Your audience is more likely to interact with presented ads if something in reward is given. We offer a mechanism to provide end user a variety of incentives based on so-called virtual currency. All settings required are to be done in administration panel provided for your application. Your application needs only a few lines of code more to enable features or add some gems to user's collection.
 Ads conversion are monitored in background, you will be informed when some currency is assigned. It is up to you whether you prefer to get notification through NSNotificationCenter or use delegate pattern.
@@ -105,7 +105,7 @@ Ads conversion are monitored in background, you will be informed when some curre
 
 ```objective-c
 [[NSNotificationCenter defaultCenter] addObserverForName:COLORAdFrameworkNotificationDidGetCurrency object:nil queue:nil usingBlock:^(NSNotification * _Nonnull note) {
-NSLog(@"userInfo: %@", note);
+    NSLog(@"userInfo: %@", note);
 }];
 ```
 
@@ -125,7 +125,7 @@ Whenever conversion is registered following method is to be called. Details cont
 #pragma mark - COLORAdControllerDelegate
 
 -(void)didGetCurrency:(NSDictionary *)details {
-NSLog(@"didGetcurrency delegate method: %@", details);
+    NSLog(@"didGetcurrency delegate method: %@", details);
 }
 ```
 
