@@ -45,13 +45,13 @@ Expand *Embedded Binaries* section and click + icon. Add COLORAdFramework to you
 Open AppDelegate.m and modify body of function `application:DidFinishLaunchingWithOptions:`
 
 ```objective-c
-[[COLORAdController sharedAdController] startWithAppIdentifier:@"566dbd1a326aeb750132fdfb"];
+[[COLORAdController sharedAdController] startWithAppIdentifier:@"YOUR_APP_ID_HERE"];
 ```
 
 or in Swift:
 
 ```Swift
-COLORAdController.sharedAdController().startWithAppIdentifier("566dbd1a326aeb750132fdfb");
+COLORAdController.sharedAdController().startWithAppIdentifier("YOUR_APP_ID_HERE");
 ```
 
 Remember to import COLORAdFramework module. Add following line of code above class implementation.
