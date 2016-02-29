@@ -31,11 +31,13 @@ After adding this value, run `pod install` and the latest version of our tvOS SD
 
 ####Download & Unzip SDK 
 
-Unzip and open the folder, then navigate to the ColorTV Framework folder. Included are both frameworks for simulator and actual devices. Use the Framework from the tvos-device folder for production. Click on your Application at the top-left side of Xcode and go to project settings. Select *General* and choose proper target, it name in most cases corresponds to name of your project. Then rag and drop the COLORAdFramework.framework directory into the *Embeded Binaries* section.
+Unzip and open the folder, then navigate to the ColorTV framework folder. Included are both frameworks for simulator and actual devices. Use the framework from the tvos-device folder for production, **only** use the framework for simulator for testing. 
+
+Click on your Application at the top-left side of Xcode and go to project settings. Select *General* and choose proper target, it name in most cases corresponds to name of your project. Then drag and drop the COLORAdFramework.framework directory into the **Embeded Binaries** section.
 
 ![Importing Framework](https://github.com/color-tv/colortv-docs/blob/master/colortv/docs/images/add_framework_tvOS.gif)
 
-Once complete, you will see the COLORAdFramework in both the *Embedded Binaries and Linked Frameworks and Libraries* sections. Please note that the framework will be automatically added to *Linked Frameworks and Libraries*. It will **not** be automatically added to both if you add it to Linked Frameworks and Libraries first.
+Once complete, you will see the COLORAdFramework in both the **Embedded Binaries and Linked Frameworks and Libraries** sections. Please note that the framework will be automatically added to *Linked Frameworks and Libraries*. It will **not** be automatically added to both if you add it to Linked Frameworks and Libraries first.
 
 ![Xcode configuration](https://www.filepicker.io/api/file/ncUuqdGR1GSOBtTaoUE3)
 
@@ -43,7 +45,7 @@ Once complete, you will see the COLORAdFramework in both the *Embedded Binaries 
 
 ##Initializing SDK
 
-Open AppDelegate.m and modify body of function `application:DidFinishLaunchingWithOptions:`
+Open AppDelegate.m and modify body of function `application:DidFinishLaunchingWithOptions:` with the App ID generated in the dashboard
 
 ```objective-c
 [[COLORAdController sharedAdController] startWithAppIdentifier:@"YOUR_APP_ID_HERE"];
