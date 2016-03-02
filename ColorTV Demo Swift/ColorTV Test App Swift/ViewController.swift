@@ -12,43 +12,89 @@ import COLORAdFramework
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var stackView: UIStackView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        for view in self.view.subviews {
-            if(view .isKindOfClass(UIButton)) {
-                view.layer.cornerRadius = 8.0;
-            }
+        for view in stackView.subviews where view is UIButton {
+                view.layer.cornerRadius = 8.0
         }
     }
     
     override func viewDidAppear(animated: Bool) {
-
-        COLORAdController.sharedAdController().currentPlacement = COLORAdFrameworkPlacementMainMenu;
+        super.viewDidAppear(animated)
+        COLORAdController.sharedAdController().currentPlacement = COLORAdFrameworkPlacementMainMenu
     }
     
+//MARK: exemplary implementation
+    
+    //Typical implementation within app. Please note that AdViewController should be initiated asynchronously in background and shown when required.
     @IBAction func showRandomAd() {
-        COLORAdController.sharedAdController().adViewControllerForPlacement(COLORAdFrameworkPlacementInAppPurchaseAbandoned, withCompletion:{ (vc , error) in
-            
-            if((error) != nil) {
-                NSLog("ERROR: %@", error!);
+        showAdForPlacement(COLORAdFrameworkPlacementInAppPurchaseAbandoned)
+    }
+    
+//MARK: presentation methods
+    
+    //The code placed below is written only for presentation purposes. Please note that developer should not choose type of ad shown based on particular placement mark. It is very unlikely such placement will be available for your application.
+    
+    @IBAction func showDiscoveryCenter() {
+        showAdForPlacement(COLORAdFrameworkPlacementMainMenu)
+        COLORAdController.sharedAdController().currentPlacement = COLORAdFrameworkPlacementMainMenu
+    }
+    
+    @IBAction func showInterstitial() {
+        showAdForPlacement(COLORAdFrameworkPlacementStageFailed)
+        COLORAdController.sharedAdController().currentPlacement = COLORAdFrameworkPlacementMainMenu
+    }
+    
+    @IBAction func showFullscreenAd() {
+        showAdForPlacement(COLORAdFrameworkPlacementStageOpen)
+        COLORAdController.sharedAdController().currentPlacement = COLORAdFrameworkPlacementMainMenu
+    }
+    
+    @IBAction func showVideoAd() {
+        showAdForPlacement(COLORAdFrameworkPlacementLevelUp)
+        COLORAdController.sharedAdController().currentPlacement = COLORAdFrameworkPlacementMainMenu
+    }
+    
+    
+    func showAdForPlacement(placement: String) {
+        COLORAdController.sharedAdController().adViewControllerForPlacement(placement, withCompletion:{ (vc , error) in
+    
+            guard let vc = vc else {
+                print("Failed to initialize ad view controller, error: \(error?.description)")
+                return
             }
-            
-            if((vc) != nil) {
-                vc?.adCompleted = {
-                    self.dismissViewControllerAnimated(true, completion: { () -> Void in
-                        
-                    });
-                };
-                
-                dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                    self.presentViewController(vc!, animated: true, completion: { () -> Void in
-                        
-                    });
-                });
+    
+            vc.adCompleted = {
+                self.dismissViewControllerAnimated(true, completion: nil)
             }
-        });
+    
+            dispatch_async(dispatch_get_main_queue()) {
+                self.presentViewController(vc, animated: true, completion: nil)
+            }
+        })
     }
 
+//MARK: UIFocusEnvironment
+    override func didUpdateFocusInContext(context: UIFocusUpdateContext, withAnimationCoordinator coordinator: UIFocusAnimationCoordinator) {
+        if(context.nextFocusedView is UIButton) {
+            coordinator.addCoordinatedAnimations({ () -> Void in
+                context.nextFocusedView?.transform = CGAffineTransformMakeScale(1.2, 1.2)
+                context.nextFocusedView?.layer.shadowColor = UIColor.blackColor().CGColor
+                context.nextFocusedView?.layer.shadowOpacity = 0.3
+                context.nextFocusedView?.layer.shadowRadius = 15
+                context.nextFocusedView?.layer.shadowOffset = CGSize(width: 20, height: 20)
+            }, completion: nil)
+        }
+        
+        if(context.previouslyFocusedView is UIButton) {
+            coordinator.addCoordinatedAnimations({ () -> Void in
+                context.previouslyFocusedView?.transform = CGAffineTransformIdentity
+                context.previouslyFocusedView?.layer.shadowColor = UIColor.clearColor().CGColor
+                context.previouslyFocusedView?.layer.shadowOpacity = 0
+            }, completion: nil)
+        }
+    }
 }
-
