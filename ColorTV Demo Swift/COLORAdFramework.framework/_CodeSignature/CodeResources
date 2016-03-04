@@ -4,10 +4,6 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>.DS_Store</key>
-		<data>
-		DAhHvuqwKNk6USkcwE9SWdtaoEg=
-		</data>
 		<key>AdGridCellBg.png</key>
 		<data>
 		iDcQFHfA6bYKHWU2pSuGj3xQ+6g=
@@ -28,6 +24,10 @@
 		<data>
 		2vMiq/Dgem45nFp5rIMmqSFTc2s=
 		</data>
+		<key>AdGridSMS.png</key>
+		<data>
+		M1zMHAlhbug37m0RTk9Mq3Os6Vo=
+		</data>
 		<key>AdInterstitialDownloadButton.png</key>
 		<data>
 		BUE8D/Wtb0lEkQr1ihkkR9Jm0qc=
@@ -36,41 +36,41 @@
 		<data>
 		TyxtAz51vdpnHroMlDAqUMtM4DU=
 		</data>
-		<key>COLORAdStoryboard.storyboardc/4Or-ra-RmM-view-NeM-3c-Ybl.nib</key>
+		<key>COLORAdStoryboard.storyboardc/4Or-ra-RmM-view-4px-gF-Bqu.nib</key>
 		<data>
-		1gHBebxjeh2eeC+DDbqIXwAAff0=
+		wGVYZZrKV8jImWF8aclUlRgqkd8=
 		</data>
 		<key>COLORAdStoryboard.storyboardc/BMGAdFullscreenViewController.nib</key>
 		<data>
-		ad6i6pHWTh5Q7K6eoAykCiGr/A4=
+		U2Ld0c6RIdwzmgLZW+/o8enZu7Y=
 		</data>
 		<key>COLORAdStoryboard.storyboardc/BMGAdGridViewController.nib</key>
 		<data>
-		RMhG5sZsx6+ye6/Op4LrLNFZUIU=
+		9JBrxq0+cXaZ7C0duWNed/U9BD4=
 		</data>
 		<key>COLORAdStoryboard.storyboardc/BMGAdSingleViewController.nib</key>
 		<data>
-		aMRLpXPXuWZG23TNSIayyK6ARqs=
+		bsyLXE54Gt57D7flAp9qM02Kvgw=
 		</data>
 		<key>COLORAdStoryboard.storyboardc/FormViewController.nib</key>
 		<data>
-		KiAAU8Gm5uudu/7QMnFB8G/OHF8=
+		gSHedYHzmVrxkBBcSciZF1gJhDQ=
 		</data>
 		<key>COLORAdStoryboard.storyboardc/Info.plist</key>
 		<data>
-		3MiY1eiI1M7VoA4uFZf2yQHn4R0=
+		fGagFeZd6ZTz6iwlKPdetOLFCzw=
 		</data>
 		<key>COLORAdStoryboard.storyboardc/UsW-13-atM-view-UJC-bX-fjZ.nib</key>
 		<data>
-		eq2e7I8hvAG1ps7pakSMCdvnKUs=
+		J/CTGTGdVB/ybq1AoXtHmYQ2awk=
 		</data>
 		<key>COLORAdStoryboard.storyboardc/d8J-YW-9cs-view-DtQ-i0-EhW.nib</key>
 		<data>
-		UicseexmIrx1jmhPynwq4P13yyA=
+		H8lAmYo4wWzrtN0tmNB/8vEJKtk=
 		</data>
 		<key>COLORAdStoryboard.storyboardc/qm2-jj-vfJ-view-Vdj-WR-dza.nib</key>
 		<data>
-		5bfTLxwYMk2a0OsTWBqpc2HDNF4=
+		ukX217h2FY66jj9RiR8n1aH6riw=
 		</data>
 		<key>Check_mark72.png</key>
 		<data>
@@ -82,11 +82,11 @@
 		</data>
 		<key>Headers/COLORAdController.h</key>
 		<data>
-		WACUS2iyVbQAXlWwfL98Su3mI+M=
+		l1dCiajajszNvEaBnPn16XPvJVg=
 		</data>
 		<key>Headers/COLORAdFramework.h</key>
 		<data>
-		tYYTj9pt9+GTNI2jUUSwWGxzN+s=
+		Wwh4kTsv0dLi0BqHstGT4DFi11s=
 		</data>
 		<key>Headers/COLORAdFrameworkLogger.h</key>
 		<data>
@@ -98,7 +98,7 @@
 		</data>
 		<key>Headers/COLORConstans.h</key>
 		<data>
-		+/IJR22QFFamPdoTuTo/xT1HqrE=
+		Szyj2roluo8AYSnpPHuAQex5T+4=
 		</data>
 		<key>Headers/COLORUserProfile.h</key>
 		<data>
@@ -128,6 +128,10 @@
 		<data>
 		Xo9ILT6ONqpSsWCGA+FE0Opb2+s=
 		</data>
+		<key>fullscreen_close_dark.png</key>
+		<data>
+		27MH4bY8qfouAhYQ9SGaF4kQTEo=
+		</data>
 		<key>icon_email.png</key>
 		<data>
 		3yjQ3oiBRAOiVw9ypE8e0SltJ/s=
@@ -135,6 +139,10 @@
 		<key>icon_phone.png</key>
 		<data>
 		XH9agbombHWTJ022vzEULy4DxhU=
+		</data>
+		<key>icon_sms.png</key>
+		<data>
+		bsKjDnJA12ZSLGliG2Gkrc+xHzU=
 		</data>
 		<key>interstitial_close.png</key>
 		<data>
@@ -167,6 +175,10 @@
 		<data>
 		2vMiq/Dgem45nFp5rIMmqSFTc2s=
 		</data>
+		<key>AdGridSMS.png</key>
+		<data>
+		M1zMHAlhbug37m0RTk9Mq3Os6Vo=
+		</data>
 		<key>AdInterstitialDownloadButton.png</key>
 		<data>
 		BUE8D/Wtb0lEkQr1ihkkR9Jm0qc=
@@ -175,41 +187,41 @@
 		<data>
 		TyxtAz51vdpnHroMlDAqUMtM4DU=
 		</data>
-		<key>COLORAdStoryboard.storyboardc/4Or-ra-RmM-view-NeM-3c-Ybl.nib</key>
+		<key>COLORAdStoryboard.storyboardc/4Or-ra-RmM-view-4px-gF-Bqu.nib</key>
 		<data>
-		1gHBebxjeh2eeC+DDbqIXwAAff0=
+		wGVYZZrKV8jImWF8aclUlRgqkd8=
 		</data>
 		<key>COLORAdStoryboard.storyboardc/BMGAdFullscreenViewController.nib</key>
 		<data>
-		ad6i6pHWTh5Q7K6eoAykCiGr/A4=
+		U2Ld0c6RIdwzmgLZW+/o8enZu7Y=
 		</data>
 		<key>COLORAdStoryboard.storyboardc/BMGAdGridViewController.nib</key>
 		<data>
-		RMhG5sZsx6+ye6/Op4LrLNFZUIU=
+		9JBrxq0+cXaZ7C0duWNed/U9BD4=
 		</data>
 		<key>COLORAdStoryboard.storyboardc/BMGAdSingleViewController.nib</key>
 		<data>
-		aMRLpXPXuWZG23TNSIayyK6ARqs=
+		bsyLXE54Gt57D7flAp9qM02Kvgw=
 		</data>
 		<key>COLORAdStoryboard.storyboardc/FormViewController.nib</key>
 		<data>
-		KiAAU8Gm5uudu/7QMnFB8G/OHF8=
+		gSHedYHzmVrxkBBcSciZF1gJhDQ=
 		</data>
 		<key>COLORAdStoryboard.storyboardc/Info.plist</key>
 		<data>
-		3MiY1eiI1M7VoA4uFZf2yQHn4R0=
+		fGagFeZd6ZTz6iwlKPdetOLFCzw=
 		</data>
 		<key>COLORAdStoryboard.storyboardc/UsW-13-atM-view-UJC-bX-fjZ.nib</key>
 		<data>
-		eq2e7I8hvAG1ps7pakSMCdvnKUs=
+		J/CTGTGdVB/ybq1AoXtHmYQ2awk=
 		</data>
 		<key>COLORAdStoryboard.storyboardc/d8J-YW-9cs-view-DtQ-i0-EhW.nib</key>
 		<data>
-		UicseexmIrx1jmhPynwq4P13yyA=
+		H8lAmYo4wWzrtN0tmNB/8vEJKtk=
 		</data>
 		<key>COLORAdStoryboard.storyboardc/qm2-jj-vfJ-view-Vdj-WR-dza.nib</key>
 		<data>
-		5bfTLxwYMk2a0OsTWBqpc2HDNF4=
+		ukX217h2FY66jj9RiR8n1aH6riw=
 		</data>
 		<key>Check_mark72.png</key>
 		<data>
@@ -221,11 +233,11 @@
 		</data>
 		<key>Headers/COLORAdController.h</key>
 		<data>
-		WACUS2iyVbQAXlWwfL98Su3mI+M=
+		l1dCiajajszNvEaBnPn16XPvJVg=
 		</data>
 		<key>Headers/COLORAdFramework.h</key>
 		<data>
-		tYYTj9pt9+GTNI2jUUSwWGxzN+s=
+		Wwh4kTsv0dLi0BqHstGT4DFi11s=
 		</data>
 		<key>Headers/COLORAdFrameworkLogger.h</key>
 		<data>
@@ -237,7 +249,7 @@
 		</data>
 		<key>Headers/COLORConstans.h</key>
 		<data>
-		+/IJR22QFFamPdoTuTo/xT1HqrE=
+		Szyj2roluo8AYSnpPHuAQex5T+4=
 		</data>
 		<key>Headers/COLORUserProfile.h</key>
 		<data>
@@ -263,6 +275,10 @@
 		<data>
 		Xo9ILT6ONqpSsWCGA+FE0Opb2+s=
 		</data>
+		<key>fullscreen_close_dark.png</key>
+		<data>
+		27MH4bY8qfouAhYQ9SGaF4kQTEo=
+		</data>
 		<key>icon_email.png</key>
 		<data>
 		3yjQ3oiBRAOiVw9ypE8e0SltJ/s=
@@ -270,6 +286,10 @@
 		<key>icon_phone.png</key>
 		<data>
 		XH9agbombHWTJ022vzEULy4DxhU=
+		</data>
+		<key>icon_sms.png</key>
+		<data>
+		bsKjDnJA12ZSLGliG2Gkrc+xHzU=
 		</data>
 		<key>interstitial_close.png</key>
 		<data>

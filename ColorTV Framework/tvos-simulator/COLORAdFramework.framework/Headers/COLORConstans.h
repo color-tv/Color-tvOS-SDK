@@ -8,11 +8,8 @@
 
 @import Foundation;
 
-#import "COLORAdFrameworkLogger.h"
-#import "COLORUserProfile.h"
-
-#ifndef constans_h
-#define constans_h
+#import <COLORAdFramework/COLORAdFrameworkLogger.h>
+#import <COLORAdFramework/COLORUserProfile.h>
 
 #pragma mark Notifications
 extern NSString * _Nonnull const COLORAdFrameworkNotificationDidGetCurrency;
@@ -36,7 +33,7 @@ extern NSString * _Nonnull const COLORAdFrameworkPlacementInAppPurchase;
 extern NSString * _Nonnull const COLORAdFrameworkPlacementInAppPurchaseAbandoned;
 extern NSString * _Nonnull const COLORAdFrameworkPlacementVirtualGoodPurchase;
 extern NSString * _Nonnull const COLORAdFrameworkPlacementUserHighScore;
-extern NSString * _Nonnull const COLORAdFrameworkPlacementOudOfGoods;
+extern NSString * _Nonnull const COLORAdFrameworkPlacementOutOfGoods;
 extern NSString * _Nonnull const COLORAdFrameworkPlacementOutOfEnergy;
 extern NSString * _Nonnull const COLORAdFrameworkPlacementInsufficientCurrency;
 extern NSString * _Nonnull const COLORAdFrameworkPlacementFinishedTutorial;
@@ -62,4 +59,3 @@ typedef NS_ENUM(NSUInteger, COLORAdFrameworkAdType) {
     COLORAdFrameworkAdTypeVideoRecommendation = 7
 };
 
-#endif /* constans_h */

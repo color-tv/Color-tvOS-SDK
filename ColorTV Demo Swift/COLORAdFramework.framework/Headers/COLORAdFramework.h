@@ -17,4 +17,8 @@ FOUNDATION_EXPORT const unsigned char RPLTAdFrameworkVersionString[];
 // In this header, you should import all the public headers of your framework using statements like #import <RPLTAdFramework/PublicHeader.h>
 
 #import <COLORAdFramework/COLORAdController.h>
+#import <COLORAdFramework/COLORConstans.h>
+#import <COLORAdFramework/COLORAdViewController.h>
+#import <COLORAdFramework/COLORAdFrameworkLogger.h>
+#import <COLORAdFramework/COLORUserProfile.h>
 

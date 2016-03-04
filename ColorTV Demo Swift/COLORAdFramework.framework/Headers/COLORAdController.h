@@ -8,9 +8,9 @@
 
 @import UIKit;
 
-#import "COLORAdViewController.h"
+#import <COLORAdFramework/COLORAdViewController.h>
 
-#import "COLORConstans.h"
+#import <COLORAdFramework/COLORConstans.h>
 
 @protocol COLORAdControllerDelegate <NSObject>
 

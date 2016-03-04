@@ -10,7 +10,7 @@
 
 @import COLORAdFramework;
 
-@interface ViewController ()
+@interface ViewController ()<COLORAdControllerDelegate>
 
 @end
 
@@ -19,11 +19,35 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    //when user gets virtual currency your application will be notified in order to assign currency to user account and possible take other desired action. Please not that delegate and NotificationCenter are alternatives to each other.
+    [COLORAdController sharedAdController].delegate = self;
+    
+    [[NSNotificationCenter defaultCenter] addObserverForName:COLORAdFrameworkNotificationDidGetCurrency object:nil queue:nil usingBlock:^(NSNotification * _Nonnull note) {
+        NSLog(@"didGetCurrency: %@", note.userInfo);
+    }];
+    
     for (UIView *view in self.view.subviews) {
         if([view isKindOfClass:[UIButton class]]) {
             view.layer.cornerRadius = 8.0f;
         }
     }
+}
+
+-(void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+
+    //update profile information to better target ads.
+    COLORUserProfile *profile = [COLORUserProfile sharedProfile];
+    [profile reset]; //reset current profile if user is switched in your application.
+    profile.age = 30;
+    profile.gender = @"female"; //male or female are expected here
+    //keywords which may charactirize your audience. It is used to better target ad.
+    [profile addKeyword:@"aviation"];
+    [profile addKeyword:@"airplane"];
+    [profile addKeyword:@"airport"];
+    
+    //report current placement. You can call it from time to time when you believe it is important to notify our server about state of your app.
+    [[COLORAdController sharedAdController] setCurrentPlacement:COLORAdFrameworkPlacementMainMenu];
 }
 
 #pragma mark - exemplary implementation
@@ -39,26 +63,18 @@
 
 -(IBAction)showDiscoveryCenter:(id)sender {
     [self showAdForPlacement:COLORAdFrameworkPlacementMainMenu];
-    
-    [[COLORAdController sharedAdController] setCurrentPlacement:COLORAdFrameworkPlacementMainMenu];
 }
 
 -(IBAction)showInterstitial:(id)sender {
     [self showAdForPlacement:COLORAdFrameworkPlacementStageFailed];
-    
-    [[COLORAdController sharedAdController] setCurrentPlacement:COLORAdFrameworkPlacementMainMenu];
 }
 
 -(IBAction)showFullscreenAd:(id)sender {
     [self showAdForPlacement:COLORAdFrameworkPlacementStageOpen];
-    
-    [[COLORAdController sharedAdController] setCurrentPlacement:COLORAdFrameworkPlacementMainMenu];
 }
 
 -(IBAction)showVideoAd:(id)sender {
     [self showAdForPlacement:COLORAdFrameworkPlacementLevelUp];
-    
-    [[COLORAdController sharedAdController] setCurrentPlacement:COLORAdFrameworkPlacementMainMenu];
 }
 
 -(void)showAdForPlacement:(NSString*)placement {
@@ -113,5 +129,10 @@
 
 }
 
+#pragma mark - virtual currency support
+
+-(void)didGetCurrency:(NSDictionary *)details {
+    NSLog(@"didGetCurrency: %@", details);
+}
 
 @end

@@ -19,34 +19,102 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="demo-app-bg" translatesAutoresizingMaskIntoConstraints="NO" id="VXt-jj-def">
                                 <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LiX-Vf-SRi">
-                                <rect key="frame" x="810" y="894" width="300" height="86"/>
-                                <color key="backgroundColor" red="0.76862745098039209" green="0.5725490196078431" blue="0.85882352941176465" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="hgp-gN-u2G"/>
-                                    <constraint firstAttribute="height" constant="86" id="wER-Gw-TzR"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="27"/>
-                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                <state key="normal" title="Random Ad"/>
-                                <connections>
-                                    <action selector="showRandomAd" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="lij-Gn-byI"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="e9S-QE-DRn">
+                                <rect key="frame" x="73" y="894" width="1775" height="86"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZPG-AO-qLX">
+                                        <rect key="frame" x="0.0" y="0.0" width="295" height="86"/>
+                                        <color key="backgroundColor" red="0.89019607840000003" green="0.31372549020000001" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="295" id="mIv-Fe-Peh"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="27"/>
+                                        <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                        <state key="normal" title="Discovery Center"/>
+                                        <connections>
+                                            <action selector="showDiscoveryCenter" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="IeG-eo-M8G"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j3S-yd-v7R">
+                                        <rect key="frame" x="365" y="0.0" width="300" height="86"/>
+                                        <color key="backgroundColor" red="0.99607843139999996" green="0.7725490196" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="86" id="DNo-V7-4wR"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="gWt-bz-mwN"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="27"/>
+                                        <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                        <state key="normal" title="Game Trailer"/>
+                                        <connections>
+                                            <action selector="showInterstitial" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="4lg-Fx-rUr"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N3f-dn-JBc">
+                                        <rect key="frame" x="735" y="0.0" width="300" height="86"/>
+                                        <color key="backgroundColor" red="0.68627450980000004" green="0.84313725490000002" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="86" id="UHE-bZ-jbq"/>
+                                            <constraint firstAttribute="height" constant="86" id="cdr-PL-a9J"/>
+                                            <constraint firstAttribute="width" constant="300" id="jgC-Hu-bcg"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="pLG-XM-Rla"/>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="300" id="tPK-mi-igt"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="27"/>
+                                        <inset key="contentEdgeInsets" minX="20" minY="20" maxX="20" maxY="20"/>
+                                        <state key="normal" title="Brand Engagement"/>
+                                        <connections>
+                                            <action selector="showFullscreenAd" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="euN-8n-3GI"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VXX-Bj-kid">
+                                        <rect key="frame" x="1105" y="0.0" width="300" height="86"/>
+                                        <color key="backgroundColor" red="0.47450980390000003" green="0.80000000000000004" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="0wv-ri-gXm"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="27"/>
+                                        <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                        <state key="normal" title="Video"/>
+                                        <connections>
+                                            <action selector="showVideoAd" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="hgT-re-tzk"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LiX-Vf-SRi">
+                                        <rect key="frame" x="1475" y="0.0" width="300" height="86"/>
+                                        <color key="backgroundColor" red="0.76862745098039209" green="0.5725490196078431" blue="0.85882352941176465" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="hgp-gN-u2G"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="sN5-1X-T3v"/>
+                                            <constraint firstAttribute="height" constant="86" id="wER-Gw-TzR"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="27"/>
+                                        <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                        <state key="normal" title="Random Ad"/>
+                                        <connections>
+                                            <action selector="showRandomAd" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="lij-Gn-byI"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="VXt-jj-def" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="1kG-Sy-oa7"/>
                             <constraint firstAttribute="trailing" secondItem="VXt-jj-def" secondAttribute="trailing" id="4a2-Ew-IRc"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="e9S-QE-DRn" secondAttribute="bottom" constant="100" id="EbY-ss-JTC"/>
+                            <constraint firstItem="e9S-QE-DRn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eX0-zz-Mmv"/>
                             <constraint firstAttribute="bottom" secondItem="VXt-jj-def" secondAttribute="bottom" id="gmx-AZ-05Y"/>
-                            <constraint firstItem="LiX-Vf-SRi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iO8-Xy-myv"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="LiX-Vf-SRi" secondAttribute="bottom" constant="100" id="jix-bs-3O4"/>
                             <constraint firstItem="VXt-jj-def" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="trb-DJ-LRi"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="stackView" destination="e9S-QE-DRn" id="Zcg-u3-2OX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="672" y="612"/>
         </scene>
     </scenes>
     <resources>
