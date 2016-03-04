@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
   s.module_name = "COLORAdFramework"
   s.platform     = :tvos, "9.0"
 
-  #s.source       = { :git => "https://github.com/color-tv/Color-tvOS-SDK.git", :tag => "#{s.version.to_s}" }
+  s.source       = { :git => "https://github.com/color-tv/Color-tvOS-SDK.git", :tag => "#{s.version.to_s}" }
 
   s.vendored_frameworks = "ColorTV Framework/COLORAdFramework.framework"
   s.public_header_files = "ColorTV Framework/COLORAdFramework.framework/Headers/*.h"
