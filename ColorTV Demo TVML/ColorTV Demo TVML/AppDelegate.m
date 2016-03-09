@@ -10,13 +10,38 @@
 
 @interface AppDelegate ()
 
+@property (nonatomic, strong) NSURL *rootURL;
+
 @end
 
 @implementation AppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    
+    TVApplicationControllerContext *appContext = [[TVApplicationControllerContext alloc] init];
+    
+//    NSURL *javaScriptURL = [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"js"];
+    appContext.javaScriptApplicationURL = [[NSBundle mainBundle] URLForResource:@"application" withExtension:@"js" subdirectory:@"client"];
+    NSLog(@"::>> Main JS URL: %@", appContext.javaScriptApplicationURL);
+    self.rootURL = [appContext.javaScriptApplicationURL URLByDeletingLastPathComponent];
+    
+    NSMutableDictionary *dict = [launchOptions mutableCopy];
+    if(!dict) {
+        dict = [[NSMutableDictionary alloc] initWithCapacity:1];
+    }
+    [dict setObject:[self.rootURL absoluteString] forKey:@"BASEURL"];
+
+    appContext.launchOptions = dict;
+    
+    NSLog(@"::>> Launch options: %@", appContext.launchOptions);
+
+    self.appController = [[TVApplicationController alloc] initWithContext:appContext window:self.window delegate:self];
+    
+//    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
