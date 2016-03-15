@@ -4,10 +4,6 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>.DS_Store</key>
-		<data>
-		DAhHvuqwKNk6USkcwE9SWdtaoEg=
-		</data>
 		<key>AdGridCellBg.png</key>
 		<data>
 		iDcQFHfA6bYKHWU2pSuGj3xQ+6g=
@@ -42,39 +38,39 @@
 		</data>
 		<key>COLORAdStoryboard.storyboardc/4Or-ra-RmM-view-4px-gF-Bqu.nib</key>
 		<data>
-		Q+ZbRslMlhCeYM5sBBO9v6/1d3o=
+		wBr3Gg+T1SJhJm2GAgnp/Lskde8=
 		</data>
 		<key>COLORAdStoryboard.storyboardc/BMGAdFullscreenViewController.nib</key>
 		<data>
-		SzerdLYIF7He7/itIj1ENsywhNE=
+		b5LURiehg6sCuUlDAEBCOWukpEw=
 		</data>
 		<key>COLORAdStoryboard.storyboardc/BMGAdGridViewController.nib</key>
 		<data>
-		iURBlVNCwNlL5s/bcmOslJdxzjw=
+		tzpHphBTJgC/PZJ+sgc6fggLE2A=
 		</data>
 		<key>COLORAdStoryboard.storyboardc/BMGAdSingleViewController.nib</key>
 		<data>
-		55GIdO2vrM9F1Nx12Dq9KFbt9rE=
+		Yd9OKf6W21Ix0eVetqOB6GpoUSc=
 		</data>
 		<key>COLORAdStoryboard.storyboardc/FormViewController.nib</key>
 		<data>
-		8fmkiAXYCVHY8e+QsRYE0wP8ZuA=
+		2NlG0k0LXwc9eE7mTgr922/+eeg=
 		</data>
 		<key>COLORAdStoryboard.storyboardc/Info.plist</key>
 		<data>
-		itzCgS5DA5d+dpO5fithjxhpy/g=
+		3MiY1eiI1M7VoA4uFZf2yQHn4R0=
 		</data>
 		<key>COLORAdStoryboard.storyboardc/UsW-13-atM-view-UJC-bX-fjZ.nib</key>
 		<data>
-		J26oWXZj0TO3AX905e6/BPZQFh0=
+		lHTfIWUO9azaJJLPeGTXkyYe4r0=
 		</data>
 		<key>COLORAdStoryboard.storyboardc/d8J-YW-9cs-view-DtQ-i0-EhW.nib</key>
 		<data>
-		WEKkmBonl3ayinM5dd+74kbEkfg=
+		LEubTxYaSeHYv9yiROzbXUcCRjs=
 		</data>
 		<key>COLORAdStoryboard.storyboardc/qm2-jj-vfJ-view-Vdj-WR-dza.nib</key>
 		<data>
-		yQruagDrYkj9gKtJnX7DnGRExKA=
+		IW8zLi3s3o1kOOmuIyqvexJD7Pg=
 		</data>
 		<key>Check_mark72.png</key>
 		<data>
@@ -102,7 +98,7 @@
 		</data>
 		<key>Headers/COLORConstans.h</key>
 		<data>
-		Szyj2roluo8AYSnpPHuAQex5T+4=
+		HCaPfUNqOACWk215afxTw6JXKak=
 		</data>
 		<key>Headers/COLORUserProfile.h</key>
 		<data>
@@ -110,7 +106,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		WedajtsWVMFAwFbQ7b15gMLG73E=
+		BznTpocZ1yeGWBr5/28Y6yG2gmc=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -193,39 +189,39 @@
 		</data>
 		<key>COLORAdStoryboard.storyboardc/4Or-ra-RmM-view-4px-gF-Bqu.nib</key>
 		<data>
-		Q+ZbRslMlhCeYM5sBBO9v6/1d3o=
+		wBr3Gg+T1SJhJm2GAgnp/Lskde8=
 		</data>
 		<key>COLORAdStoryboard.storyboardc/BMGAdFullscreenViewController.nib</key>
 		<data>
-		SzerdLYIF7He7/itIj1ENsywhNE=
+		b5LURiehg6sCuUlDAEBCOWukpEw=
 		</data>
 		<key>COLORAdStoryboard.storyboardc/BMGAdGridViewController.nib</key>
 		<data>
-		iURBlVNCwNlL5s/bcmOslJdxzjw=
+		tzpHphBTJgC/PZJ+sgc6fggLE2A=
 		</data>
 		<key>COLORAdStoryboard.storyboardc/BMGAdSingleViewController.nib</key>
 		<data>
-		55GIdO2vrM9F1Nx12Dq9KFbt9rE=
+		Yd9OKf6W21Ix0eVetqOB6GpoUSc=
 		</data>
 		<key>COLORAdStoryboard.storyboardc/FormViewController.nib</key>
 		<data>
-		8fmkiAXYCVHY8e+QsRYE0wP8ZuA=
+		2NlG0k0LXwc9eE7mTgr922/+eeg=
 		</data>
 		<key>COLORAdStoryboard.storyboardc/Info.plist</key>
 		<data>
-		itzCgS5DA5d+dpO5fithjxhpy/g=
+		3MiY1eiI1M7VoA4uFZf2yQHn4R0=
 		</data>
 		<key>COLORAdStoryboard.storyboardc/UsW-13-atM-view-UJC-bX-fjZ.nib</key>
 		<data>
-		J26oWXZj0TO3AX905e6/BPZQFh0=
+		lHTfIWUO9azaJJLPeGTXkyYe4r0=
 		</data>
 		<key>COLORAdStoryboard.storyboardc/d8J-YW-9cs-view-DtQ-i0-EhW.nib</key>
 		<data>
-		WEKkmBonl3ayinM5dd+74kbEkfg=
+		LEubTxYaSeHYv9yiROzbXUcCRjs=
 		</data>
 		<key>COLORAdStoryboard.storyboardc/qm2-jj-vfJ-view-Vdj-WR-dza.nib</key>
 		<data>
-		yQruagDrYkj9gKtJnX7DnGRExKA=
+		IW8zLi3s3o1kOOmuIyqvexJD7Pg=
 		</data>
 		<key>Check_mark72.png</key>
 		<data>
@@ -253,7 +249,7 @@
 		</data>
 		<key>Headers/COLORConstans.h</key>
 		<data>
-		Szyj2roluo8AYSnpPHuAQex5T+4=
+		HCaPfUNqOACWk215afxTw6JXKak=
 		</data>
 		<key>Headers/COLORUserProfile.h</key>
 		<data>

@@ -16,6 +16,7 @@ extern NSString * _Nonnull const COLORAdFrameworkNotificationDidGetCurrency;
 
 #pragma mark General
 extern NSString * _Nonnull const COLORAdFrameworkBundleIdentifier;
+extern NSString * _Nonnull const COLORAdFrameworkApiBaseURL;
 
 #pragma mark App Placement
 extern NSString * _Nonnull const COLORAdFrameworkPlacementAppLaunch;

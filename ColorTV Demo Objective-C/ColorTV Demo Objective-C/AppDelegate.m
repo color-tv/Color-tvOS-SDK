@@ -20,6 +20,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+    [COLORAdFrameworkLogger setDebugLevel:COLORAdFrameworkDebugLevelInfo];
+    
     [[COLORAdController sharedAdController] startWithAppIdentifier:@"566dbd1a326aeb750132fdfb"];
     
     return YES;
