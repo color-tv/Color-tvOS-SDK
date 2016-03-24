@@ -85,6 +85,7 @@
         
         if(!error && vc) {
             vc.adCompleted = ^{
+                NSLog(@"::>> AdCompleted callback!!!!! ----------");
                 dispatch_async(dispatch_get_main_queue(), ^{
                     //[self.navigationController popViewControllerAnimated:YES];
                     [self dismissViewControllerAnimated:YES completion:^{
@@ -127,6 +128,16 @@
         } completion:nil];
     }
 
+}
+
+#pragma mark - button state updates
+
+-(IBAction)buttonPressed:(UIButton*)btn {
+    NSLog(@"::>> btn pressed");
+}
+
+-(IBAction)buttonReleased:(UIButton*)btn {
+    NSLog(@"::>> btn released");
 }
 
 #pragma mark - virtual currency support

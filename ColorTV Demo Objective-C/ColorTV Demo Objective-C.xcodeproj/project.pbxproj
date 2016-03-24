@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		176590CD1CA48D5E00243926 /* COLORDemoButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 176590CC1CA48D5E00243926 /* COLORDemoButton.m */; };
 		CBF73A861C81039600C599A3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CBF73A851C81039600C599A3 /* main.m */; };
 		CBF73A891C81039600C599A3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CBF73A881C81039600C599A3 /* AppDelegate.m */; };
 		CBF73A8C1C81039600C599A3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBF73A8B1C81039600C599A3 /* ViewController.m */; };
@@ -51,6 +52,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		176590CB1CA48D5E00243926 /* COLORDemoButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COLORDemoButton.h; sourceTree = "<group>"; };
+		176590CC1CA48D5E00243926 /* COLORDemoButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COLORDemoButton.m; sourceTree = "<group>"; };
 		CBF73A811C81039600C599A3 /* ColorTV Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ColorTV Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBF73A851C81039600C599A3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CBF73A871C81039600C599A3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -120,6 +123,8 @@
 		CBF73A831C81039600C599A3 /* ColorTV Demo Objective-C */ = {
 			isa = PBXGroup;
 			children = (
+				176590CB1CA48D5E00243926 /* COLORDemoButton.h */,
+				176590CC1CA48D5E00243926 /* COLORDemoButton.m */,
 				CBF73AB81C81054B00C599A3 /* demo-app-bg.png */,
 				CBF73A871C81039600C599A3 /* AppDelegate.h */,
 				CBF73A881C81039600C599A3 /* AppDelegate.m */,
@@ -227,7 +232,7 @@
 				TargetAttributes = {
 					CBF73A801C81039600C599A3 = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = MRE2S3DP28;
+						DevelopmentTeam = RW6DR85M92;
 					};
 					CBF73A961C81039600C599A3 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -291,6 +296,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				176590CD1CA48D5E00243926 /* COLORDemoButton.m in Sources */,
 				CBF73A8C1C81039600C599A3 /* ViewController.m in Sources */,
 				CBF73A891C81039600C599A3 /* AppDelegate.m in Sources */,
 				CBF73A861C81039600C599A3 /* main.m in Sources */,
@@ -433,7 +439,7 @@
 				);
 				INFOPLIST_FILE = "ColorTV Demo Objective-C/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.colortv.ColorTV-Demo-Objective-C";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.colortv.Demo-Objective-C";
 				PRODUCT_NAME = "ColorTV Demo";
 				PROVISIONING_PROFILE = "";
 			};
@@ -452,7 +458,7 @@
 				);
 				INFOPLIST_FILE = "ColorTV Demo Objective-C/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.colortv.ColorTV-Demo-Objective-C";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.colortv.Demo-Objective-C";
 				PRODUCT_NAME = "ColorTV Demo";
 				PROVISIONING_PROFILE = "";
 			};
@@ -525,6 +531,7 @@
 				CBF73AAD1C81039600C599A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CBF73AAE1C81039600C599A3 /* Build configuration list for PBXNativeTarget "ColorTV Demo Objective-CTests" */ = {
 			isa = XCConfigurationList;
@@ -533,6 +540,7 @@
 				CBF73AB01C81039600C599A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CBF73AB11C81039600C599A3 /* Build configuration list for PBXNativeTarget "ColorTV Demo Objective-CUITests" */ = {
 			isa = XCConfigurationList;
@@ -541,6 +549,7 @@
 				CBF73AB31C81039600C599A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
