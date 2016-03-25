@@ -28,9 +28,11 @@
     
     for (UIView *view in self.view.subviews) {
         if([view isKindOfClass:[UIButton class]]) {
+    
             view.layer.cornerRadius = 8.0f;
         }
     }
+
 }
 
 -(void)viewDidAppear:(BOOL)animated {
@@ -48,6 +50,13 @@
     
     //report current placement. You can call it from time to time when you believe it is important to notify our server about state of your app.
     [[COLORAdController sharedAdController] setCurrentPlacement:COLORAdFrameworkPlacementMainMenu];
+    
+    [self setNeedsFocusUpdate];
+    [self updateFocusIfNeeded];
+}
+
+-(UIView*)preferredFocusedView {
+    return self.view.subviews[3];
 }
 
 #pragma mark - exemplary implementation
@@ -115,7 +124,7 @@
             context.nextFocusedView.layer.shadowColor = [[UIColor blackColor] CGColor];
             context.nextFocusedView.layer.shadowOpacity = 0.3f;
             context.nextFocusedView.layer.shadowRadius = 15.0f;
-            context.nextFocusedView.layer.shadowOffset = CGSizeMake(20.0f, 20.0f);
+            context.nextFocusedView.layer.shadowOffset = CGSizeMake(0.0f, 20.0f);
         } completion:nil];
     }
 
@@ -128,16 +137,6 @@
         } completion:nil];
     }
 
-}
-
-#pragma mark - button state updates
-
--(IBAction)buttonPressed:(UIButton*)btn {
-    NSLog(@"::>> btn pressed");
-}
-
--(IBAction)buttonReleased:(UIButton*)btn {
-    NSLog(@"::>> btn released");
 }
 
 #pragma mark - virtual currency support
