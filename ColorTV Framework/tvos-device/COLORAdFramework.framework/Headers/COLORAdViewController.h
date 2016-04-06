@@ -20,4 +20,6 @@ typedef void(^COLORPreloadedAdViewControllerCompletion)(NSError * _Nullable erro
 
 @property (nonatomic, copy) void (^_Nullable adCompleted)();
 
+-(void)closeAd;
+
 @end

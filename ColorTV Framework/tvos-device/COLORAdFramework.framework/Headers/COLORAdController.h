@@ -36,4 +36,6 @@
 -(void)adViewControllerForPlacement:(NSString* _Nonnull)placenemt withCompletion:(COLORAdFrameworkAdRequestCompletion _Nonnull)completion;
 -(void)adViewControllerOfType:(COLORAdFrameworkAdType)type withCompletion:(COLORAdFrameworkAdRequestCompletion _Nonnull)completion;
 
+-(void)checkAvailableCurrencyAfterTimeInterval:(NSTimeInterval)timeInterval;
+
 @end
