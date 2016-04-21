@@ -4,6 +4,10 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>AdGridAppStore.png</key>
+		<data>
+		ujt6kPINq7EeOzXbOXEX0XVsjIE=
+		</data>
 		<key>AdGridCellBg.png</key>
 		<data>
 		iDcQFHfA6bYKHWU2pSuGj3xQ+6g=
@@ -38,39 +42,39 @@
 		</data>
 		<key>COLORAdStoryboard.storyboardc/4Or-ra-RmM-view-4px-gF-Bqu.nib</key>
 		<data>
-		mKeICulHyMW46cEX5rbscuUH4d8=
+		W9LQHUzw87QxxlfhZGM2IcSNI7Y=
 		</data>
 		<key>COLORAdStoryboard.storyboardc/BMGAdFullscreenViewController.nib</key>
 		<data>
-		lgDBxB5dAz76b+cAEt92KQr3Cc8=
+		Z7XXlFmqN9XDzBPX01N6Hp/grV8=
 		</data>
 		<key>COLORAdStoryboard.storyboardc/BMGAdGridViewController.nib</key>
 		<data>
-		e8GxASuKLdGoerLw5T8bUxwtQcY=
+		gPF/8ZbEkOKU1C6DNY0jfCUfbwE=
 		</data>
 		<key>COLORAdStoryboard.storyboardc/BMGAdSingleViewController.nib</key>
 		<data>
-		N3JGQ1VKfv22UMdSyeuBXPcqw9g=
+		BUN2JGj/uZXb++b6XjiW0LFkZx0=
 		</data>
 		<key>COLORAdStoryboard.storyboardc/FormViewController.nib</key>
 		<data>
-		hqAjh++09+Qr6qBPQSa0Lswqp0k=
+		k1WoWmTdZUjMxSVHQMd+1Q3g2E8=
 		</data>
 		<key>COLORAdStoryboard.storyboardc/Info.plist</key>
 		<data>
-		itzCgS5DA5d+dpO5fithjxhpy/g=
+		3MiY1eiI1M7VoA4uFZf2yQHn4R0=
 		</data>
 		<key>COLORAdStoryboard.storyboardc/UsW-13-atM-view-UJC-bX-fjZ.nib</key>
 		<data>
-		R7AfKjbKNO5IgadnV9X5QmOl51I=
+		mUC+QY/8BFNF4njoBIRjKqGJcco=
 		</data>
 		<key>COLORAdStoryboard.storyboardc/d8J-YW-9cs-view-DtQ-i0-EhW.nib</key>
 		<data>
-		q5uNinRBoAGy7ip4NE4wgoNBjI4=
+		7NdGrc+j8UbGKlmVi+it7+iEhyw=
 		</data>
 		<key>COLORAdStoryboard.storyboardc/qm2-jj-vfJ-view-Vdj-WR-dza.nib</key>
 		<data>
-		4TSWuCuBJEmM/NOjLoDbndC8roM=
+		c+waQk/Lti9miEiSmhWRo+6dpdc=
 		</data>
 		<key>Check_mark72.png</key>
 		<data>
@@ -94,7 +98,7 @@
 		</data>
 		<key>Headers/COLORAdViewController.h</key>
 		<data>
-		CPh4mKhrdSBqqY8Pt3ZqRzdOksw=
+		4+Tw3EEjHgp3L8Zo7DHY+rXvEKY=
 		</data>
 		<key>Headers/COLORConstans.h</key>
 		<data>
@@ -106,7 +110,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		FeSWXDnE76bghTsa1NrNySp7UWI=
+		lETct64PGx6IFHRYzl5VP5Xy5v0=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -155,6 +159,17 @@
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>AdGridAppStore.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			ujt6kPINq7EeOzXbOXEX0XVsjIE=
+			</data>
+			<key>hash2</key>
+			<data>
+			lKrTlPbVu88HWZA7r9d3hJo4DvtPiIyRl6V9BoLEzP4=
+			</data>
+		</dict>
 		<key>AdGridCellBg.png</key>
 		<dict>
 			<key>hash</key>
@@ -247,99 +262,99 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			mKeICulHyMW46cEX5rbscuUH4d8=
+			W9LQHUzw87QxxlfhZGM2IcSNI7Y=
 			</data>
 			<key>hash2</key>
 			<data>
-			anWu8ke1psCe7o5IhIUHNFfNJohSAQh+E1aF7MBFE4Y=
+			4P/3x/+WAeIUDzps7v3sYc7P3D3K4+tMaTzvngrQ8bs=
 			</data>
 		</dict>
 		<key>COLORAdStoryboard.storyboardc/BMGAdFullscreenViewController.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			lgDBxB5dAz76b+cAEt92KQr3Cc8=
+			Z7XXlFmqN9XDzBPX01N6Hp/grV8=
 			</data>
 			<key>hash2</key>
 			<data>
-			btG944fpAvdaBRJ8gzfhh1Ol5V4piTjEVHFOvVW2m5Q=
+			uQ8wEM6ohNn0vfILVfv1UkeirQr935i62rPkpOd5B6A=
 			</data>
 		</dict>
 		<key>COLORAdStoryboard.storyboardc/BMGAdGridViewController.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			e8GxASuKLdGoerLw5T8bUxwtQcY=
+			gPF/8ZbEkOKU1C6DNY0jfCUfbwE=
 			</data>
 			<key>hash2</key>
 			<data>
-			JRMYGR0fq+K5QXyfQ1Cu0w9KvuZKIDS9T3y2q4prfe4=
+			8K/lou9V9S/v6sWOs80+vKCShI6YBJHRl8bO/1cRydA=
 			</data>
 		</dict>
 		<key>COLORAdStoryboard.storyboardc/BMGAdSingleViewController.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			N3JGQ1VKfv22UMdSyeuBXPcqw9g=
+			BUN2JGj/uZXb++b6XjiW0LFkZx0=
 			</data>
 			<key>hash2</key>
 			<data>
-			zXsIH8kN9ELttODzL7NVa+xBWj15o+ndjBo0CsNcGMQ=
+			mxYNsTUvEtayI3PBSo3Rn3dnvQhZDH4+H7IHrzoq7lM=
 			</data>
 		</dict>
 		<key>COLORAdStoryboard.storyboardc/FormViewController.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			hqAjh++09+Qr6qBPQSa0Lswqp0k=
+			k1WoWmTdZUjMxSVHQMd+1Q3g2E8=
 			</data>
 			<key>hash2</key>
 			<data>
-			qPVdOGq6QedXYiK4qN/glpxV+7G/YCQE+cywGcZ4hnU=
+			W3r9eYfha/YdfLSi3XGmFLkh9bFVazlb07csPKePmOk=
 			</data>
 		</dict>
 		<key>COLORAdStoryboard.storyboardc/Info.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			itzCgS5DA5d+dpO5fithjxhpy/g=
+			3MiY1eiI1M7VoA4uFZf2yQHn4R0=
 			</data>
 			<key>hash2</key>
 			<data>
-			05iDvMFLlvR+4K9TNuTLjiG8Oymwaus0GB8xRw+TtUo=
+			MU6XD4Eu8AsbAbD52XK0k/Qkb1UQNM4hBAAZMewD13A=
 			</data>
 		</dict>
 		<key>COLORAdStoryboard.storyboardc/UsW-13-atM-view-UJC-bX-fjZ.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			R7AfKjbKNO5IgadnV9X5QmOl51I=
+			mUC+QY/8BFNF4njoBIRjKqGJcco=
 			</data>
 			<key>hash2</key>
 			<data>
-			27bOyuKKrw7pGDlkmoKcebbrK/yuOtBdB3FzpgA8/Gg=
+			fvt803xYAQQf61iT+3woew9k/gEirDLc7jdqZlqrQlo=
 			</data>
 		</dict>
 		<key>COLORAdStoryboard.storyboardc/d8J-YW-9cs-view-DtQ-i0-EhW.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			q5uNinRBoAGy7ip4NE4wgoNBjI4=
+			7NdGrc+j8UbGKlmVi+it7+iEhyw=
 			</data>
 			<key>hash2</key>
 			<data>
-			9uqI1FUM49KJIrOzDBYJ21lZKXMnqJxyfnippJSuIe8=
+			gBsF0VBxtIHS9ke1SAXSH9zhwCLHM147EoroKcrQ/EQ=
 			</data>
 		</dict>
 		<key>COLORAdStoryboard.storyboardc/qm2-jj-vfJ-view-Vdj-WR-dza.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			4TSWuCuBJEmM/NOjLoDbndC8roM=
+			c+waQk/Lti9miEiSmhWRo+6dpdc=
 			</data>
 			<key>hash2</key>
 			<data>
-			LVD/idk81lF2HsztF8AED3XbPDDE7b8BQrAwoyP3rQE=
+			gINPKbxCfVQVMAphnBnGsKXtGvbEHx89sEFETk6JnKg=
 			</data>
 		</dict>
 		<key>Check_mark72.png</key>
@@ -401,11 +416,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			CPh4mKhrdSBqqY8Pt3ZqRzdOksw=
+			4+Tw3EEjHgp3L8Zo7DHY+rXvEKY=
 			</data>
 			<key>hash2</key>
 			<data>
-			mbMBXPMgsVjxDH7RlbiprmakmyfHos/vU+0YLNceNF8=
+			Dx6F8LAeWnWC+j8eUzV1TAzuaVkb2t3smmtUV9llc7k=
 			</data>
 		</dict>
 		<key>Headers/COLORConstans.h</key>
