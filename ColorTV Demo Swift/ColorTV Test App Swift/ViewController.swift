@@ -13,6 +13,7 @@ import COLORAdFramework
 class ViewController: UIViewController {
 
     @IBOutlet weak var stackView: UIStackView!
+    var storedAd: COLORAdViewController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -74,6 +75,8 @@ class ViewController: UIViewController {
             dispatch_async(dispatch_get_main_queue()) {
                 self.presentViewController(vc, animated: true, completion: nil)
             }
+        }, expirationHandler: { (expiredVc) in
+            print("Ad view controller \(expiredVc) has expired")
         })
     }
 
