@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17E035CA1CF4A28C00C786FC /* COLORAdFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17E035C91CF4A28C00C786FC /* COLORAdFramework.framework */; };
+		17E035CB1CF4A28C00C786FC /* COLORAdFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 17E035C91CF4A28C00C786FC /* COLORAdFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CB5275151C8F23FF002B804A /* client in Resources */ = {isa = PBXBuildFile; fileRef = CB5275141C8F23FF002B804A /* client */; };
 		CB9268B01C873E3400D5E8E4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9268AF1C873E3400D5E8E4 /* main.m */; };
 		CB9268B31C873E3400D5E8E4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9268B21C873E3400D5E8E4 /* AppDelegate.m */; };
@@ -35,7 +37,22 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		17E035CC1CF4A28C00C786FC /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				17E035CB1CF4A28C00C786FC /* COLORAdFramework.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		17E035C91CF4A28C00C786FC /* COLORAdFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = COLORAdFramework.framework; sourceTree = "<group>"; };
 		CB5275141C8F23FF002B804A /* client */ = {isa = PBXFileReference; lastKnownFileType = folder; path = client; sourceTree = "<group>"; };
 		CB9268AB1C873E3400D5E8E4 /* ColorTV Demo TVML.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ColorTV Demo TVML.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB9268AF1C873E3400D5E8E4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -60,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17E035CA1CF4A28C00C786FC /* COLORAdFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +101,7 @@
 		CB9268A21C873E3400D5E8E4 = {
 			isa = PBXGroup;
 			children = (
+				17E035C91CF4A28C00C786FC /* COLORAdFramework.framework */,
 				CB9268AD1C873E3400D5E8E4 /* ColorTV Demo TVML */,
 				CB9268C41C873E3400D5E8E4 /* ColorTV Demo TVMLTests */,
 				CB9268CF1C873E3400D5E8E4 /* ColorTV Demo TVMLUITests */,
@@ -153,6 +172,7 @@
 				CB9268A71C873E3400D5E8E4 /* Sources */,
 				CB9268A81C873E3400D5E8E4 /* Frameworks */,
 				CB9268A91C873E3400D5E8E4 /* Resources */,
+				17E035CC1CF4A28C00C786FC /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -411,6 +431,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "ColorTV Demo TVML/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.colortv.ColorTV-Demo-TVML";
@@ -426,6 +450,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "ColorTV Demo TVML/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.colortv.ColorTV-Demo-TVML";

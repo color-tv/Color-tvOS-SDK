@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 
+@import COLORAdFramework;
+
 @interface AppDelegate ()
 
 @property (nonatomic, strong) NSURL *rootURL;
@@ -22,8 +24,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
     TVApplicationControllerContext *appContext = [[TVApplicationControllerContext alloc] init];
-    
-//    NSURL *javaScriptURL = [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"js"];
+
     appContext.javaScriptApplicationURL = [[NSBundle mainBundle] URLForResource:@"application" withExtension:@"js" subdirectory:@"client"];
     NSLog(@"::>> Main JS URL: %@", appContext.javaScriptApplicationURL);
     self.rootURL = [appContext.javaScriptApplicationURL URLByDeletingLastPathComponent];
@@ -39,10 +40,15 @@
     NSLog(@"::>> Launch options: %@", appContext.launchOptions);
 
     self.appController = [[TVApplicationController alloc] initWithContext:appContext window:self.window delegate:self];
-    
-//    [self.window makeKeyAndVisible];
-    
+
     return YES;
+}
+
+-(void)appController:(TVApplicationController *)appController evaluateAppJavaScriptInContext:(JSContext *)jsContext {
+    [COLORAdFrameworkLogger setDebugLevel:COLORAdFrameworkDebugLevelInfo];
+    [jsContext.globalObject setObject:[COLORAdController class] forKeyedSubscript:@"COLORAdController"];
+    [jsContext.globalObject setObject:[COLORUserProfile class] forKeyedSubscript:@"COLORUserProfile"];
+    
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

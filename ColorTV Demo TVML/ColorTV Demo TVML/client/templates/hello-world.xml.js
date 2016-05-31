@@ -1,4 +1,4 @@
-var Template = function(obj) { console.log("----------"); console.log(obj); return `<?xml version="1.0" encoding="UTF-8" ?>
+var Template = function(obj) { console.log(obj); return `<?xml version="1.0" encoding="UTF-8" ?>
     <document>
         <mainTemplate>
             <title>ColorTV Demo TVML</title>
@@ -12,10 +12,10 @@ var Template = function(obj) { console.log("----------"); console.log(obj); retu
                         <title>Discovery Center</title>
                     </menuItem>
                     <menuItem>
-                        <title>Game Trailer</title>
+                        <title>App Feature</title>
                     </menuItem>
                     <menuItem>
-                        <title>Brand Engagement</title>
+                        <title>Direct Engagement</title>
                     </menuItem>
                     <menuItem>
                         <title>Video</title>
