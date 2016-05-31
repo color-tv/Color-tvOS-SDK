@@ -87,7 +87,7 @@
 }
 
 -(void)showAdForPlacement:(NSString*)placement {
-    [[COLORAdController sharedAdController] adViewControllerForPlacement:placement withCompletion:^(COLORAdViewController * _Nullable vc, NSError * _Nullable error) {
+    [[COLORAdController sharedAdController] adViewControllerForPlacement:placement withCompletion:^(__weak COLORAdViewController * _Nullable vc, NSError * _Nullable error) {
         
         NSLog(@"ViewController: %@", vc);
         NSLog(@"Error: %@", error);
@@ -103,7 +103,7 @@
                 });
             };
             
-            dispatch_async(dispatch_get_main_queue(), ^{
+            dispatch_async(dispatch_get_main_queue(), ^{            
                 [self presentViewController:vc animated:YES completion:^{
                     
                 }];
@@ -111,6 +111,8 @@
             });
             
         }
+    } expirationHandler:^(COLORAdViewController *expiredVc) {
+        NSLog(@"Ad view controller %@ has expired", expiredVc);
     }];
 }
 

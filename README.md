@@ -80,7 +80,7 @@ Remember to import COLORAdFramework module. Add following line of code above cla
 ColorTV offers lot of different types of advertisement which are automatically provided by our server in order to attract you audience. You do not need to care about proper ad and its content, we optimize the best performing content for all of your users. All you need to do is to add a few lines of code and an ad will be displayed wherever and whenever you want.
 
 ```objective-c
-    [[COLORAdController sharedAdController] adViewControllerForPlacement:COLORAdFrameworkPlacementAppLaunch withCompletion:^(COLORAdViewController * _Nullable vc, NSError * _Nullable error) {
+[[COLORAdController sharedAdController] adViewControllerForPlacement:COLORAdFrameworkPlacementAppLaunch withCompletion:^(COLORAdViewController * _Nullable vc, NSError * _Nullable error) {
         if(vc) {
             
             vc.adCompleted = ^{
@@ -96,12 +96,14 @@ ColorTV offers lot of different types of advertisement which are automatically p
             });
         } else {
             NSLog(@"Error: %@", error);
-        }        
+        }
+    } expirationHandler:^(COLORAdViewController * _Nullable expiredVC){
+        //If you kept a reference to COLORAdViewController but haven't shown it yet, you should discard it now
     }];
 ```
 
 ```Swift
-    COLORAdController.sharedAdController().adViewControllerForPlacement(placement, withCompletion:{ (vc , error) in
+        COLORAdController.sharedAdController().adViewControllerForPlacement(placement, withCompletion:{ (vc , error) in
             guard let vc = vc else {
                 print("Failed to initialize ad view controller, error: \(error?.description)")
                 return
@@ -114,6 +116,8 @@ ColorTV offers lot of different types of advertisement which are automatically p
             dispatch_async(dispatch_get_main_queue()) {
                 self.presentViewController(vc, animated: true, completion: nil)
             }
+        }, expirationHandler: { (expiredVc) in
+            //If you kept a reference to COLORAdViewController but haven't shown it yet, you should discard it now
         })
 ```
 
@@ -122,6 +126,8 @@ We understand how imporant user experience is to your app's performance. Nobody 
 Completion block is called when some elements of ad are loaded. It provides you two arguments, `viewController` and `error`. The framework generates `viewController` which is to be displayed in the manner which matches your application's structure. In most cases modal view controller is OK but sometimes navigation view controller or some kind if embedded view controller will be better. It is up to you.
 
 When the ad should no longer be displayed you will be informed and need to define completion block. In the example above that controller is simply dismissed from screen.
+
+You can keep a reference to `viewController` and show it later. However, the ad is valid only for some period of time (about 5-15 minutes). When it becomes invalid, `expirationHandler` is called, so you can discard the reference to `viewController`.
 
 Please note that majority of operations are done on the background threads while interactions with User Interface are only made on the main thread. Remember to use `[NSThread mainThread]` (old style) or main queue from GCD (new style) when interacting with UI.
 
