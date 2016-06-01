@@ -51,6 +51,20 @@ Once complete, you will see the COLORAdFramework in both the **Embedded Binaries
 
 ---
 
+##Adding custom JS classes (TVML only)
+
+Open AppDelegate.m and add function `appController:evaluateAppJavaScriptInContext`. If the function already exists please add following code to the function's body.
+
+```objective-c
+-(void)appController:(TVApplicationController *)appController evaluateAppJavaScriptInContext:(JSContext *)jsContext {
+    [jsContext.globalObject setObject:[COLORAdController class] forKeyedSubscript:@"COLORAdController"];
+    [jsContext.globalObject setObject:[COLORUserProfile class] forKeyedSubscript:@"COLORUserProfile"];
+}
+
+```
+
+---
+
 ##Initializing SDK
 
 Open AppDelegate.m and modify body of function `application:DidFinishLaunchingWithOptions:` with the App ID generated in the dashboard
@@ -63,7 +77,11 @@ Open AppDelegate.m and modify body of function `application:DidFinishLaunchingWi
 COLORAdController.sharedAdController().startWithAppIdentifier("YOUR_APP_ID_HERE");
 ```
 
-Remember to import COLORAdFramework module. Add following line of code above class implementation.
+```JavaScript
+COLORAdController.sharedAdController().startWithAppIdentifier("YOUR_APP_ID_HERE");
+```
+
+Remember to import COLORAdFramework module. Add following line of code above class implementation (If using TVML/TVJS add import declaration to AppDelegate.m.).
 
 ```objective-c
 @import COLORAdFramework;
@@ -121,6 +139,20 @@ ColorTV offers lot of different types of advertisement which are automatically p
         })
 ```
 
+```JavaScript
+COLORAdController.sharedAdController().prepareAdForPlacementWithCompletionAndExpirationHandler("MainManu", function(success) {
+        if(success) {
+            console.log("AD prepared");
+            COLORAdController.sharedAdController().showLastAd();
+        } else {
+            console.log("AD NOT prepared");
+        }
+    }, function() {
+        console.log("AD expired");
+    }
+);
+```
+
 We understand how imporant user experience is to your app's performance. Nobody wants to wait a few seconds to see an advertisement regardless how relevant it's content is, so we developed the method `adViewControllerWithCompletion` for optimal performance. Call `adViewControllerWithCompletion` whenever you think an ad is likely to be shown. We highly reccommend invoking this method in all potential places you will show an ad. By doing this you can decide to either stop or start showing ads at specific placements in your app via our dashboard without pushing updates to your users! 
 
 Completion block is called when some elements of ad are loaded. It provides you two arguments, `viewController` and `error`. The framework generates `viewController` which is to be displayed in the manner which matches your application's structure. In most cases modal view controller is OK but sometimes navigation view controller or some kind if embedded view controller will be better. It is up to you.
@@ -143,6 +175,10 @@ When showing an ad you must provide the context inside your app where you are sh
 
 ```Swift
 COLORAdController.sharedAdController().currentPlacement = COLORAdFrameworkPlacementMainMenu
+```
+
+```JavaScript
+COLORAdController.sharedAdController().setCurrentPlacement("StageOpen");
 ```
 
 The predefined values available as constants whose names start with COLORAdFrameworkPlacement... 
@@ -181,6 +217,20 @@ profile.gender = @"female"; //male or female are expected here
     profile.addKeyword("aviation")
     profile.addKeyword("airplane")
     profile.addKeyword("airport")
+```
+
+```JavaScript
+var userProfile = COLORAdController.sharedAdController().userProfile();
+
+userProfile.reset(); //reset current profile if user is switched in your application.
+
+userProfile.setAge(30);
+userProfile.setGender("female"); //male or female are expected here
+
+//keywords which may characterize your audience. They are used to target ads more effectively.
+userProfile.addKeyword("aviation");
+userProfile.addKeyword("airplane");
+userProfile.addKeyword("airport");
 ```
 
 ---
@@ -234,3 +284,18 @@ func didGetCurrency(details: [NSObject : AnyObject]!) {
     print("didGetCurrency delegate method: \(details)")
 }
 ```
+
+####Currency Handler (JavaScript)
+
+```JavaScript
+COLORAdController.sharedAdController().currencyHandler = function(details) {
+    console.log("::>> currency handler ::<<");
+    console.log("::>> currency type: " + details.currencyType);
+    console.log("::>> currency amount: " + details.currencyAmount);
+    console.log("::>> placement: " + details.placement);
+    console.log("::>> status: " + details.status);
+    console.log("::>> timestamp: " + details.timestamp);
+};
+
+```
+

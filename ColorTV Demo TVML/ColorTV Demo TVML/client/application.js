@@ -18,22 +18,20 @@ App.onLaunch = function(options) {
                         console.log('Error loading hello-world.xml.js');
                         return;
                     }
-                    
-                    var adController = COLORAdController.sharedAdController();
-                    adController.startWithAppIdentifier("566dbd1a326aeb750132fdfb");
-                    adController.setCurrentPlacement("AppLaunch");
+
+                    COLORAdController.sharedAdController().startWithAppIdentifier("566dbd1a326aeb750132fdfb");
+                    COLORAdController.sharedAdController().setCurrentPlacement("AppLaunch");
 
                     
-                    var userProfile = adController.userProfile();
-                    console.log("::>> shared profile: " + userProfile);
-                    adController.userProfile().reset();
-                    adController.userProfile().setAge(30);
-                    adController.userProfile().setGender("female");
-                    adController.userProfile().addKeyword("aviation");
-                    adController.userProfile().addKeyword("airplane");
-                    adController.userProfile().addKeyword("airport");
+                    var userProfile = COLORAdController.sharedAdController().userProfile();
+                    userProfile.reset();
+                    userProfile.setAge(30);
+                    userProfile.setGender("female");
+                    userProfile.addKeyword("aviation");
+                    userProfile.addKeyword("airplane");
+                    userProfile.addKeyword("airport");
 
-                    adController.currencyHandler = function(details) {
+                    COLORAdController.sharedAdController().currencyHandler = function(details) {
                         console.log("::>> currency handler ::<<");
                         console.log("::>> currency type: " + details.currencyType);
                         console.log("::>> currency amount: " + details.currencyAmount);
@@ -42,7 +40,7 @@ App.onLaunch = function(options) {
                         console.log("::>> timestamp: " + details.timestamp);
                     };
 
-                    adController.registerThirdPartyUserIdWithCompletionHandler("jj@colortv.com", function(success) {
+                    COLORAdController.sharedAdController().registerThirdPartyUserIdWithCompletionHandler("jj@colortv.com", function(success) {
                                                          if(success) {
                                                             console.log("Third party user id registered.");
                                                          } else {
@@ -83,10 +81,10 @@ App.onLaunch = function(options) {
                         elements.item(i).addEventListener("select", function(event) {
                             console.log(event + " " + placement);
                                                           
-                                                          adController.prepareAdForPlacementWithCompletionAndExpirationHandler(placement, function(success){
+                                                          COLORAdController.sharedAdController().prepareAdForPlacementWithCompletionAndExpirationHandler(placement, function(success){
                                                                                                           if(success) {
                                                                                                           console.log("AD prepared");
-                                                                                                          adController.showLastAd();
+                                                                                                          COLORAdController.sharedAdController().showLastAd();
                                                                                                           } else {
                                                                                                           console.log("AD NOT prepared");
                                                                                                           }
