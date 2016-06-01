@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "Color-tvOS-SDK"
-  s.version      = "1.3.2"
+  s.version      = "1.4.1"
   s.summary      = "tvOS SDK for the ColorTV Marketing Platform"
 
   s.description  = <<-DESC
@@ -24,6 +24,7 @@ Pod::Spec.new do |s|
 
   s.vendored_frameworks = "ColorTV Framework/COLORAdFramework.framework"
   s.public_header_files = "ColorTV Framework/COLORAdFramework.framework/Headers/*.h"
+  s.source_files = "ColorTV Framework/COLORAdFramework.framework/Headers/*.h"
 
   s.framework  = "AdSupport"
 
