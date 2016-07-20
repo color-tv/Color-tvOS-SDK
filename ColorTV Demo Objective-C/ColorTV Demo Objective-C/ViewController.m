@@ -63,7 +63,9 @@
 
 //Typical implementation within app. Please note that AdViewController should be initiated asynchronously in background and shown when required.
 -(IBAction)showRandomAd:(id)sender {
-    [self showAdForPlacement:COLORAdFrameworkPlacementInAppPurchaseAbandoned];
+    //[self showAdForPlacement:COLORAdFrameworkPlacementInAppPurchaseAbandoned];
+    //TestVideo
+    [self showAdForPlacement:@"TestVideo"];
 }
 
 #pragma mark - presentation functions
@@ -93,8 +95,8 @@
         NSLog(@"Error: %@", error);
         
         if(!error && vc) {
-            vc.adCompleted = ^{
-                NSLog(@"::>> AdCompleted callback!!!!! ----------");
+            vc.adCompleted = ^(BOOL videoWatched){
+                NSLog(@"::>> AdCompleted callback!!!!! ---------- %d", videoWatched);
                 dispatch_async(dispatch_get_main_queue(), ^{
                     //[self.navigationController popViewControllerAnimated:YES];
                     [self dismissViewControllerAnimated:YES completion:^{

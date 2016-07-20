@@ -22,10 +22,10 @@ typedef void(^COLORPreloadedAdViewControllerCompletion)(NSError * _Nullable erro
 @interface COLORAdViewController : UIViewController
 
 @property (nonatomic, weak) COLORAdServerAPI * _Nullable api;
-@property (nonatomic, copy) void (^_Nullable adCompleted)();
+@property (nonatomic, copy) void (^_Nullable adCompleted)(BOOL watched);
 
 @property (nonatomic, readonly) BOOL expired;
 
--(void)closeAd;
+-(void)closeAd:(BOOL)watched;
 
 @end

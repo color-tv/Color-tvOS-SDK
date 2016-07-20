@@ -68,7 +68,7 @@ class ViewController: UIViewController {
                 return
             }
     
-            vc.adCompleted = {
+            vc.adCompleted = { (videoWatched) in
                 self.dismissViewControllerAnimated(true, completion: nil)
             }
     

@@ -101,7 +101,7 @@ ColorTV offers lot of different types of advertisement which are automatically p
 [[COLORAdController sharedAdController] adViewControllerForPlacement:COLORAdFrameworkPlacementAppLaunch withCompletion:^(COLORAdViewController * _Nullable vc, NSError * _Nullable error) {
         if(vc) {
             
-            vc.adCompleted = ^{
+            vc.adCompleted = ^(BOOL videoWatched) {
                 dispatch_async(dispatch_get_main_queue(), ^{
                     [self dismissViewControllerAnimated:YES completion:nil];
                 });
@@ -127,7 +127,7 @@ ColorTV offers lot of different types of advertisement which are automatically p
                 return
             }
     
-            vc.adCompleted = {
+            vc.adCompleted = { (videoWatched) in
                 self.dismissViewControllerAnimated(true, completion: nil)
             }
     
@@ -140,7 +140,7 @@ ColorTV offers lot of different types of advertisement which are automatically p
 ```
 
 ```JavaScript
-COLORAdController.sharedAdController().prepareAdForPlacementWithCompletionAndExpirationHandler("MainManu", function(success) {
+COLORAdController.sharedAdController().prepareAdForPlacementWithCompletionAndExpirationHandler("MainMenu", function(success) {
         if(success) {
             console.log("AD prepared");
             COLORAdController.sharedAdController().showLastAd();
