@@ -63,9 +63,7 @@
 
 //Typical implementation within app. Please note that AdViewController should be initiated asynchronously in background and shown when required.
 -(IBAction)showRandomAd:(id)sender {
-    //[self showAdForPlacement:COLORAdFrameworkPlacementInAppPurchaseAbandoned];
-    //TestVideo
-    [self showAdForPlacement:@"TestVideo"];
+    [self showAdForPlacement:COLORAdFrameworkPlacementInAppPurchaseAbandoned];
 }
 
 #pragma mark - presentation functions
@@ -73,19 +71,61 @@
 //The code placed below is written only for presentation purposes. Please note that developer should not choose type of ad shown based on particular placement mark. It is very unlikely such placement will be available for your application.
 
 -(IBAction)showDiscoveryCenter:(id)sender {
-    [self showAdForPlacement:COLORAdFrameworkPlacementMainMenu];
+    [self showAdForPlacement:@"DemoAppWall"];
 }
 
 -(IBAction)showInterstitial:(id)sender {
-    [self showAdForPlacement:COLORAdFrameworkPlacementStageFailed];
+    [self showAdForPlacement:@"DemoInterstitial" andId:781];
 }
 
 -(IBAction)showFullscreenAd:(id)sender {
-    [self showAdForPlacement:COLORAdFrameworkPlacementStageOpen];
+    [self showAdForPlacement:COLORAdFrameworkPlacementStageOpen andId:774];
+}
+
+-(IBAction)showFullscreenAd2:(id)sender {
+    [self showAdForPlacement:COLORAdFrameworkPlacementStageOpen andId:736];
+}
+
+-(IBAction)showFullscreenAd3:(id)sender {
+    [self showAdForPlacement:COLORAdFrameworkPlacementStageOpen andId:749];
+}
+
+-(IBAction)showFullscreenAd4:(id)sender {
+    [self showAdForPlacement:COLORAdFrameworkPlacementStageOpen andId:81];
 }
 
 -(IBAction)showVideoAd:(id)sender {
-    [self showAdForPlacement:COLORAdFrameworkPlacementLevelUp];
+    [self showAdForPlacement:@"DemoVideo"];
+}
+
+-(void)showAdForPlacement:(NSString*)placement andId:(NSUInteger)identifier {
+    [[COLORAdController sharedAdController] adViewControllerForId:(NSUInteger)identifier andPlacement:placement withCompletion:^(__weak COLORAdViewController * _Nullable vc, NSError * _Nullable error) {
+        
+        NSLog(@"ViewController: %@", vc);
+        NSLog(@"Error: %@", error);
+        
+        if(!error && vc) {
+            vc.adCompleted = ^(BOOL videoWatched){
+                NSLog(@"::>> AdCompleted callback!!!!! ---------- %d", videoWatched);
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    //[self.navigationController popViewControllerAnimated:YES];
+                    [self dismissViewControllerAnimated:YES completion:^{
+                        
+                    }];
+                });
+            };
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self presentViewController:vc animated:YES completion:^{
+                    
+                }];
+                //[self.navigationController pushViewController:vc animated:YES];
+            });
+            
+        }
+    } expirationHandler:^(COLORAdViewController *expiredVc) {
+        NSLog(@"Ad view controller %@ has expired", expiredVc);
+    }];
 }
 
 -(void)showAdForPlacement:(NSString*)placement {

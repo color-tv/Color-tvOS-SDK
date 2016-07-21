@@ -55,6 +55,8 @@
 
 -(void)adViewControllerOfType:(COLORAdFrameworkAdType)type withCompletion:(COLORAdFrameworkAdRequestCompletion _Nonnull)completion expirationHandler:(COLORAdFrameworkAdExpirationHandler _Nonnull)expirationHandler;
 
+-(void)adViewControllerForId:(NSUInteger)identifier andPlacement:(NSString* _Nonnull)placement withCompletion:(COLORAdFrameworkAdRequestCompletion _Nonnull)completion expirationHandler:(COLORAdFrameworkAdExpirationHandler _Nonnull)expirationHandler;
+
 -(void)checkAvailableCurrencyAfterTimeInterval:(NSTimeInterval)timeInterval;
 
 @end
