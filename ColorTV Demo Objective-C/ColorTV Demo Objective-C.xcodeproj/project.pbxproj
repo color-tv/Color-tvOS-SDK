@@ -54,6 +54,7 @@
 /* Begin PBXFileReference section */
 		176590CB1CA48D5E00243926 /* COLORDemoButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COLORDemoButton.h; sourceTree = "<group>"; };
 		176590CC1CA48D5E00243926 /* COLORDemoButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COLORDemoButton.m; sourceTree = "<group>"; };
+		178A11561D427D2500EE1345 /* COLORAdControllerPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COLORAdControllerPrivate.h; sourceTree = "<group>"; };
 		CBF73A811C81039600C599A3 /* ColorTV Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ColorTV Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBF73A851C81039600C599A3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CBF73A871C81039600C599A3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -123,6 +124,7 @@
 		CBF73A831C81039600C599A3 /* ColorTV Demo Objective-C */ = {
 			isa = PBXGroup;
 			children = (
+				178A11561D427D2500EE1345 /* COLORAdControllerPrivate.h */,
 				176590CB1CA48D5E00243926 /* COLORDemoButton.h */,
 				176590CC1CA48D5E00243926 /* COLORDemoButton.m */,
 				CBF73AB81C81054B00C599A3 /* demo-app-bg.png */,
