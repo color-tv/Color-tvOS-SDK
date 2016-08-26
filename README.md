@@ -285,6 +285,25 @@ func didGetCurrency(details: [NSObject : AnyObject]!) {
 }
 ```
 
+#####Server response
+Server returns key-value encoded dictionary describing assigned currency.
+
+```
+{
+    currencyAmount = 20;
+    currencyType = "Gold Coins";
+    placement = AppResume;
+    status = true;
+    timestamp = "2016-08-26T13:02:38.004Z";
+}
+```
+
+Currency amount is an unsigned integer. It tells amount of currency assigned.
+Currency type is a string. It returns name of the currency as defined on server through developer's dashboard.
+Placement - placement describing where ad with registered conversion was shown.
+Status - defines that operation is successful.
+Timestamp - Date and time designator (ISO-8601 standard) describing when conversionwas registered on server.
+
 ####Currency Handler (JavaScript)
 
 ```JavaScript
