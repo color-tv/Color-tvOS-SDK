@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-        COLORAdController.sharedAdController().startWithAppIdentifier("566dbd1a326aeb750132fdfb")
+        COLORAdController.sharedAdController().startWithAppIdentifier("08271056-5211-4ae6-bf1c-12e344455383")
         
         return true
     }

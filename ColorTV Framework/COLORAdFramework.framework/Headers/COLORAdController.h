@@ -46,6 +46,12 @@
 
 @property (nonatomic, weak) id<COLORAdControllerDelegate> _Nullable delegate;
 
+-(void)monitorAdsForPlacements:(NSArray * _Nullable)placements;
+
+-(BOOL)isAdReady;
+
+-(COLORAdViewController * _Nullable)ad;
+
 -(void)registerThirdPartyUserId:(NSString* _Nonnull)userId withCompletion:(COLORAdFrameworkRegisterThirdPartyUserIdCompletion _Nonnull)completion;
 
 -(void)adViewControllerForPlacement:(NSString* _Nonnull)placement withCompletion:(COLORAdFrameworkAdRequestCompletion _Nonnull)completion __attribute__((deprecated("use adViewControllerForPlacement:withCompletion:expirationHandler: instead")));

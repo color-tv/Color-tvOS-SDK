@@ -19,13 +19,18 @@ typedef void(^COLORPreloadedAdViewControllerCompletion)(NSError * _Nullable erro
 @class COLORAdItem;
 @class COLORAdServerAPI;
 
+typedef void(^COLORAdViewControllerDidCompleteAd)(BOOL watched);
+
 @interface COLORAdViewController : UIViewController
 
 @property (nonatomic, weak) COLORAdServerAPI * _Nullable api;
-@property (nonatomic, copy) void (^_Nullable adCompleted)(BOOL watched);
+@property (nonatomic, copy) COLORAdViewControllerDidCompleteAd _Nullable adCompleted __attribute__((deprecated("use addCompletionHandler: instead")));
 
 @property (nonatomic, readonly) BOOL expired;
 
 -(void)closeAd:(BOOL)watched;
+
+//-(void)addCompletionHandler:(void (^ _Nonnull)(BOOL watched))completion;
+-(void)addCompletionHandler:(COLORAdViewControllerDidCompleteAd _Nonnull)completion;
 
 @end

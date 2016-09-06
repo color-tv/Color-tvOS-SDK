@@ -67,11 +67,13 @@ class ViewController: UIViewController {
                 print("Failed to initialize ad view controller, error: \(error?.description)")
                 return
             }
-    
-            vc.adCompleted = { (videoWatched) in
-                self.dismissViewControllerAnimated(true, completion: nil)
-            }
-    
+            
+            vc.addCompletionHandler({ (videoWatched) in
+                dispatch_async(dispatch_get_main_queue()) {
+                    self.dismissViewControllerAnimated(true, completion: nil)
+                }
+            })
+
             dispatch_async(dispatch_get_main_queue()) {
                 self.presentViewController(vc, animated: true, completion: nil)
             }
