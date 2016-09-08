@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "Color-tvOS-SDK"
-  s.version      = "1.5.1"
+  s.version      = "1.6.1"
   s.summary      = "tvOS SDK for the ColorTV Marketing Platform"
 
   s.description  = <<-DESC
