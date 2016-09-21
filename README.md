@@ -65,6 +65,12 @@ Open AppDelegate.m and add function `appController:evaluateAppJavaScriptInContex
 
 ---
 
+##Submitting to AppStore
+
+**Before submitting your application to iTunesConnect please make sure that correct version of COLORAdFramework is used. Just to remind. We deliver two binaries - universal both for arm64 and i86 architecture as well as arm64 (directory: tvos-device). Remember, only the second one passes iTunesConnect validation.**
+
+---
+
 ##Initializing SDK
 
 Open AppDelegate.m and modify body of function `application:DidFinishLaunchingWithOptions:` with the App ID generated in the dashboard
