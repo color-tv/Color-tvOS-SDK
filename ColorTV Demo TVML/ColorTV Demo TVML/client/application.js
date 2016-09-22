@@ -84,7 +84,8 @@ App.onLaunch = function(options) {
                                                           COLORAdController.sharedAdController().prepareAdForPlacementWithCompletionAndExpirationHandler(placement, function(success){
                                                                                                           if(success) {
                                                                                                           console.log("AD prepared");
-                                                                                                          COLORAdController.sharedAdController().showLastAd();
+                                                                                                                                                         COLORAdController.sharedAdController().showLastAdWithCompletionHandler(function(watched) {
+                                                                                                                                                                                                            console.log("AD completed " + watched);                                                                                                                  });
                                                                                                           } else {
                                                                                                           console.log("AD NOT prepared");
                                                                                                           }

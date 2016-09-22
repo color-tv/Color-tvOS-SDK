@@ -21,7 +21,8 @@
 
 -(void)prepareAdForPlacement:(NSString* _Nonnull)placement withCompletion:(JSValue* _Nonnull)completion andExpirationHandler:(JSValue* _Nonnull)expiration;
 
--(void)showLastAd;
+-(void)showLastAd __attribute__((deprecated("use showLastAdWithCompletionHandler: instead")));
+-(void)showLastAdWithCompletionHandler:(JSValue* _Nullable)completion;
 
 -(void)setCurrentPlacement:(NSString* _Nonnull)placement;
 
