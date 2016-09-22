@@ -149,7 +149,9 @@ ColorTV offers lot of different types of advertisement which are automatically p
 COLORAdController.sharedAdController().prepareAdForPlacementWithCompletionAndExpirationHandler("MainMenu", function(success) {
         if(success) {
             console.log("AD prepared");
-            COLORAdController.sharedAdController().showLastAd();
+            COLORAdController.sharedAdController().showLastAdWithCompletionHandler(function(watched) {
+            		console.log("AD closed " + watched);
+            });
         } else {
             console.log("AD NOT prepared");
         }
