@@ -13,6 +13,9 @@
 
 #import <COLORAdFramework/COLORConstans.h>
 
+@class COLORContentRecommendationResponse;
+@class COLORRecommendationViewController;
+
 @protocol COLORAdControllerJavaScript <JSExport>
 
 +(instancetype _Null_unspecified)sharedAdController;
@@ -21,7 +24,6 @@
 
 -(void)prepareAdForPlacement:(NSString* _Nonnull)placement withCompletion:(JSValue* _Nonnull)completion andExpirationHandler:(JSValue* _Nonnull)expiration;
 
--(void)showLastAd __attribute__((deprecated("use showLastAdWithCompletionHandler: instead")));
 -(void)showLastAdWithCompletionHandler:(JSValue* _Nullable)completion;
 
 -(void)setCurrentPlacement:(NSString* _Nonnull)placement;
@@ -29,6 +31,14 @@
 -(void)registerThirdPartyUserId:(NSString* _Nonnull)userId withCompletionHandler:(JSValue* _Nonnull)completion;
 
 -(JSValue* _Nonnull)userProfile;
+
+//Content recommendation methods
+
+-(void)trackEvent:(COLORAdFrameworkVideoEventType)eventType forPartnerVideoId:(NSString *_Nonnull)partnerVideoId andSecondsWatched:(NSTimeInterval)secondsWatched;
+
+-(void)prepareRecommendationControllerForPlacement:(NSString* _Nonnull)placement andVideoId:(NSString* _Nonnull)videoId withCompletion:(JSValue* _Nonnull)completion;
+
+-(void)showLastRecommendationWithCompletionHandler:(JSValue* _Nullable)completion;
 
 @end
 
@@ -55,13 +65,12 @@
 
 -(void)registerThirdPartyUserId:(NSString* _Nonnull)userId withCompletion:(COLORAdFrameworkRegisterThirdPartyUserIdCompletion _Nonnull)completion;
 
--(void)adViewControllerForPlacement:(NSString* _Nonnull)placement withCompletion:(COLORAdFrameworkAdRequestCompletion _Nonnull)completion __attribute__((deprecated("use adViewControllerForPlacement:withCompletion:expirationHandler: instead")));
 -(void)adViewControllerForPlacement:(NSString* _Nonnull)placement withCompletion:(COLORAdFrameworkAdRequestCompletion _Nonnull)completion expirationHandler:(COLORAdFrameworkAdExpirationHandler _Nonnull)expirationHandler;
-
--(void)adViewControllerOfType:(COLORAdFrameworkAdType)type withCompletion:(COLORAdFrameworkAdRequestCompletion _Nonnull)completion __attribute__((deprecated("use adViewControllerOfType:withCompletion:expirationHandler: instead")));
 
 -(void)adViewControllerOfType:(COLORAdFrameworkAdType)type withCompletion:(COLORAdFrameworkAdRequestCompletion _Nonnull)completion expirationHandler:(COLORAdFrameworkAdExpirationHandler _Nonnull)expirationHandler;
 
 -(void)checkAvailableCurrencyAfterTimeInterval:(NSTimeInterval)timeInterval;
+
+-(void)contentRecommendationControllerForPlacement:(NSString* _Nonnull)placement andVideoId:(NSString* _Nullable)videoId withCompletion:(COLORAdFrameworkContentRecommendationRequestCompletion _Nonnull)completion;
 
 @end

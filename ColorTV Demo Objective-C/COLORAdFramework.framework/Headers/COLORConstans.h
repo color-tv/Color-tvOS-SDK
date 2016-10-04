@@ -42,6 +42,10 @@ extern NSString * _Nonnull const COLORAdFrameworkPlacementOutOfGoods;
 extern NSString * _Nonnull const COLORAdFrameworkPlacementOutOfEnergy;
 extern NSString * _Nonnull const COLORAdFrameworkPlacementInsufficientCurrency;
 extern NSString * _Nonnull const COLORAdFrameworkPlacementFinishedTutorial;
+extern NSString * _Nonnull const COLORAdFrameworkPlacementVideoStart;
+extern NSString * _Nonnull const COLORAdFrameworkPlacementVideoPause;
+extern NSString * _Nonnull const COLORAdFrameworkPlacementVideoStop;
+extern NSString * _Nonnull const COLORAdFrameworkPlacementVideoEnd;
 
 #pragma mark User Preferences
 extern NSString * _Nonnull const COLORAdFrameworkPreferencesEmailAddress;
@@ -49,7 +53,10 @@ extern NSString * _Nonnull const COLORAdFrameworkPreferencesPhoneNumber;
 
 #pragma handlers
 @class COLORAdViewController;
+@class COLORRecommendationViewController;
+
 typedef void(^COLORAdFrameworkAdRequestCompletion)(COLORAdViewController * _Nullable vc, NSError * _Nullable error);
+typedef void(^COLORAdFrameworkContentRecommendationRequestCompletion)(COLORRecommendationViewController * _Nullable vc, NSError * _Nullable error);
 typedef void(^COLORAdFrameworkRegisterThirdPartyUserIdCompletion)(NSError * _Nullable error);
 typedef void(^COLORAdFrameworkAdExpirationHandler)(COLORAdViewController * _Nullable expiredVc);
 
@@ -63,5 +70,11 @@ typedef NS_ENUM(NSUInteger, COLORAdFrameworkAdType) {
     COLORAdFrameworkAdTypeFeaturedItem = 5,
     COLORAdFrameworkAdTypeFullscreen = 6,
     COLORAdFrameworkAdTypeVideoRecommendation = 7
+};
+
+typedef NS_ENUM(NSUInteger, COLORAdFrameworkVideoEventType) {
+    COLORAdFrameworkVideoEventStarted,
+    COLORAdFrameworkVideoEventStopped,
+    COLORAdFrameworkVideoEventCompleted
 };
 
