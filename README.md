@@ -193,6 +193,48 @@ The predefined values available as constants whose names start with COLORAdFrame
 
 ---
 
+##Displaying content recommendation
+
+Displaying Recommendation is simillar to displaying ads. It may be shown wherever you place them inside your app, but you need to include a Placement parameter to indicate the specific location. As with ads, you can display content recommendation view controller in many ways: show it a modal view controller, push onto a navigation controller and so on.
+
+```objective-c
+[[COLORAdController sharedAdController] contentRecommendationControllerForPlacement:COLORAdFrameworkPlacementVideoEnd
+    andVideoId:@"570d799457dde161ef006cbc" 
+    withCompletion:^(COLORRecommendationViewController *vc, NSError *error) {
+        if(!vc) {
+            NSLog(@"Failed to get recommendation view controller for placement %@, error %@", COLORAdFrameworkPlacementMainMenu, error);
+            return;
+        }
+        vc.contentRecommendationClosed = ^{
+            [self dismissViewControllerAnimated:YES completion:nil];
+        };
+        
+        vc.itemSelected = ^(NSString *videoId, NSURL *videoURL) {
+            //play the selected video
+        };
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self presentViewController:vc animated:YES completion:nil];
+        });
+    }];
+```
+To load a Content Recommendation for a certain placement, you need to call `contentRecommendationControllerForPlacement:andVideoId:withCompletion` method. You can use one of the predefined placements, like `COLORAdFrameworkPlacementVideoFinished`. If you show Content Recommendation after playing a video, you can pass its identifier in a `videoId` parameter to get more accurate recommendations.
+
+When the user selects one of the recommended videos, you get notified by `itemSelected` handler, so you can play this video.
+
+After the content recommendation view controler is closed by the user, `contentRecommendationClosed` block is called and you need to dismiss the recommendation view controller or remove it from the navigation stack.
+
+###Reporting video events
+
+In order to get even better content recommendation, you can use our SDK to collect data about the users' behavior in your app's videos. For example, you can report that a user stopped a video after watching it for 25 seconds. Simply call `trackEventForPartnerVideoId:eventType:secondsWatched` method, like this:
+
+```objective-c
+[[COLORAdController sharedAdController] trackEventForPartnerVideoId:@"570d799457dde161ef006cbc" eventType:COLORAdFrameworkVideoEventStopped secondsWatched:25];
+```
+
+The types of events which can be reported are defined in `COLORAdFrameworkVideoEventType` enum.
+
+---
+
 ##User Profile
 
 Another way to provide valuable information which allows us to provide suitable ads to your audience is user profile. You can provide basic information which characterise specific user by setting properties of `COLORUserProfile` Singleton. If for some reason you believe that user of your application has changed, e.g. account is switched call `-(void)reset` method and set new values.
