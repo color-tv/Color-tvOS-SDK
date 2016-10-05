@@ -11,29 +11,10 @@
 		CB96596D1C6B7DF800E17DE2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB96596C1C6B7DF800E17DE2 /* ViewController.swift */; };
 		CB9659701C6B7DF800E17DE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB96596E1C6B7DF800E17DE2 /* Main.storyboard */; };
 		CB9659721C6B7DF800E17DE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB9659711C6B7DF800E17DE2 /* Assets.xcassets */; };
-		CB96597D1C6B7DF800E17DE2 /* ColorTV_Test_App_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB96597C1C6B7DF800E17DE2 /* ColorTV_Test_App_SwiftTests.swift */; };
-		CB9659881C6B7DF800E17DE2 /* ColorTV_Test_App_SwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9659871C6B7DF800E17DE2 /* ColorTV_Test_App_SwiftUITests.swift */; };
 		CBF73ABB1C811D6000C599A3 /* COLORAdFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBF73ABA1C811D6000C599A3 /* COLORAdFramework.framework */; };
 		CBF73ABC1C811D6000C599A3 /* COLORAdFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CBF73ABA1C811D6000C599A3 /* COLORAdFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CBF73ABE1C811F2100C599A3 /* demo-app-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = CBF73ABD1C811F2100C599A3 /* demo-app-bg.png */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		CB9659791C6B7DF800E17DE2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CB96595F1C6B7DF800E17DE2 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = CB9659661C6B7DF800E17DE2;
-			remoteInfo = "ColorTV Test App Swift";
-		};
-		CB9659841C6B7DF800E17DE2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CB96595F1C6B7DF800E17DE2 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = CB9659661C6B7DF800E17DE2;
-			remoteInfo = "ColorTV Test App Swift";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		CB04E46B1C6B898C000AE6E3 /* Embed Frameworks */ = {
@@ -56,12 +37,6 @@
 		CB96596F1C6B7DF800E17DE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CB9659711C6B7DF800E17DE2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB9659731C6B7DF800E17DE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CB9659781C6B7DF800E17DE2 /* ColorTV Demo Swift.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ColorTV Demo Swift.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CB96597C1C6B7DF800E17DE2 /* ColorTV_Test_App_SwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTV_Test_App_SwiftTests.swift; sourceTree = "<group>"; };
-		CB96597E1C6B7DF800E17DE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CB9659831C6B7DF800E17DE2 /* ColorTV Demo Swift.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ColorTV Demo Swift.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CB9659871C6B7DF800E17DE2 /* ColorTV_Test_App_SwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTV_Test_App_SwiftUITests.swift; sourceTree = "<group>"; };
-		CB9659891C6B7DF800E17DE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBF73ABA1C811D6000C599A3 /* COLORAdFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = COLORAdFramework.framework; sourceTree = "<group>"; };
 		CBF73ABD1C811F2100C599A3 /* demo-app-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "demo-app-bg.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -75,20 +50,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CB9659751C6B7DF800E17DE2 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CB9659801C6B7DF800E17DE2 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -97,8 +58,6 @@
 			children = (
 				CBF73ABA1C811D6000C599A3 /* COLORAdFramework.framework */,
 				CB9659691C6B7DF800E17DE2 /* ColorTV Test App Swift */,
-				CB96597B1C6B7DF800E17DE2 /* ColorTV Test App SwiftTests */,
-				CB9659861C6B7DF800E17DE2 /* ColorTV Test App SwiftUITests */,
 				CB9659681C6B7DF800E17DE2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -107,8 +66,6 @@
 			isa = PBXGroup;
 			children = (
 				CB9659671C6B7DF800E17DE2 /* ColorTV Demo.app */,
-				CB9659781C6B7DF800E17DE2 /* ColorTV Demo Swift.xctest */,
-				CB9659831C6B7DF800E17DE2 /* ColorTV Demo Swift.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -124,24 +81,6 @@
 				CB9659731C6B7DF800E17DE2 /* Info.plist */,
 			);
 			path = "ColorTV Test App Swift";
-			sourceTree = "<group>";
-		};
-		CB96597B1C6B7DF800E17DE2 /* ColorTV Test App SwiftTests */ = {
-			isa = PBXGroup;
-			children = (
-				CB96597C1C6B7DF800E17DE2 /* ColorTV_Test_App_SwiftTests.swift */,
-				CB96597E1C6B7DF800E17DE2 /* Info.plist */,
-			);
-			path = "ColorTV Test App SwiftTests";
-			sourceTree = "<group>";
-		};
-		CB9659861C6B7DF800E17DE2 /* ColorTV Test App SwiftUITests */ = {
-			isa = PBXGroup;
-			children = (
-				CB9659871C6B7DF800E17DE2 /* ColorTV_Test_App_SwiftUITests.swift */,
-				CB9659891C6B7DF800E17DE2 /* Info.plist */,
-			);
-			path = "ColorTV Test App SwiftUITests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,42 +104,6 @@
 			productReference = CB9659671C6B7DF800E17DE2 /* ColorTV Demo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		CB9659771C6B7DF800E17DE2 /* ColorTV Demo SwiftTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CB96598F1C6B7DF800E17DE2 /* Build configuration list for PBXNativeTarget "ColorTV Demo SwiftTests" */;
-			buildPhases = (
-				CB9659741C6B7DF800E17DE2 /* Sources */,
-				CB9659751C6B7DF800E17DE2 /* Frameworks */,
-				CB9659761C6B7DF800E17DE2 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				CB96597A1C6B7DF800E17DE2 /* PBXTargetDependency */,
-			);
-			name = "ColorTV Demo SwiftTests";
-			productName = "ColorTV Test App SwiftTests";
-			productReference = CB9659781C6B7DF800E17DE2 /* ColorTV Demo Swift.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		CB9659821C6B7DF800E17DE2 /* ColorTV Demo SwiftUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CB9659921C6B7DF800E17DE2 /* Build configuration list for PBXNativeTarget "ColorTV Demo SwiftUITests" */;
-			buildPhases = (
-				CB96597F1C6B7DF800E17DE2 /* Sources */,
-				CB9659801C6B7DF800E17DE2 /* Frameworks */,
-				CB9659811C6B7DF800E17DE2 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				CB9659851C6B7DF800E17DE2 /* PBXTargetDependency */,
-			);
-			name = "ColorTV Demo SwiftUITests";
-			productName = "ColorTV Test App SwiftUITests";
-			productReference = CB9659831C6B7DF800E17DE2 /* ColorTV Demo Swift.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -214,14 +117,7 @@
 					CB9659661C6B7DF800E17DE2 = {
 						CreatedOnToolsVersion = 7.2.1;
 						DevelopmentTeam = RW6DR85M92;
-					};
-					CB9659771C6B7DF800E17DE2 = {
-						CreatedOnToolsVersion = 7.2.1;
-						TestTargetID = CB9659661C6B7DF800E17DE2;
-					};
-					CB9659821C6B7DF800E17DE2 = {
-						CreatedOnToolsVersion = 7.2.1;
-						TestTargetID = CB9659661C6B7DF800E17DE2;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -239,8 +135,6 @@
 			projectRoot = "";
 			targets = (
 				CB9659661C6B7DF800E17DE2 /* ColorTV Demo Swift */,
-				CB9659771C6B7DF800E17DE2 /* ColorTV Demo SwiftTests */,
-				CB9659821C6B7DF800E17DE2 /* ColorTV Demo SwiftUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -256,20 +150,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CB9659761C6B7DF800E17DE2 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CB9659811C6B7DF800E17DE2 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -282,36 +162,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CB9659741C6B7DF800E17DE2 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CB96597D1C6B7DF800E17DE2 /* ColorTV_Test_App_SwiftTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CB96597F1C6B7DF800E17DE2 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CB9659881C6B7DF800E17DE2 /* ColorTV_Test_App_SwiftUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		CB96597A1C6B7DF800E17DE2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = CB9659661C6B7DF800E17DE2 /* ColorTV Demo Swift */;
-			targetProxy = CB9659791C6B7DF800E17DE2 /* PBXContainerItemProxy */;
-		};
-		CB9659851C6B7DF800E17DE2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = CB9659661C6B7DF800E17DE2 /* ColorTV Demo Swift */;
-			targetProxy = CB9659841C6B7DF800E17DE2 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		CB96596E1C6B7DF800E17DE2 /* Main.storyboard */ = {
@@ -422,6 +273,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.colortv.ColorTV-Demo-Swift";
 				PRODUCT_NAME = "ColorTV Demo";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -441,54 +293,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.colortv.ColorTV-Demo-Swift";
 				PRODUCT_NAME = "ColorTV Demo";
 				PROVISIONING_PROFILE = "";
-			};
-			name = Release;
-		};
-		CB9659901C6B7DF800E17DE2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = "ColorTV Test App SwiftTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.colortv.ColorTV-Test-App-SwiftTests";
-				PRODUCT_NAME = "ColorTV Demo Swift";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ColorTV Demo Swift.app/ColorTV Demo Swift";
-			};
-			name = Debug;
-		};
-		CB9659911C6B7DF800E17DE2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = "ColorTV Test App SwiftTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.colortv.ColorTV-Test-App-SwiftTests";
-				PRODUCT_NAME = "ColorTV Demo Swift";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ColorTV Demo Swift.app/ColorTV Demo Swift";
-			};
-			name = Release;
-		};
-		CB9659931C6B7DF800E17DE2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = "ColorTV Test App SwiftUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.colortv.ColorTV-Test-App-SwiftUITests";
-				PRODUCT_NAME = "ColorTV Demo Swift";
-				TEST_TARGET_NAME = "ColorTV Test App Swift";
-				USES_XCTRUNNER = YES;
-			};
-			name = Debug;
-		};
-		CB9659941C6B7DF800E17DE2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = "ColorTV Test App SwiftUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.colortv.ColorTV-Test-App-SwiftUITests";
-				PRODUCT_NAME = "ColorTV Demo Swift";
-				TEST_TARGET_NAME = "ColorTV Test App Swift";
-				USES_XCTRUNNER = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -509,24 +314,6 @@
 			buildConfigurations = (
 				CB96598D1C6B7DF800E17DE2 /* Debug */,
 				CB96598E1C6B7DF800E17DE2 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		CB96598F1C6B7DF800E17DE2 /* Build configuration list for PBXNativeTarget "ColorTV Demo SwiftTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CB9659901C6B7DF800E17DE2 /* Debug */,
-				CB9659911C6B7DF800E17DE2 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		CB9659921C6B7DF800E17DE2 /* Build configuration list for PBXNativeTarget "ColorTV Demo SwiftUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CB9659931C6B7DF800E17DE2 /* Debug */,
-				CB9659941C6B7DF800E17DE2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

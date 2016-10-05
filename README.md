@@ -217,6 +217,27 @@ Displaying Recommendation is simillar to displaying ads. It may be shown whereve
         });
     }];
 ```
+```swift
+COLORAdController.sharedAdController().contentRecommendationController(forPlacement: COLORAdFrameworkPlacementBetweenLevels, andVideoId: nil) { (vc, error) in
+    guard let vc = vc else {
+        print("Failed to get content recommendation, error: \((error as? NSError)?.description)")
+        return
+    }
+    
+    vc.contentRecommendationClosed = {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    vc.itemSelected = { videoId, videoURL in
+        //play selected video
+        print("Selected item: id \(videoId), url \(videoURL)")
+    }
+    
+    DispatchQueue.main.async {
+        self.present(vc, animated: true, completion: nil)
+    }
+}
+```
 To load a Content Recommendation for a certain placement, you need to call `contentRecommendationControllerForPlacement:andVideoId:withCompletion` method. You can use one of the predefined placements, like `COLORAdFrameworkPlacementVideoFinished`. If you show Content Recommendation after playing a video, you can pass its identifier in a `videoId` parameter to get more accurate recommendations.
 
 When the user selects one of the recommended videos, you get notified by `itemSelected` handler, so you can play this video.
@@ -229,6 +250,9 @@ In order to get even better content recommendation, you can use our SDK to colle
 
 ```objective-c
 [[COLORAdController sharedAdController] trackEventForPartnerVideoId:@"570d799457dde161ef006cbc" eventType:COLORAdFrameworkVideoEventStopped secondsWatched:25];
+```
+```swift
+COLORAdController.sharedAdController().trackEvent(.stopped, forPartnerVideoId: "570d799457dde161ef006cbc", andSecondsWatched: 25)
 ```
 
 The types of events which can be reported are defined in `COLORAdFrameworkVideoEventType` enum.
