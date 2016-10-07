@@ -25,14 +25,6 @@ pod 'Color-tvOS-SDK'
 
 After adding this value, run `pod install` and the latest version of our tvOS SDK will be installed!
 
-If you are using CocoaPods and Swift, you might encounter a compiler error: "Include of non-modular header inside framework...". It is [a bug in CocoaPods](https://github.com/CocoaPods/CocoaPods/issues/4420) which was fixed in 1.0.0.beta.1. If you are using an earlier version of CocoaPods, please add the following lines to your `Podfile`:
-
-```ruby
-post_install do |installer|
-   `rm Pods/Headers/Public/Color-tvOS-SDK/COLORAdFramework/*.h`
-end
-```
-
 ####2. Manual Integration
 
 [Download the tvOS SDK here](https://github.com/replaytv/Color-tvOS-SDK)
@@ -362,13 +354,13 @@ func didGetCurrency(details: [NSObject : AnyObject]!) {
 #####Server response
 Server returns key-value encoded dictionary describing assigned currency.
 
-```
+```JSON
 {
-    currencyAmount = 20;
-    currencyType = "Gold Coins";
-    placement = AppResume;
-    status = true;
-    timestamp = "2016-08-26T13:02:38.004Z";
+    "currencyAmount": 20,
+    "currencyType": "Gold Coins",
+    "placement": "AppResume",
+    "status": true,
+    "timestamp": "2016-08-26T13:02:38.004Z"
 }
 ```
 
