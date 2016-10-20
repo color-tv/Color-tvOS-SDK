@@ -8,8 +8,13 @@
 
 @import Foundation;
 
+#if TARGET_OS_TV
 #import <COLORAdFramework/COLORAdFrameworkLogger.h>
 #import <COLORAdFramework/COLORUserProfile.h>
+#else
+#import <COLORMobileAdFramework/COLORAdFrameworkLogger.h>
+#import <COLORMobileAdFramework/COLORUserProfile.h>
+#endif
 
 #pragma mark Notifications
 extern NSString * _Nonnull const COLORAdFrameworkNotificationDidGetCurrency;

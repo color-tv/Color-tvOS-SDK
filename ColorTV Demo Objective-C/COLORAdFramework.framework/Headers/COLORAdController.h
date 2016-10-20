@@ -9,9 +9,13 @@
 @import UIKit;
 @import JavaScriptCore;
 
+#if TARGET_OS_TV
 #import <COLORAdFramework/COLORAdViewController.h>
-
 #import <COLORAdFramework/COLORConstans.h>
+#else
+#import <COLORMobileAdFramework/COLORAdViewController.h>
+#import <COLORMobileAdFramework/COLORConstans.h>
+#endif
 
 @class COLORContentRecommendationResponse;
 @class COLORRecommendationViewController;
