@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "Color-tvOS-SDK"
-  s.version      = "2.0.0"
+  s.version      = "2.2.0"
   s.summary      = "tvOS SDK for the ColorTV Marketing Platform"
 
   s.description  = <<-DESC
@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   s.license      = { :type => "BSD", :file => "LICENSE" }
 
   s.author             = "ColorTV"
-  s.social_media_url   = "https://twitter.com/colorsmarttv"
+  s.social_media_url   = "https://twitter.com/thecolortv"
 
   s.module_name = "COLORAdFramework"
   s.platform     = :tvos, "9.0"
