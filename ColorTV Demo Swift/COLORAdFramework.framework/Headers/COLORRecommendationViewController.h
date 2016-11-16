@@ -6,9 +6,11 @@
 //  Copyright © 2016 Replay inc. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 
-@class COLORTintableIconCache;
+
+@class COLORItemClickHandler;
+@class COLORTimerPresenter;
 
 @interface COLORRecommendationViewController : UIViewController
 

@@ -18,6 +18,7 @@ typedef void(^COLORPreloadedAdViewControllerCompletion)(NSError * _Nullable erro
 
 @class COLORAdItem;
 @class COLORAdServerAPI;
+@class COLORItemClickHandler;
 
 typedef void(^COLORAdViewControllerDidCompleteAd)(BOOL watched);
 
