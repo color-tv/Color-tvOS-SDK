@@ -80,6 +80,9 @@ typedef NS_ENUM(NSUInteger, COLORAdFrameworkAdType) {
 typedef NS_ENUM(NSUInteger, COLORAdFrameworkVideoEventType) {
     COLORAdFrameworkVideoEventStarted,
     COLORAdFrameworkVideoEventStopped,
-    COLORAdFrameworkVideoEventCompleted
+    COLORAdFrameworkVideoEventCompleted,
+    COLORAdFrameworkVideoEventPaused,
+    COLORAdFrameworkVideoEventResumed
+
 };
 
