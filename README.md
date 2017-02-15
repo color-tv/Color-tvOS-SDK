@@ -201,7 +201,7 @@ Displaying Recommendation is simillar to displaying ads. It may be shown whereve
             [self dismissViewControllerAnimated:YES completion:nil];
         };
         
-        vc.itemSelected = ^(NSString *videoId, NSURL *videoURL) {
+        vc.itemSelected = ^(NSString *videoId, NSURL *videoURL, NSDictionary *params) {
             //play the selected video
         };
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -220,7 +220,7 @@ COLORAdController.sharedAdController().contentRecommendationController(forPlacem
         self.dismiss(animated: true, completion: nil)
     }
     
-    vc.itemSelected = { videoId, videoURL in
+    vc.itemSelected = { videoId, videoURL, params in
         //play selected video
         print("Selected item: id \(videoId), url \(videoURL)")
     }
