@@ -17,4 +17,6 @@
 @property (nonatomic, copy) void (^_Nullable contentRecommendationClosed)();
 @property (nonatomic, copy) void (^_Nullable itemSelected)(NSString * _Nonnull videoId, NSURL * _Nonnull videoURL, NSDictionary * _Nullable parameters);
 
+-(void)registerClass:(Class _Nonnull)className forReusableCellWithIdentifier:(NSString * _Nonnull)identifier;
+
 @end

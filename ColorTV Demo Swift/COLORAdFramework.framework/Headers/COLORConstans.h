@@ -59,9 +59,11 @@ extern NSString * _Nonnull const COLORAdFrameworkPreferencesPhoneNumber;
 #pragma handlers
 @class COLORAdViewController;
 @class COLORRecommendationViewController;
+@class COLORNextItemRecommendationViewController;
 
 typedef void(^COLORAdFrameworkAdRequestCompletion)(COLORAdViewController * _Nullable vc, NSError * _Nullable error);
 typedef void(^COLORAdFrameworkContentRecommendationRequestCompletion)(COLORRecommendationViewController * _Nullable vc, NSError * _Nullable error);
+typedef void(^COLORAdFrameworkNextItemRecommendationRequestCompletion)(COLORNextItemRecommendationViewController * _Nullable vc, NSError * _Nullable error);
 typedef void(^COLORAdFrameworkRegisterThirdPartyUserIdCompletion)(NSError * _Nullable error);
 typedef void(^COLORAdFrameworkAdExpirationHandler)(COLORAdViewController * _Nullable expiredVc);
 

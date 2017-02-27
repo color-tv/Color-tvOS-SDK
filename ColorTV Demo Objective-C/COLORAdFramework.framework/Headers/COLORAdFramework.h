@@ -20,6 +20,10 @@ FOUNDATION_EXPORT const unsigned char RPLTAdFrameworkVersionString[];
 #import <COLORAdFramework/COLORConstans.h>
 #import <COLORAdFramework/COLORAdViewController.h>
 #import <COLORAdFramework/COLORRecommendationViewController.h>
+#import <COLORAdFramework/COLORNextItemRecommendationViewController.h>
 #import <COLORAdFramework/COLORAdFrameworkLogger.h>
 #import <COLORAdFramework/COLORUserProfile.h>
 
+#import <COLORAdFramework/COLORBaseRecommendationCollectionViewCell.h>
+#import <COLORAdFramework/COLORGridCell.h>
+#import <COLORAdFramework/COLORContentRecommendationCellProtocol.h>

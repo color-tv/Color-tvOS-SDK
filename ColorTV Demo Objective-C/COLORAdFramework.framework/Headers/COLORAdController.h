@@ -77,6 +77,6 @@
 
 -(void)contentRecommendationControllerForPlacement:(NSString* _Nonnull)placement andVideoId:(NSString* _Nullable)videoId withCompletion:(COLORAdFrameworkContentRecommendationRequestCompletion _Nonnull)completion;
 
--(void)nextItemRecommendationControllerForPlacement:(NSString* _Nonnull)placement andVideoId:(NSString* _Nullable)videoId withCompletion:(COLORAdFrameworkContentRecommendationRequestCompletion _Nonnull)completion;
+-(void)nextItemRecommendationControllerForPlacement:(NSString* _Nonnull)placement andVideoId:(NSString* _Nullable)videoId withCompletion:(COLORAdFrameworkNextItemRecommendationRequestCompletion _Nonnull)completion;
 
 @end
