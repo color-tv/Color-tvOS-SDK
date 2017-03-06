@@ -89,11 +89,13 @@ Remember to import COLORAdFramework module. Add following line of code above cla
 @import COLORAdFramework
 ```
 
+Remember the module is called COLORMobileAdFramework when running on iOS.
+
 ---
 
 ##Displaying ads
 
-ColorTV offers lot of different types of advertisement which are automatically provided by our server in order to attract you audience. You do not need to care about proper ad and its content, we optimize the best performing content for all of your users. All you need to do is to add a few lines of code and an ad will be displayed wherever and whenever you want.
+ColorTV offers lot of different types of advertisement which are automatically provided by our server in order to attract you audience. You do not need to care about proper ad and its content, we optimize the best performing content for all of your users. All you need to do is to add a few lines of code and an ad will be displayed wherever and whenever you want. This feature is not available on iOS.
 
 ```objective-c
 [[COLORAdController sharedAdController] adViewControllerForPlacement:COLORAdFrameworkPlacementAppLaunch withCompletion:^(COLORAdViewController * _Nullable vc, NSError * _Nullable error) {
