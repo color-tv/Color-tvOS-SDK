@@ -1,0 +1,6 @@
+framework module COLORMobileAdFramework {
+  umbrella header "COLORMobileAdFramework.h"
+
+  export *
+  module * { export * }
+}
