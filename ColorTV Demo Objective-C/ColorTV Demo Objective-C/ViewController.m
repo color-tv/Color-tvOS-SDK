@@ -8,7 +8,13 @@
 
 #import "ViewController.h"
 
+#if TARGET_OS_TV
 @import COLORAdFramework;
+#else
+@import COLORMobileAdFramework;
+#endif
+
+#import "VideoViewController.h"
 
 @interface ViewController ()<COLORAdControllerDelegate>
 
@@ -114,6 +120,18 @@
         }
     } expirationHandler:^(COLORAdViewController *expiredVc) {
         NSLog(@"Ad view controller %@ has expired", expiredVc);
+    }];
+}
+
+-(IBAction)showContentRecommendation:(id)sender {
+    
+    NSURL *demoVideoURL = [NSURL URLWithString:@"https://s3.amazonaws.com/colortv-testapp-data/0017.mp4"];
+
+    VideoViewController *vvc = [[VideoViewController alloc] init];
+    [vvc loadVideoWithURL:demoVideoURL andId:@"0017"];
+    
+    [self presentViewController:vvc animated:YES completion:^{
+        [vvc play];
     }];
 }
 

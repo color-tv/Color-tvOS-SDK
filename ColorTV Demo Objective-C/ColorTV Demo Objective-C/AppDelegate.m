@@ -8,7 +8,11 @@
 
 #import "AppDelegate.h"
 
+#if TARGET_OS_TV
 @import COLORAdFramework;
+#else
+@import COLORMobileAdFramework;
+#endif
 
 @interface AppDelegate ()
 

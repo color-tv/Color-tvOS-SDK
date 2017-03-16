@@ -8,36 +8,38 @@
 
 /* Begin PBXBuildFile section */
 		176590CD1CA48D5E00243926 /* COLORDemoButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 176590CC1CA48D5E00243926 /* COLORDemoButton.m */; };
+		177005091E797CFF00CEA751 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 177005081E797CFF00CEA751 /* main.m */; };
+		177005121E797CFF00CEA751 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 177005101E797CFF00CEA751 /* Main.storyboard */; };
+		177005141E797CFF00CEA751 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 177005131E797CFF00CEA751 /* Assets.xcassets */; };
+		177005171E797CFF00CEA751 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 177005151E797CFF00CEA751 /* LaunchScreen.storyboard */; };
+		1770051C1E799AD700CEA751 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CBF73A881C81039600C599A3 /* AppDelegate.m */; };
+		1770051D1E799AD700CEA751 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBF73A8B1C81039600C599A3 /* ViewController.m */; };
+		177005241E79A1AA00CEA751 /* COLORMobileAdFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 177005221E79A19700CEA751 /* COLORMobileAdFramework.framework */; };
+		177005251E79A1AA00CEA751 /* COLORMobileAdFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 177005221E79A19700CEA751 /* COLORMobileAdFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		177005291E79B5E500CEA751 /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 177005281E79B5E500CEA751 /* VideoViewController.m */; };
+		1770052A1E79B80500CEA751 /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 177005281E79B5E500CEA751 /* VideoViewController.m */; };
 		CBF73A861C81039600C599A3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CBF73A851C81039600C599A3 /* main.m */; };
 		CBF73A891C81039600C599A3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CBF73A881C81039600C599A3 /* AppDelegate.m */; };
 		CBF73A8C1C81039600C599A3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBF73A8B1C81039600C599A3 /* ViewController.m */; };
 		CBF73A8F1C81039600C599A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBF73A8D1C81039600C599A3 /* Main.storyboard */; };
 		CBF73A911C81039600C599A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBF73A901C81039600C599A3 /* Assets.xcassets */; };
-		CBF73A9C1C81039600C599A3 /* ColorTV_Demo_Objective_CTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CBF73A9B1C81039600C599A3 /* ColorTV_Demo_Objective_CTests.m */; };
-		CBF73AA71C81039600C599A3 /* ColorTV_Demo_Objective_CUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CBF73AA61C81039600C599A3 /* ColorTV_Demo_Objective_CUITests.m */; };
 		CBF73AB51C8103BC00C599A3 /* COLORAdFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBF73AB41C8103BC00C599A3 /* COLORAdFramework.framework */; };
 		CBF73AB61C8103BC00C599A3 /* COLORAdFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CBF73AB41C8103BC00C599A3 /* COLORAdFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CBF73AB91C81054B00C599A3 /* demo-app-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = CBF73AB81C81054B00C599A3 /* demo-app-bg.png */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		CBF73A981C81039600C599A3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CBF73A791C81039600C599A3 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = CBF73A801C81039600C599A3;
-			remoteInfo = "ColorTV Demo Objective-C";
-		};
-		CBF73AA31C81039600C599A3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CBF73A791C81039600C599A3 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = CBF73A801C81039600C599A3;
-			remoteInfo = "ColorTV Demo Objective-C";
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXCopyFilesBuildPhase section */
+		177005261E79A1AA00CEA751 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				177005251E79A1AA00CEA751 /* COLORMobileAdFramework.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CBF73AB71C8103BC00C599A3 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -54,6 +56,15 @@
 /* Begin PBXFileReference section */
 		176590CB1CA48D5E00243926 /* COLORDemoButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COLORDemoButton.h; sourceTree = "<group>"; };
 		176590CC1CA48D5E00243926 /* COLORDemoButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COLORDemoButton.m; sourceTree = "<group>"; };
+		177005051E797CFF00CEA751 /* ColorTV Demo Objective-C.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ColorTV Demo Objective-C.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		177005081E797CFF00CEA751 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		177005111E797CFF00CEA751 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		177005131E797CFF00CEA751 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		177005161E797CFF00CEA751 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		177005181E797CFF00CEA751 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		177005221E79A19700CEA751 /* COLORMobileAdFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = COLORMobileAdFramework.framework; sourceTree = "<group>"; };
+		177005271E79B5E500CEA751 /* VideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoViewController.h; sourceTree = "<group>"; };
+		177005281E79B5E500CEA751 /* VideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoViewController.m; sourceTree = "<group>"; };
 		CBF73A811C81039600C599A3 /* ColorTV Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ColorTV Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBF73A851C81039600C599A3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CBF73A871C81039600C599A3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -63,17 +74,19 @@
 		CBF73A8E1C81039600C599A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CBF73A901C81039600C599A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CBF73A921C81039600C599A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CBF73A971C81039600C599A3 /* ColorTV Demo Objective-CTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ColorTV Demo Objective-CTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CBF73A9B1C81039600C599A3 /* ColorTV_Demo_Objective_CTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorTV_Demo_Objective_CTests.m; sourceTree = "<group>"; };
-		CBF73A9D1C81039600C599A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CBF73AA21C81039600C599A3 /* ColorTV Demo Objective-CUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ColorTV Demo Objective-CUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CBF73AA61C81039600C599A3 /* ColorTV_Demo_Objective_CUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorTV_Demo_Objective_CUITests.m; sourceTree = "<group>"; };
-		CBF73AA81C81039600C599A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBF73AB41C8103BC00C599A3 /* COLORAdFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = COLORAdFramework.framework; sourceTree = "<group>"; };
 		CBF73AB81C81054B00C599A3 /* demo-app-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "demo-app-bg.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		177005021E797CFF00CEA751 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				177005241E79A1AA00CEA751 /* COLORMobileAdFramework.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CBF73A7E1C81039600C599A3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -82,31 +95,45 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CBF73A941C81039600C599A3 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CBF73A9F1C81039600C599A3 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CBF73A781C81039600C599A3 = {
+		177005061E797CFF00CEA751 /* ColorTV Demo Objective-C iOS */ = {
+			isa = PBXGroup;
+			children = (
+				177005101E797CFF00CEA751 /* Main.storyboard */,
+				177005131E797CFF00CEA751 /* Assets.xcassets */,
+				177005151E797CFF00CEA751 /* LaunchScreen.storyboard */,
+				177005181E797CFF00CEA751 /* Info.plist */,
+				177005071E797CFF00CEA751 /* Supporting Files */,
+			);
+			path = "ColorTV Demo Objective-C iOS";
+			sourceTree = "<group>";
+		};
+		177005071E797CFF00CEA751 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				177005081E797CFF00CEA751 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		177005211E79A19700CEA751 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				CBF73AB41C8103BC00C599A3 /* COLORAdFramework.framework */,
+				177005221E79A19700CEA751 /* COLORMobileAdFramework.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CBF73A781C81039600C599A3 = {
+			isa = PBXGroup;
+			children = (
 				CBF73A831C81039600C599A3 /* ColorTV Demo Objective-C */,
-				CBF73A9A1C81039600C599A3 /* ColorTV Demo Objective-CTests */,
-				CBF73AA51C81039600C599A3 /* ColorTV Demo Objective-CUITests */,
+				177005061E797CFF00CEA751 /* ColorTV Demo Objective-C iOS */,
 				CBF73A821C81039600C599A3 /* Products */,
+				177005211E79A19700CEA751 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -114,8 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				CBF73A811C81039600C599A3 /* ColorTV Demo.app */,
-				CBF73A971C81039600C599A3 /* ColorTV Demo Objective-CTests.xctest */,
-				CBF73AA21C81039600C599A3 /* ColorTV Demo Objective-CUITests.xctest */,
+				177005051E797CFF00CEA751 /* ColorTV Demo Objective-C.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -130,6 +156,8 @@
 				CBF73A881C81039600C599A3 /* AppDelegate.m */,
 				CBF73A8A1C81039600C599A3 /* ViewController.h */,
 				CBF73A8B1C81039600C599A3 /* ViewController.m */,
+				177005271E79B5E500CEA751 /* VideoViewController.h */,
+				177005281E79B5E500CEA751 /* VideoViewController.m */,
 				CBF73A8D1C81039600C599A3 /* Main.storyboard */,
 				CBF73A901C81039600C599A3 /* Assets.xcassets */,
 				CBF73A921C81039600C599A3 /* Info.plist */,
@@ -146,27 +174,27 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		CBF73A9A1C81039600C599A3 /* ColorTV Demo Objective-CTests */ = {
-			isa = PBXGroup;
-			children = (
-				CBF73A9B1C81039600C599A3 /* ColorTV_Demo_Objective_CTests.m */,
-				CBF73A9D1C81039600C599A3 /* Info.plist */,
-			);
-			path = "ColorTV Demo Objective-CTests";
-			sourceTree = "<group>";
-		};
-		CBF73AA51C81039600C599A3 /* ColorTV Demo Objective-CUITests */ = {
-			isa = PBXGroup;
-			children = (
-				CBF73AA61C81039600C599A3 /* ColorTV_Demo_Objective_CUITests.m */,
-				CBF73AA81C81039600C599A3 /* Info.plist */,
-			);
-			path = "ColorTV Demo Objective-CUITests";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		177005041E797CFF00CEA751 /* ColorTV Demo Objective-C iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1770051B1E797CFF00CEA751 /* Build configuration list for PBXNativeTarget "ColorTV Demo Objective-C iOS" */;
+			buildPhases = (
+				177005011E797CFF00CEA751 /* Sources */,
+				177005021E797CFF00CEA751 /* Frameworks */,
+				177005031E797CFF00CEA751 /* Resources */,
+				177005261E79A1AA00CEA751 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ColorTV Demo Objective-C iOS";
+			productName = "ColorTV Demo Objective-C iOS";
+			productReference = 177005051E797CFF00CEA751 /* ColorTV Demo Objective-C.app */;
+			productType = "com.apple.product-type.application";
+		};
 		CBF73A801C81039600C599A3 /* ColorTV Demo Objective-C */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CBF73AAB1C81039600C599A3 /* Build configuration list for PBXNativeTarget "ColorTV Demo Objective-C" */;
@@ -185,42 +213,6 @@
 			productReference = CBF73A811C81039600C599A3 /* ColorTV Demo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		CBF73A961C81039600C599A3 /* ColorTV Demo Objective-CTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CBF73AAE1C81039600C599A3 /* Build configuration list for PBXNativeTarget "ColorTV Demo Objective-CTests" */;
-			buildPhases = (
-				CBF73A931C81039600C599A3 /* Sources */,
-				CBF73A941C81039600C599A3 /* Frameworks */,
-				CBF73A951C81039600C599A3 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				CBF73A991C81039600C599A3 /* PBXTargetDependency */,
-			);
-			name = "ColorTV Demo Objective-CTests";
-			productName = "ColorTV Demo Objective-CTests";
-			productReference = CBF73A971C81039600C599A3 /* ColorTV Demo Objective-CTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		CBF73AA11C81039600C599A3 /* ColorTV Demo Objective-CUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CBF73AB11C81039600C599A3 /* Build configuration list for PBXNativeTarget "ColorTV Demo Objective-CUITests" */;
-			buildPhases = (
-				CBF73A9E1C81039600C599A3 /* Sources */,
-				CBF73A9F1C81039600C599A3 /* Frameworks */,
-				CBF73AA01C81039600C599A3 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				CBF73AA41C81039600C599A3 /* PBXTargetDependency */,
-			);
-			name = "ColorTV Demo Objective-CUITests";
-			productName = "ColorTV Demo Objective-CUITests";
-			productReference = CBF73AA21C81039600C599A3 /* ColorTV Demo Objective-CUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -230,17 +222,14 @@
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Jordan Jasinski";
 				TargetAttributes = {
+					177005041E797CFF00CEA751 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = RW6DR85M92;
+						ProvisioningStyle = Automatic;
+					};
 					CBF73A801C81039600C599A3 = {
 						CreatedOnToolsVersion = 7.2.1;
 						DevelopmentTeam = RW6DR85M92;
-					};
-					CBF73A961C81039600C599A3 = {
-						CreatedOnToolsVersion = 7.2.1;
-						TestTargetID = CBF73A801C81039600C599A3;
-					};
-					CBF73AA11C81039600C599A3 = {
-						CreatedOnToolsVersion = 7.2.1;
-						TestTargetID = CBF73A801C81039600C599A3;
 					};
 				};
 			};
@@ -258,13 +247,22 @@
 			projectRoot = "";
 			targets = (
 				CBF73A801C81039600C599A3 /* ColorTV Demo Objective-C */,
-				CBF73A961C81039600C599A3 /* ColorTV Demo Objective-CTests */,
-				CBF73AA11C81039600C599A3 /* ColorTV Demo Objective-CUITests */,
+				177005041E797CFF00CEA751 /* ColorTV Demo Objective-C iOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		177005031E797CFF00CEA751 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				177005171E797CFF00CEA751 /* LaunchScreen.storyboard in Resources */,
+				177005141E797CFF00CEA751 /* Assets.xcassets in Resources */,
+				177005121E797CFF00CEA751 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CBF73A7F1C81039600C599A3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -275,27 +273,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CBF73A951C81039600C599A3 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CBF73AA01C81039600C599A3 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		177005011E797CFF00CEA751 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1770052A1E79B80500CEA751 /* VideoViewController.m in Sources */,
+				1770051C1E799AD700CEA751 /* AppDelegate.m in Sources */,
+				1770051D1E799AD700CEA751 /* ViewController.m in Sources */,
+				177005091E797CFF00CEA751 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CBF73A7D1C81039600C599A3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				177005291E79B5E500CEA751 /* VideoViewController.m in Sources */,
 				176590CD1CA48D5E00243926 /* COLORDemoButton.m in Sources */,
 				CBF73A8C1C81039600C599A3 /* ViewController.m in Sources */,
 				CBF73A891C81039600C599A3 /* AppDelegate.m in Sources */,
@@ -303,38 +299,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CBF73A931C81039600C599A3 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CBF73A9C1C81039600C599A3 /* ColorTV_Demo_Objective_CTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CBF73A9E1C81039600C599A3 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CBF73AA71C81039600C599A3 /* ColorTV_Demo_Objective_CUITests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		CBF73A991C81039600C599A3 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = CBF73A801C81039600C599A3 /* ColorTV Demo Objective-C */;
-			targetProxy = CBF73A981C81039600C599A3 /* PBXContainerItemProxy */;
-		};
-		CBF73AA41C81039600C599A3 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = CBF73A801C81039600C599A3 /* ColorTV Demo Objective-C */;
-			targetProxy = CBF73AA31C81039600C599A3 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
+		177005101E797CFF00CEA751 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				177005111E797CFF00CEA751 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		177005151E797CFF00CEA751 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				177005161E797CFF00CEA751 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 		CBF73A8D1C81039600C599A3 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -346,6 +329,50 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		177005191E797CFF00CEA751 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = RW6DR85M92;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = "ColorTV Demo Objective-C iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.colortv.ColorTV-Demo-Objective-C-iOS";
+				PRODUCT_NAME = "ColorTV Demo Objective-C";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1770051A1E797CFF00CEA751 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = RW6DR85M92;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = "ColorTV Demo Objective-C iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.colortv.ColorTV-Demo-Objective-C-iOS";
+				PRODUCT_NAME = "ColorTV Demo Objective-C";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		CBF73AA91C81039600C599A3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -468,57 +495,17 @@
 			};
 			name = Release;
 		};
-		CBF73AAF1C81039600C599A3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = "ColorTV Demo Objective-CTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.colortv.ColorTV-Demo-Objective-CTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ColorTV Demo Objective-C.app/ColorTV Demo Objective-C";
-			};
-			name = Debug;
-		};
-		CBF73AB01C81039600C599A3 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = "ColorTV Demo Objective-CTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.colortv.ColorTV-Demo-Objective-CTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ColorTV Demo Objective-C.app/ColorTV Demo Objective-C";
-			};
-			name = Release;
-		};
-		CBF73AB21C81039600C599A3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = "ColorTV Demo Objective-CUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.colortv.ColorTV-Demo-Objective-CUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = "ColorTV Demo Objective-C";
-				USES_XCTRUNNER = YES;
-			};
-			name = Debug;
-		};
-		CBF73AB31C81039600C599A3 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = "ColorTV Demo Objective-CUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.colortv.ColorTV-Demo-Objective-CUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = "ColorTV Demo Objective-C";
-				USES_XCTRUNNER = YES;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1770051B1E797CFF00CEA751 /* Build configuration list for PBXNativeTarget "ColorTV Demo Objective-C iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				177005191E797CFF00CEA751 /* Debug */,
+				1770051A1E797CFF00CEA751 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		CBF73A7C1C81039600C599A3 /* Build configuration list for PBXProject "ColorTV Demo Objective-C" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -533,24 +520,6 @@
 			buildConfigurations = (
 				CBF73AAC1C81039600C599A3 /* Debug */,
 				CBF73AAD1C81039600C599A3 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		CBF73AAE1C81039600C599A3 /* Build configuration list for PBXNativeTarget "ColorTV Demo Objective-CTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CBF73AAF1C81039600C599A3 /* Debug */,
-				CBF73AB01C81039600C599A3 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		CBF73AB11C81039600C599A3 /* Build configuration list for PBXNativeTarget "ColorTV Demo Objective-CUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CBF73AB21C81039600C599A3 /* Debug */,
-				CBF73AB31C81039600C599A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
