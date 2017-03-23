@@ -61,6 +61,8 @@
 
 @property (nonatomic, weak) id<COLORAdControllerDelegate> _Nullable delegate;
 
+@property (nonatomic, strong) NSMutableDictionary* _Nonnull developerSettings;
+
 -(void)monitorAdsForPlacements:(NSArray * _Nullable)placements;
 
 -(BOOL)isAdReady;
