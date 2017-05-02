@@ -13,8 +13,8 @@
 
 @property (nonatomic, assign, readonly) BOOL isVideoPlayed;
 
--(void)loadVideoWithURL:(NSURL*)url andId:(NSString*)identifier;
--(void)play;
--(void)pause;
+- (void)loadVideoWithURL:(NSURL *)url andId:(NSString *)identifier;
+- (void)play;
+- (void)pause;
 
 @end

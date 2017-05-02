@@ -41,7 +41,7 @@
 
 }
 
--(void)viewDidAppear:(BOOL)animated {
+- (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
 
     //update profile information to better target ads.
@@ -61,14 +61,14 @@
     [self updateFocusIfNeeded];
 }
 
--(UIView*)preferredFocusedView {
+- (UIView *)preferredFocusedView {
     return self.view.subviews[3];
 }
 
 #pragma mark - exemplary implementation
 
 //Typical implementation within app. Please note that AdViewController should be initiated asynchronously in background and shown when required.
--(IBAction)showRandomAd:(id)sender {
+- (IBAction)showRandomAd:(id)sender {
     [self showAdForPlacement:COLORAdFrameworkPlacementInAppPurchaseAbandoned];
 }
 
@@ -76,23 +76,23 @@
 
 //The code placed below is written only for presentation purposes. Please note that developer should not choose type of ad shown based on particular placement mark. It is very unlikely such placement will be available for your application.
 
--(IBAction)showDiscoveryCenter:(id)sender {
+- (IBAction)showDiscoveryCenter:(id)sender {
     [self showAdForPlacement:COLORAdFrameworkPlacementMainMenu];
 }
 
--(IBAction)showInterstitial:(id)sender {
+- (IBAction)showInterstitial:(id)sender {
     [self showAdForPlacement:COLORAdFrameworkPlacementStageFailed];
 }
 
--(IBAction)showFullscreenAd:(id)sender {
+- (IBAction)showFullscreenAd:(id)sender {
     [self showAdForPlacement:COLORAdFrameworkPlacementStageOpen];
 }
 
--(IBAction)showVideoAd:(id)sender {
+- (IBAction)showVideoAd:(id)sender {
     [self showAdForPlacement:COLORAdFrameworkPlacementLevelUp];
 }
 
--(void)showAdForPlacement:(NSString*)placement {
+- (void)showAdForPlacement:(NSString *)placement {
 
     [[COLORAdController sharedAdController] adViewControllerForPlacement:placement withCompletion:^(__weak COLORAdViewController * _Nullable vc, NSError * _Nullable error) {
         
@@ -123,7 +123,7 @@
     }];
 }
 
--(IBAction)showContentRecommendation:(id)sender {
+- (IBAction)showContentRecommendation:(id)sender {
     
     NSURL *demoVideoURL = [NSURL URLWithString:@"https://s3.amazonaws.com/colortv-testapp-data/0017.mp4"];
 
@@ -137,7 +137,7 @@
 
 #pragma mark - focus updates
 
--(void)didUpdateFocusInContext:(UIFocusUpdateContext *)context withAnimationCoordinator:(UIFocusAnimationCoordinator *)coordinator {
+- (void)didUpdateFocusInContext:(UIFocusUpdateContext *)context withAnimationCoordinator:(UIFocusAnimationCoordinator *)coordinator {
     
     if ([context.nextFocusedView isKindOfClass:[UIButton class]]) {
         [coordinator addCoordinatedAnimations:^{
@@ -162,7 +162,7 @@
 
 #pragma mark - virtual currency support
 
--(void)didGetCurrency:(NSDictionary *)details {
+- (void)didGetCurrency:(NSDictionary *)details {
     NSLog(@"didGetCurrency: %@", details);
 }
 

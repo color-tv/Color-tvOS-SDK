@@ -18,7 +18,7 @@
 
 @implementation COLORDemoButton
 
--(void)setHighlighted:(BOOL)highlighted {
+- (void)setHighlighted:(BOOL)highlighted {
     [super setHighlighted:highlighted];
 
     if(highlighted) {

@@ -27,7 +27,7 @@ const char *kDemoVideoViewPlayerAccessQueue = "com.colortv.DemoApp.DemoVideoView
 
 @implementation DemoPlayerVideoView
 
--(instancetype)init {
+- (instancetype)init {
     self = [super init];
     if(self) {
         playerViewAccessQueue = dispatch_queue_create(kDemoVideoViewPlayerAccessQueue, nil);
@@ -36,23 +36,23 @@ const char *kDemoVideoViewPlayerAccessQueue = "com.colortv.DemoApp.DemoVideoView
     return self;
 }
 
-+(Class)layerClass {
++ (Class)layerClass {
     return [AVPlayerLayer class];
 }
 
--(AVPlayer*)player {
+- (AVPlayer *)player {
     __block AVPlayer *result;
     
     dispatch_sync(playerViewAccessQueue, ^{
-        result = ((AVPlayerLayer*)self.layer).player;
+        result = ((AVPlayerLayer *)self.layer).player;
     });
     
     return result;
 }
 
--(void)setPlayer:(AVPlayer *)player {
+- (void)setPlayer:(AVPlayer *)player {
     dispatch_sync(playerViewAccessQueue, ^{
-        ((AVPlayerLayer*)self.layer).player = player;
+        ((AVPlayerLayer *)self.layer).player = player;
     });
 }
 
@@ -71,7 +71,7 @@ const char *kDemoVideoViewPlayerAccessQueue = "com.colortv.DemoApp.DemoVideoView
 
 @implementation VideoViewController
 
--(instancetype)init {
+- (instancetype)init {
     self = [super init];
     if(self) {
         
@@ -81,7 +81,7 @@ const char *kDemoVideoViewPlayerAccessQueue = "com.colortv.DemoApp.DemoVideoView
     return self;
 }
 
--(void)loadView {
+- (void)loadView {
     self.view = [[DemoPlayerVideoView alloc] init];
     
     _loadingIndicator = [[UIActivityIndicatorView alloc] initWithFrame:CGRectZero];
@@ -118,7 +118,7 @@ const char *kDemoVideoViewPlayerAccessQueue = "com.colortv.DemoApp.DemoVideoView
     // Do any additional setup after loading the view.
 }
 
--(void)viewDidAppear:(BOOL)animated {
+- (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
     [self.view addGestureRecognizer:self.playPauseBtnRecognizer];
@@ -127,7 +127,7 @@ const char *kDemoVideoViewPlayerAccessQueue = "com.colortv.DemoApp.DemoVideoView
     [self.videoPlayer addObserver:self forKeyPath:kPlaybackLikelyToKeepUpKeyPath options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
 }
 
--(void)viewWillDisappear:(BOOL)animated {
+- (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     
     if(self.isVideoPlayed) {
@@ -145,11 +145,11 @@ const char *kDemoVideoViewPlayerAccessQueue = "com.colortv.DemoApp.DemoVideoView
     // Dispose of any resources that can be recreated.
 }
 
--(AVPlayer*)videoPlayer {
-    return ((AVPlayerLayer*)self.view.layer).player;
+- (AVPlayer *)videoPlayer {
+    return ((AVPlayerLayer *)self.view.layer).player;
 }
 
--(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
 
     if([keyPath isEqualToString:@"rate"]) {
         
@@ -181,13 +181,13 @@ const char *kDemoVideoViewPlayerAccessQueue = "com.colortv.DemoApp.DemoVideoView
     }
 }
 
--(void)loadVideoWithURL:(NSURL *)url andId:(NSString *)identifier {
+- (void)loadVideoWithURL:(NSURL *)url andId:(NSString *)identifier {
     AVPlayerItem *videoItem = [AVPlayerItem playerItemWithURL:url];
     
     if(self.videoPlayer) {
         [self.videoPlayer replaceCurrentItemWithPlayerItem:videoItem];
     } else {
-        ((DemoPlayerVideoView*)self.view).player = [AVPlayer playerWithPlayerItem:videoItem];
+        ((DemoPlayerVideoView *)self.view).player = [AVPlayer playerWithPlayerItem:videoItem];
     }
     
     [[COLORAdController sharedAdController] contentRecommendationControllerForPlacement:COLORAdFrameworkPlacementVideoStart andVideoId:identifier withCompletion:^(COLORRecommendationViewController * _Nullable vc, NSError * _Nullable error) {
@@ -222,21 +222,21 @@ const char *kDemoVideoViewPlayerAccessQueue = "com.colortv.DemoApp.DemoVideoView
 
 }
 
--(void)play {
+- (void)play {
     [[self videoPlayer] play];
     _isVideoPlayed = YES;
 }
 
--(void)pause {
+- (void)pause {
     [[self videoPlayer] pause];
     _isVideoPlayed = NO;
 }
 
--(BOOL)isVideoPlayed {
+- (BOOL)isVideoPlayed {
     return _isVideoPlayed;
 }
 
--(void)playPauseBtnClicked:(id)sender {
+- (void)playPauseBtnClicked:(id)sender {
     if(self.isVideoPlayed) {
         [self pause];
     } else {
