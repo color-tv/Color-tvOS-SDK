@@ -11,7 +11,7 @@
 
 @interface VideoViewController : UIViewController
 
-@property (nonatomic, assign, readonly) BOOL isVideoPlayed;
+@property (nonatomic, assign, readonly) BOOL isVideoPlaying;
 
 - (void)loadVideoWithURL:(NSURL *)url andId:(NSString *)identifier;
 - (void)play;

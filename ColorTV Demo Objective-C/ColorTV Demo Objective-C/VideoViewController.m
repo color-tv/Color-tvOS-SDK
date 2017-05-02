@@ -17,10 +17,9 @@
 static NSString *const kPlaybackLikelyToKeepUpKeyPath = @"currentItem.playbackLikelyToKeepUp";
 const char *kDemoVideoViewPlayerAccessQueue = "com.colortv.DemoApp.DemoVideoViewPlayerAccessQueue";
 
-@interface DemoPlayerVideoView : UIView {
-    dispatch_queue_t playerViewAccessQueue;
-}
+@interface DemoPlayerVideoView : UIView
 
+@property (atomic, strong) dispatch_queue_t playerViewAccessQueue;
 @property (atomic, strong) AVPlayer *player;
 
 @end
@@ -30,7 +29,7 @@ const char *kDemoVideoViewPlayerAccessQueue = "com.colortv.DemoApp.DemoVideoView
 - (instancetype)init {
     self = [super init];
     if(self) {
-        playerViewAccessQueue = dispatch_queue_create(kDemoVideoViewPlayerAccessQueue, nil);
+        self.playerViewAccessQueue = dispatch_queue_create(kDemoVideoViewPlayerAccessQueue, nil);
         self.backgroundColor = [UIColor blackColor];
     }
     return self;
@@ -43,7 +42,7 @@ const char *kDemoVideoViewPlayerAccessQueue = "com.colortv.DemoApp.DemoVideoView
 - (AVPlayer *)player {
     __block AVPlayer *result;
     
-    dispatch_sync(playerViewAccessQueue, ^{
+    dispatch_sync(self.playerViewAccessQueue, ^{
         result = ((AVPlayerLayer *)self.layer).player;
     });
     
@@ -51,17 +50,16 @@ const char *kDemoVideoViewPlayerAccessQueue = "com.colortv.DemoApp.DemoVideoView
 }
 
 - (void)setPlayer:(AVPlayer *)player {
-    dispatch_sync(playerViewAccessQueue, ^{
+    dispatch_sync(self.playerViewAccessQueue, ^{
         ((AVPlayerLayer *)self.layer).player = player;
     });
 }
 
 @end
 
-@interface VideoViewController () {
-    BOOL _isVideoPlayed;
-}
+@interface VideoViewController ()
 
+@property (nonatomic, assign, readwrite) BOOL isVideoPlaying;
 @property (nonatomic, strong, readonly) UIActivityIndicatorView *loadingIndicator;
 @property (nonatomic, strong) UITapGestureRecognizer *playPauseBtnRecognizer;
 @property (nonatomic, strong) COLORRecommendationViewController *recommendationVC;
@@ -75,7 +73,7 @@ const char *kDemoVideoViewPlayerAccessQueue = "com.colortv.DemoApp.DemoVideoView
     self = [super init];
     if(self) {
         
-        self.playPauseBtnRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(playPauseBtnClicked:)];
+        self.playPauseBtnRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(playPauseButtonClicked)];
         self.playPauseBtnRecognizer.allowedPressTypes = @[@(UIPressTypePlayPause)];
     }
     return self;
@@ -102,7 +100,7 @@ const char *kDemoVideoViewPlayerAccessQueue = "com.colortv.DemoApp.DemoVideoView
     [playPauseBtn setTitle:@"|>" forState:UIControlStateNormal];
     playPauseBtn.backgroundColor = [UIColor redColor];
     [playPauseBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [playPauseBtn addTarget:self action:@selector(playPauseBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
+    [playPauseBtn addTarget:self action:@selector(playPauseButtonClicked) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:playPauseBtn];
     
     playPauseBtn.translatesAutoresizingMaskIntoConstraints = NO;
@@ -111,11 +109,6 @@ const char *kDemoVideoViewPlayerAccessQueue = "com.colortv.DemoApp.DemoVideoView
     [playPauseBtn.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor constant:40.0f].active = YES;
     [playPauseBtn.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor constant:-40.0f].active = YES;
 #endif
-}
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -130,7 +123,7 @@ const char *kDemoVideoViewPlayerAccessQueue = "com.colortv.DemoApp.DemoVideoView
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     
-    if(self.isVideoPlayed) {
+    if(self.isVideoPlaying) {
         [self pause];
     }
     
@@ -138,11 +131,6 @@ const char *kDemoVideoViewPlayerAccessQueue = "com.colortv.DemoApp.DemoVideoView
     
     [self.videoPlayer removeObserver:self forKeyPath:@"rate"];
     [self.videoPlayer removeObserver:self forKeyPath:kPlaybackLikelyToKeepUpKeyPath];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (AVPlayer *)videoPlayer {
@@ -224,20 +212,16 @@ const char *kDemoVideoViewPlayerAccessQueue = "com.colortv.DemoApp.DemoVideoView
 
 - (void)play {
     [[self videoPlayer] play];
-    _isVideoPlayed = YES;
+    self.isVideoPlaying = YES;
 }
 
 - (void)pause {
     [[self videoPlayer] pause];
-    _isVideoPlayed = NO;
+    self.isVideoPlaying = NO;
 }
 
-- (BOOL)isVideoPlayed {
-    return _isVideoPlayed;
-}
-
-- (void)playPauseBtnClicked:(id)sender {
-    if(self.isVideoPlayed) {
+- (void)playPauseButtonClicked {
+    if(self.isVideoPlaying) {
         [self pause];
     } else {
         [self play];
