@@ -17,12 +17,13 @@
 #endif
 
 static NSString *const kPlaybackLikelyToKeepUpKeyPath = @"currentItem.playbackLikelyToKeepUp";
+static NSString *const kRateKeyPath = @"rate";
 
 @interface VideoViewController ()
 
 @property (nonatomic, assign, readwrite) BOOL isVideoPlaying;
-@property (nonatomic, strong, readonly) UIActivityIndicatorView *loadingIndicator;
-@property (nonatomic, strong) UITapGestureRecognizer *playPauseBtnRecognizer;
+@property (nonatomic, strong) UIActivityIndicatorView *loadingIndicator;
+@property (nonatomic, strong) UITapGestureRecognizer *playPauseButtonRecognizer;
 @property (nonatomic, strong) COLORRecommendationViewController *recommendationVC;
 @property (nonatomic, strong) COLORNextItemRecommendationViewController *nextItemVC;
 
@@ -30,55 +31,16 @@ static NSString *const kPlaybackLikelyToKeepUpKeyPath = @"currentItem.playbackLi
 
 @implementation VideoViewController
 
-- (instancetype)init {
-    self = [super init];
-    if(self) {
-        
-        self.playPauseBtnRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(playPauseButtonClicked)];
-        self.playPauseBtnRecognizer.allowedPressTypes = @[@(UIPressTypePlayPause)];
-    }
-    return self;
-}
-
 - (void)loadView {
     self.view = [[DemoPlayerVideoView alloc] init];
-    
-    _loadingIndicator = [[UIActivityIndicatorView alloc] initWithFrame:CGRectZero];
-    
-    self.loadingIndicator.translatesAutoresizingMaskIntoConstraints = NO;
-    
-    [self.view addSubview:self.loadingIndicator];
-    
-    [self.loadingIndicator.widthAnchor constraintEqualToConstant:100.0f].active = YES;
-    [self.loadingIndicator.heightAnchor constraintEqualToConstant:100.0f].active = YES;
-    [self.loadingIndicator.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor].active = YES;
-    [self.loadingIndicator.centerYAnchor constraintEqualToAnchor:self.view.centerYAnchor].active = YES;
-    
-    [self.loadingIndicator startAnimating];
-    
-#if TARGET_OS_IOS
-    UIButton *playPauseBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [playPauseBtn setTitle:@"|>" forState:UIControlStateNormal];
-    playPauseBtn.backgroundColor = [UIColor redColor];
-    [playPauseBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [playPauseBtn addTarget:self action:@selector(playPauseButtonClicked) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:playPauseBtn];
-    
-    playPauseBtn.translatesAutoresizingMaskIntoConstraints = NO;
-    [playPauseBtn.widthAnchor constraintEqualToConstant:70.0f].active = YES;
-    [playPauseBtn.heightAnchor constraintEqualToConstant:70.0f].active = YES;
-    [playPauseBtn.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor constant:40.0f].active = YES;
-    [playPauseBtn.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor constant:-40.0f].active = YES;
-#endif
+    [self setupLoadingIndicator];
+    [self setupPlayPauseButtonIfNeeded];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
-    [self.view addGestureRecognizer:self.playPauseBtnRecognizer];
-    
-    [self.videoPlayer addObserver:self forKeyPath:@"rate" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
-    [self.videoPlayer addObserver:self forKeyPath:kPlaybackLikelyToKeepUpKeyPath options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
+    [self addObservers];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -88,40 +50,55 @@ static NSString *const kPlaybackLikelyToKeepUpKeyPath = @"currentItem.playbackLi
         [self pause];
     }
     
-    [self.view removeGestureRecognizer:self.playPauseBtnRecognizer];
+    [self removeObservers];
+}
+
+#pragma mark - Observers
+
+- (void)addObservers {
+    [self.view addGestureRecognizer:self.playPauseButtonRecognizer];
     
-    [self.videoPlayer removeObserver:self forKeyPath:@"rate"];
+    [self.videoPlayer addObserver:self
+                       forKeyPath:kRateKeyPath
+                          options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld
+                          context:nil];
+    [self.videoPlayer addObserver:self
+                       forKeyPath:kPlaybackLikelyToKeepUpKeyPath
+                          options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld
+                          context:nil];
+}
+
+- (void)removeObservers {
+    [self.view removeGestureRecognizer:self.playPauseButtonRecognizer];
+    
+    [self.videoPlayer removeObserver:self forKeyPath:kRateKeyPath];
     [self.videoPlayer removeObserver:self forKeyPath:kPlaybackLikelyToKeepUpKeyPath];
 }
 
-- (AVPlayer *)videoPlayer {
-    return ((AVPlayerLayer *)self.view.layer).player;
+- (UITapGestureRecognizer *)playPauseButtonRecognizer {
+    if (!_playPauseButtonRecognizer) {
+        _playPauseButtonRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self
+                                                                             action:@selector(playPauseButtonClicked)];
+        _playPauseButtonRecognizer.allowedPressTypes = @[@(UIPressTypePlayPause)];
+    }
+    return _playPauseButtonRecognizer;
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
-
-    if([keyPath isEqualToString:@"rate"]) {
-        
+    
+    if([keyPath isEqualToString:kRateKeyPath]) {
         float rate = [change[@"new"] floatValue];
-        
-        if(rate == 0) {
-            if(self.recommendationVC) {
-                
-                if(self.presentedViewController != self.recommendationVC) {
-                    [self presentViewController:self.recommendationVC animated:YES completion:nil];
-                }
-            }
+        BOOL recommendationsShouldBePresented = self.recommendationVC && (self.presentedViewController != self.recommendationVC);
+        if(rate == 0 && recommendationsShouldBePresented) {
+            [self presentViewController:self.recommendationVC animated:YES completion:nil];
         }
-        
         if(self.videoPlayer.currentItem.isPlaybackLikelyToKeepUp) {
             [self.loadingIndicator stopAnimating];
         } else {
             [self.loadingIndicator startAnimating];
         }
     } else if([keyPath isEqualToString:kPlaybackLikelyToKeepUpKeyPath]) {
-
         BOOL likelyToKeepUp = [change[@"new"] boolValue];
-        
         if(likelyToKeepUp) {
             [self.loadingIndicator stopAnimating];
         } else {
@@ -129,6 +106,43 @@ static NSString *const kPlaybackLikelyToKeepUpKeyPath = @"currentItem.playbackLi
         }
     }
 }
+
+#pragma mark - View
+
+- (AVPlayer *)videoPlayer {
+    return ((AVPlayerLayer *)self.view.layer).player;
+}
+
+- (void)setupLoadingIndicator {
+    self.loadingIndicator = [[UIActivityIndicatorView alloc] initWithFrame:CGRectZero];
+    self.loadingIndicator.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.view addSubview:self.loadingIndicator];
+    [self.loadingIndicator.widthAnchor constraintEqualToConstant:100.0f].active = YES;
+    [self.loadingIndicator.heightAnchor constraintEqualToConstant:100.0f].active = YES;
+    [self.loadingIndicator.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor].active = YES;
+    [self.loadingIndicator.centerYAnchor constraintEqualToAnchor:self.view.centerYAnchor].active = YES;
+    [self.loadingIndicator startAnimating];
+}
+
+- (void)setupPlayPauseButtonIfNeeded {
+#if TARGET_OS_IOS
+    UIButton *playPauseButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [playPauseButton setTitle:@"|>" forState:UIControlStateNormal];
+    playPauseButton.backgroundColor = [UIColor redColor];
+    [playPauseButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [playPauseButton addTarget:self action:@selector(playPauseButtonClicked) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:playPauseButton];
+    
+    playPauseButton.translatesAutoresizingMaskIntoConstraints = NO;
+    [playPauseButton.widthAnchor constraintEqualToConstant:70.0f].active = YES;
+    [playPauseButton.heightAnchor constraintEqualToConstant:70.0f].active = YES;
+    [playPauseButton.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor constant:40.0f].active = YES;
+    [playPauseButton.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor constant:-40.0f].active = YES;
+#endif
+
+}
+
+#pragma mark - Video
 
 - (void)loadVideoWithURL:(NSURL *)url andId:(NSString *)identifier {
     AVPlayerItem *videoItem = [AVPlayerItem playerItemWithURL:url];
@@ -139,36 +153,38 @@ static NSString *const kPlaybackLikelyToKeepUpKeyPath = @"currentItem.playbackLi
         ((DemoPlayerVideoView *)self.view).player = [AVPlayer playerWithPlayerItem:videoItem];
     }
     
-    [[COLORAdController sharedAdController] contentRecommendationControllerForPlacement:COLORAdFrameworkPlacementVideoStart andVideoId:identifier withCompletion:^(COLORRecommendationViewController * _Nullable vc, NSError * _Nullable error) {
-        
-        if(!error && vc) {
-            
-            vc.itemSelected = ^(NSString *videoId, NSURL *videoURL, NSDictionary *clickParams) {
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    [self dismissViewControllerAnimated:YES completion:^{
-                        
-                        [self loadVideoWithURL:videoURL andId:videoId];
-                        [self play];
-                    }];
-                });
-            };
-            
-            vc.contentRecommendationClosed = ^() {
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    
-                    [self dismissViewControllerAnimated:YES completion:^{
-                        [self play];
-                    }];
-                });
-            };
-
-            self.recommendationVC = vc;
-            
-        } else {
-            NSLog(@"::>> ConRec ERROR: %@", error);
-        }
-    }];
-
+    [[COLORAdController sharedAdController] contentRecommendationControllerForPlacement:COLORAdFrameworkPlacementVideoStart
+                                                                             andVideoId:identifier
+                                                                         withCompletion:^(COLORRecommendationViewController * _Nullable viewController, NSError * _Nullable error) {
+         if (error) {
+             NSLog(@"::>> ConRec ERROR: %@", error);
+             return;
+         }
+         if (!viewController) {
+             NSLog(@"::>> ConRec No RecommendationViewController");
+             return;
+         }
+         
+         viewController.itemSelected = ^(NSString *videoId, NSURL *videoURL, NSDictionary *clickParams) {
+             dispatch_async(dispatch_get_main_queue(), ^{
+                 [self dismissViewControllerAnimated:YES completion:^{
+                     [self loadVideoWithURL:videoURL andId:videoId];
+                     [self play];
+                 }];
+             });
+         };
+         
+         viewController.contentRecommendationClosed = ^() {
+             dispatch_async(dispatch_get_main_queue(), ^{
+                 [self dismissViewControllerAnimated:YES completion:^{
+                     [self play];
+                 }];
+             });
+         };
+         
+         self.recommendationVC = viewController;
+     }];
+    
 }
 
 - (void)play {
