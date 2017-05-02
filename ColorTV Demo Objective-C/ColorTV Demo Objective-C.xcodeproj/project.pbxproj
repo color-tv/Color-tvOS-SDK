@@ -18,6 +18,8 @@
 		177005251E79A1AA00CEA751 /* COLORMobileAdFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 177005221E79A19700CEA751 /* COLORMobileAdFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		177005291E79B5E500CEA751 /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 177005281E79B5E500CEA751 /* VideoViewController.m */; };
 		1770052A1E79B80500CEA751 /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 177005281E79B5E500CEA751 /* VideoViewController.m */; };
+		BD8A5B351EB879F400E92AA6 /* DemoPlayerVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8A5B341EB879F400E92AA6 /* DemoPlayerVideoView.m */; };
+		BD8A5B361EB879F400E92AA6 /* DemoPlayerVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8A5B341EB879F400E92AA6 /* DemoPlayerVideoView.m */; };
 		CBF73A861C81039600C599A3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CBF73A851C81039600C599A3 /* main.m */; };
 		CBF73A891C81039600C599A3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CBF73A881C81039600C599A3 /* AppDelegate.m */; };
 		CBF73A8C1C81039600C599A3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBF73A8B1C81039600C599A3 /* ViewController.m */; };
@@ -65,6 +67,8 @@
 		177005221E79A19700CEA751 /* COLORMobileAdFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = COLORMobileAdFramework.framework; sourceTree = "<group>"; };
 		177005271E79B5E500CEA751 /* VideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoViewController.h; sourceTree = "<group>"; };
 		177005281E79B5E500CEA751 /* VideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoViewController.m; sourceTree = "<group>"; };
+		BD8A5B331EB879F400E92AA6 /* DemoPlayerVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoPlayerVideoView.h; sourceTree = "<group>"; };
+		BD8A5B341EB879F400E92AA6 /* DemoPlayerVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoPlayerVideoView.m; sourceTree = "<group>"; };
 		CBF73A811C81039600C599A3 /* ColorTV Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ColorTV Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBF73A851C81039600C599A3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CBF73A871C81039600C599A3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -158,6 +162,8 @@
 				CBF73A8B1C81039600C599A3 /* ViewController.m */,
 				177005271E79B5E500CEA751 /* VideoViewController.h */,
 				177005281E79B5E500CEA751 /* VideoViewController.m */,
+				BD8A5B331EB879F400E92AA6 /* DemoPlayerVideoView.h */,
+				BD8A5B341EB879F400E92AA6 /* DemoPlayerVideoView.m */,
 				CBF73A8D1C81039600C599A3 /* Main.storyboard */,
 				CBF73A901C81039600C599A3 /* Assets.xcassets */,
 				CBF73A921C81039600C599A3 /* Info.plist */,
@@ -284,6 +290,7 @@
 				1770051C1E799AD700CEA751 /* AppDelegate.m in Sources */,
 				1770051D1E799AD700CEA751 /* ViewController.m in Sources */,
 				177005091E797CFF00CEA751 /* main.m in Sources */,
+				BD8A5B361EB879F400E92AA6 /* DemoPlayerVideoView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +298,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD8A5B351EB879F400E92AA6 /* DemoPlayerVideoView.m in Sources */,
 				177005291E79B5E500CEA751 /* VideoViewController.m in Sources */,
 				176590CD1CA48D5E00243926 /* COLORDemoButton.m in Sources */,
 				CBF73A8C1C81039600C599A3 /* ViewController.m in Sources */,
@@ -505,6 +513,7 @@
 				1770051A1E797CFF00CEA751 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CBF73A7C1C81039600C599A3 /* Build configuration list for PBXProject "ColorTV Demo Objective-C" */ = {
 			isa = XCConfigurationList;

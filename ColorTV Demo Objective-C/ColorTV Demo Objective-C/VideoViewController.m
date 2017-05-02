@@ -8,6 +8,8 @@
 
 #import "VideoViewController.h"
 
+#import "DemoPlayerVideoView.h"
+
 #if TARGET_OS_TV
 @import COLORAdFramework;
 #else
@@ -15,47 +17,6 @@
 #endif
 
 static NSString *const kPlaybackLikelyToKeepUpKeyPath = @"currentItem.playbackLikelyToKeepUp";
-const char *kDemoVideoViewPlayerAccessQueue = "com.colortv.DemoApp.DemoVideoViewPlayerAccessQueue";
-
-@interface DemoPlayerVideoView : UIView
-
-@property (atomic, strong) dispatch_queue_t playerViewAccessQueue;
-@property (atomic, strong) AVPlayer *player;
-
-@end
-
-@implementation DemoPlayerVideoView
-
-- (instancetype)init {
-    self = [super init];
-    if(self) {
-        self.playerViewAccessQueue = dispatch_queue_create(kDemoVideoViewPlayerAccessQueue, nil);
-        self.backgroundColor = [UIColor blackColor];
-    }
-    return self;
-}
-
-+ (Class)layerClass {
-    return [AVPlayerLayer class];
-}
-
-- (AVPlayer *)player {
-    __block AVPlayer *result;
-    
-    dispatch_sync(self.playerViewAccessQueue, ^{
-        result = ((AVPlayerLayer *)self.layer).player;
-    });
-    
-    return result;
-}
-
-- (void)setPlayer:(AVPlayer *)player {
-    dispatch_sync(self.playerViewAccessQueue, ^{
-        ((AVPlayerLayer *)self.layer).player = player;
-    });
-}
-
-@end
 
 @interface VideoViewController ()
 
