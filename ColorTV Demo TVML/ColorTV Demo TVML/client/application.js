@@ -52,7 +52,7 @@ function getDoc(options) {
 function configureElements(doc) {
     var elements = doc.getElementsByTagName("menuItem");
     console.log("::>> ELEMENTS: " + elements);
-    for(var i = 0; i < elements.length; i++) {
+    for(var i = 0; i < elements.length - 1; i++) {
         var titleNode = elements.item(i).getElementsByTagName("title").item(0);
         console.log("::>> TITLE: " + titleNode.nodeType);
         switch(i) {
@@ -70,7 +70,7 @@ function configureElements(doc) {
                 break;
             case 4:
                 var placement = "AbandonInAppPurchase";
-                break;
+                break;                
         }
         elements.item(i).addEventListener("select", function(event) {
             console.log(event + " " + placement);
@@ -87,7 +87,7 @@ function configureElements(doc) {
             });
         }, null);
     }
-
+    elements.item(elements.length - 1).addEventListener("select", function(event) {console.log("Show content recommendation now!")}, null);
 }
 
 App.onLaunch = function(options) {
