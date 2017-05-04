@@ -100,10 +100,21 @@ function playMedia(videoURL, mediaType) {
     var myPlayer = new Player();
     myPlayer.playlist = videoList;
     myPlayer.play();
+    COLORAdController.sharedAdController().prepareRecommendationControllerForPlacementAndVideoIdWithCompletion("VideoStart", "0017", function(error) {
+        if (error) {
+            console.log("Error while fetching recommendation for curent video");
+        }
+    })
     myPlayer.addEventListener("stateDidChange", function(event) {
         console.log("stateDidChange to " + event.state);
         if (event.state == "paused") {
-
+            COLORAdController.sharedAdController().showLastRecommendationWithCompletionHandler(function(newVideoId, newVideoURL) {
+                var newSingleVideo = MediaItem("video", newVideoURL);
+                var newVideoList = new Playlist();
+                newVideoList.push(newSingleVideo);
+                myPlayer.playlist = newVideoList;
+                myPlayer.play();
+            });
         }
     });
 }
