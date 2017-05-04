@@ -87,8 +87,27 @@ function configureElements(doc) {
             });
         }, null);
     }
-    elements.item(elements.length - 1).addEventListener("select", function(event) {console.log("Show content recommendation now!")}, null);
+    elements.item(elements.length - 1).addEventListener("select", function(event) {
+        console.log("Show content recommendation now!");
+        playMedia("https://s3.amazonaws.com/colortv-testapp-data/0017.mp4", "video");
+    }, null);
 }
+
+function playMedia(videoURL, mediaType) {
+    var singleVideo = new MediaItem(mediaType, videoURL);
+    var videoList = new Playlist();
+    videoList.push(singleVideo);
+    var myPlayer = new Player();
+    myPlayer.playlist = videoList;
+    myPlayer.play();
+    myPlayer.addEventListener("stateDidChange", function(event) {
+        console.log("stateDidChange to " + event.state);
+        if (event.state == "paused") {
+
+        }
+    });
+}
+
 
 App.onLaunch = function(options) {
 
