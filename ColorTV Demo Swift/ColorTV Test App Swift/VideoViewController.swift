@@ -15,7 +15,6 @@ import COLORAdFramework
 class VideoViewController: UIViewController {
     
     let kPlaybackLikelyToKeepUpKeyPath = "currentItem.playbackLikelyToKeepUp"
-    let kDemoVideoViewPlayerAccessQueue = "com.colortv.DemoApp.DemoVideoViewPlayerAccessQueue"
     var isVideoPlayed: Bool = false
     
     var videoView: DemoPlayerVideoView {

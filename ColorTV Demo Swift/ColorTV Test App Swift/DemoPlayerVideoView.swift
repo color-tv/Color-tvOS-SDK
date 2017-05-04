@@ -11,21 +11,29 @@ import UIKit
 import AVFoundation
 
 class DemoPlayerVideoView: UIView {
-  var player: AVPlayer? {
-    get {
-      return playerLayer.player
+    
+    let playerViewAccessQueue = DispatchQueue(label: "com.colortv.DemoApp.DemoVideoViewPlayerAccessQueue")
+    
+    var player: AVPlayer? {
+        get {
+            var result: AVPlayer?
+            playerViewAccessQueue.sync {
+                result = playerLayer.player
+            }
+            return result
+        }
+        set {
+            playerViewAccessQueue.sync {
+                playerLayer.player = newValue
+            }
+        }
     }
-    set {
-      playerLayer.player = newValue
+    
+    var playerLayer: AVPlayerLayer {
+        return layer as! AVPlayerLayer
     }
-  }
-  
-  var playerLayer: AVPlayerLayer {
-    return layer as! AVPlayerLayer
-  }
-  
-  // Override UIView property
-  override static var layerClass: AnyClass {
-    return AVPlayerLayer.self
-  }
+    
+    override static var layerClass: AnyClass {
+        return AVPlayerLayer.self
+    }
 }
