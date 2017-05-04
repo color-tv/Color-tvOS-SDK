@@ -15,7 +15,7 @@ import COLORAdFramework
 class VideoViewController: UIViewController {
     
     let kPlaybackLikelyToKeepUpKeyPath = "currentItem.playbackLikelyToKeepUp"
-    var isVideoPlayed: Bool = false
+    var isVideoPlaying: Bool = false
     
     var videoView: DemoPlayerVideoView {
         return view as! DemoPlayerVideoView
@@ -109,19 +109,15 @@ class VideoViewController: UIViewController {
     
     func play() {
         videoPlayer?.play()
-        isVideoPlayed = true
+        isVideoPlaying = true
     }
     
     func pause() {
         videoPlayer?.pause()
-        isVideoPlayed = false
+        isVideoPlaying = false
     }
     
     func playPauseButtonClicked(sender: Any) {
-        if self.isVideoPlayed {
-            pause()
-        } else {
-            play()
-        }
+        isVideoPlaying ? pause() : play()
     }
 }
