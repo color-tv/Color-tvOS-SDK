@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="m2l-fV-fcn">
+    <device id="appleTV" orientation="landscape">
+        <adaptation id="light"/>
+    </device>
+    <dependencies>
+        <deployment identifier="tvOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Video View Controller-->
+        <scene sceneID="kDu-2B-Mnw">
+            <objects>
+                <viewController id="m2l-fV-fcn" customClass="VideoViewController" customModule="ColorTV_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fqt-zH-bUO"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZfM-Kt-6hY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TWS-fc-WCJ" customClass="DemoPlayerVideoView" customModule="ColorTV_Demo" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="IvS-sy-X9P">
+                                <rect key="frame" x="910" y="490" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="l7K-xw-Mb8"/>
+                                    <constraint firstAttribute="width" constant="100" id="rsB-Js-P8S"/>
+                                </constraints>
+                            </activityIndicatorView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="IvS-sy-X9P" firstAttribute="centerY" secondItem="TWS-fc-WCJ" secondAttribute="centerY" id="XnW-Ed-Uqe"/>
+                            <constraint firstItem="IvS-sy-X9P" firstAttribute="centerX" secondItem="TWS-fc-WCJ" secondAttribute="centerX" id="hMz-rK-Irq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="loadingIndicator" destination="IvS-sy-X9P" id="dWS-Pb-7GM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L2u-qF-fsQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="106" y="33"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,7 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="appleTV" orientation="landscape">
+        <adaptation id="light"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <deployment identifier="tvOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -24,7 +29,7 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZPG-AO-qLX">
                                         <rect key="frame" x="0.0" y="0.0" width="295" height="86"/>
-                                        <color key="backgroundColor" red="0.89019607840000003" green="0.31372549020000001" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.89019607840000003" green="0.31372549020000001" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="295" id="mIv-Fe-Peh"/>
                                         </constraints>
@@ -37,7 +42,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j3S-yd-v7R">
                                         <rect key="frame" x="365" y="0.0" width="300" height="86"/>
-                                        <color key="backgroundColor" red="0.99607843139999996" green="0.7725490196" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.99607843139999996" green="0.7725490196" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="86" id="DNo-V7-4wR"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="gWt-bz-mwN"/>
@@ -51,7 +56,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N3f-dn-JBc">
                                         <rect key="frame" x="735" y="0.0" width="300" height="86"/>
-                                        <color key="backgroundColor" red="0.68627450980000004" green="0.84313725490000002" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.68627450980000004" green="0.84313725490000002" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="86" id="UHE-bZ-jbq"/>
                                             <constraint firstAttribute="height" constant="86" id="cdr-PL-a9J"/>
@@ -68,7 +73,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VXX-Bj-kid">
                                         <rect key="frame" x="1105" y="0.0" width="300" height="86"/>
-                                        <color key="backgroundColor" red="0.47450980390000003" green="0.80000000000000004" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.47450980390000003" green="0.80000000000000004" blue="0.92549019610000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="300" id="0wv-ri-gXm"/>
                                         </constraints>
@@ -81,7 +86,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LiX-Vf-SRi">
                                         <rect key="frame" x="1475" y="0.0" width="300" height="86"/>
-                                        <color key="backgroundColor" red="0.76862745098039209" green="0.5725490196078431" blue="0.85882352941176465" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.76862745098039209" green="0.5725490196078431" blue="0.85882352941176465" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="300" id="hgp-gN-u2G"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="sN5-1X-T3v"/>
@@ -95,20 +100,36 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EeR-Lw-btI">
+                                <rect key="frame" x="735" y="721" width="450" height="73"/>
+                                <color key="backgroundColor" red="0.68627450980000004" green="0.84313725490000002" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="450" id="BmG-nz-Wvm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="27"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Content Recommendation"/>
+                                <connections>
+                                    <action selector="showContentRecomendation:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="Mnk-WN-3ge"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="VXX-Bj-kid" firstAttribute="top" secondItem="EeR-Lw-btI" secondAttribute="bottom" constant="100" id="0Ry-0f-nYK"/>
                             <constraint firstItem="VXt-jj-def" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="1kG-Sy-oa7"/>
                             <constraint firstAttribute="trailing" secondItem="VXt-jj-def" secondAttribute="trailing" id="4a2-Ew-IRc"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="e9S-QE-DRn" secondAttribute="bottom" constant="100" id="EbY-ss-JTC"/>
+                            <constraint firstItem="EeR-Lw-btI" firstAttribute="centerX" secondItem="VXt-jj-def" secondAttribute="centerX" id="GvM-Rc-eyg"/>
                             <constraint firstItem="e9S-QE-DRn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eX0-zz-Mmv"/>
                             <constraint firstAttribute="bottom" secondItem="VXt-jj-def" secondAttribute="bottom" id="gmx-AZ-05Y"/>
                             <constraint firstItem="VXt-jj-def" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="trb-DJ-LRi"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="contentRecButton" destination="EeR-Lw-btI" id="7gY-Ue-jGf"/>
                         <outlet property="stackView" destination="e9S-QE-DRn" id="Zcg-u3-2OX"/>
                     </connections>
                 </viewController>
@@ -120,4 +141,9 @@
     <resources>
         <image name="demo-app-bg" width="1920" height="1080"/>
     </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <nil key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation" orientation="landscapeRight"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
 </document>
