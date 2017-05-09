@@ -22,7 +22,6 @@ class VideoViewController: UIViewController {
     }
     
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
-    private var playPauseBtnRecognizer: UITapGestureRecognizer!
     private var recommendationVC: COLORRecommendationViewController!
     private var nextItemVC: COLORNextItemRecommendationViewController!
     
@@ -32,8 +31,9 @@ class VideoViewController: UIViewController {
     
     override func loadView() {
         super.loadView()
-        playPauseBtnRecognizer = UITapGestureRecognizer(target: self, action: #selector(playPauseButtonClicked))
+        let playPauseBtnRecognizer = UITapGestureRecognizer(target: self, action: #selector(playPauseButtonClicked))
         playPauseBtnRecognizer.allowedPressTypes = [NSNumber(value: UIPressType.playPause.rawValue)]
+        view.addGestureRecognizer(playPauseBtnRecognizer)
         view.backgroundColor = UIColor.black
         loadingIndicator.startAnimating()
         
@@ -41,7 +41,6 @@ class VideoViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        view.addGestureRecognizer(playPauseBtnRecognizer)
         videoPlayer?.addObserver(self, forKeyPath: "rate", options: [.new, .old], context: nil)
         videoPlayer?.addObserver(self, forKeyPath: kPlaybackLikelyToKeepUpKeyPath, options: [.new, .old], context: nil)
     }
@@ -83,26 +82,26 @@ class VideoViewController: UIViewController {
         
         COLORAdController.sharedAdController().contentRecommendationController(forPlacement: COLORAdFrameworkPlacementVideoStart, andVideoId: identifier) {
             (vc: COLORRecommendationViewController?, error: Error?) in
-            if let vc = vc, error == nil {
-                vc.itemSelected = {(videoId: String, videoURL: URL, clickParams: [AnyHashable : Any]?) in
-                    DispatchQueue.main.async {
-                        self.dismiss(animated: true) {
-                            self.loadVideo(with: videoURL, identifier: videoId)
-                            self.play()
-                        }
-                    }
-                }
-                vc.contentRecommendationClosed = {
-                    DispatchQueue.main.async {
-                        self.dismiss(animated: true) {
-                            self.play()
-                        }
-                    }
-                }
-                self.recommendationVC = vc
-            } else {
-                NSLog("::>> ConRec ERROR: \(error)");
+            guard let vc = vc, error == nil else {
+                NSLog("::>> ConRec ERROR: \(error?.localizedDescription ?? "Unrecognized error")")
+                return
             }
+            vc.itemSelected = {(videoId: String, videoURL: URL, clickParams: [AnyHashable : Any]?) in
+                DispatchQueue.main.async {
+                    self.dismiss(animated: true) {
+                        self.loadVideo(with: videoURL, identifier: videoId)
+                        self.play()
+                    }
+                }
+            }
+            vc.contentRecommendationClosed = {
+                DispatchQueue.main.async {
+                    self.dismiss(animated: true) {
+                        self.play()
+                    }
+                }
+            }
+            self.recommendationVC = vc
         }
         play()
     }
