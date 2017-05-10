@@ -29,14 +29,13 @@ class VideoViewController: UIViewController {
         return videoView.playerLayer.player;
     }
     
-    override func loadView() {
-        super.loadView()
+    override func viewDidLoad() {
+        super.viewDidLoad()
         let playPauseBtnRecognizer = UITapGestureRecognizer(target: self, action: #selector(playPauseButtonClicked))
         playPauseBtnRecognizer.allowedPressTypes = [NSNumber(value: UIPressType.playPause.rawValue)]
         view.addGestureRecognizer(playPauseBtnRecognizer)
         view.backgroundColor = UIColor.black
         loadingIndicator.startAnimating()
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
