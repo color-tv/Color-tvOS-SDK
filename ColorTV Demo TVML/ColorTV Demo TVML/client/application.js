@@ -25,18 +25,18 @@ function configureAdController() {
     COLORAdController.sharedAdController().startWithAppIdentifier("08271056-5211-4ae6-bf1c-12e344455383");
     COLORAdController.sharedAdController().setCurrentPlacement("AppLaunch");
     COLORAdController.sharedAdController().currencyHandler = function(details) {
-        console.log("::>> currency handler ::<<");
-        console.log("::>> currency type: " + details.currencyType);
-        console.log("::>> currency amount: " + details.currencyAmount);
-        console.log("::>> placement: " + details.placement);
-        console.log("::>> status: " + details.status);
-        console.log("::>> timestamp: " + details.timestamp);
+        logger.log("::>> currency handler ::<<");
+        logger.log("::>> currency type: " + details.currencyType);
+        logger.log("::>> currency amount: " + details.currencyAmount);
+        logger.log("::>> placement: " + details.placement);
+        logger.log("::>> status: " + details.status);
+        logger.log("::>> timestamp: " + details.timestamp);
     };
     COLORAdController.sharedAdController().registerThirdPartyUserIdWithCompletionHandler("jj@colortv.com", function(success) {
         if(success) {
-           console.log("Third party user id registered.");
+           logger.log("Third party user id registered.");
         } else {
-           console.log("Third party user id failure.");
+           logger.log("Third party user id failure.");
         }
     });
 
@@ -51,10 +51,10 @@ function getDoc(options) {
 
 function configureElements(doc) {
     var elements = doc.getElementsByTagName("menuItem");
-    console.log("::>> ELEMENTS: " + elements);
+    logger.log("::>> ELEMENTS: " + elements);
     for(var i = 0; i < elements.length - 1; i++) {
         var titleNode = elements.item(i).getElementsByTagName("title").item(0);
-        console.log("::>> TITLE: " + titleNode.nodeType);
+        logger.log("::>> TITLE: " + titleNode.nodeType);
         switch(i) {
             case 0:
                 var placement = "MainMenu";
@@ -73,22 +73,22 @@ function configureElements(doc) {
                 break;                
         }
         elements.item(i).addEventListener("select", function(event) {
-            console.log(event + " " + placement);
+            logger.log(event + " " + placement);
             COLORAdController.sharedAdController().prepareAdForPlacementWithCompletionAndExpirationHandler(placement, function(success) {
                 if(success) {
-                console.log("AD prepared");
+                logger.log("AD prepared");
                 COLORAdController.sharedAdController().showLastAdWithCompletionHandler(function(watched) {
-                    console.log("AD completed " + watched);                                                                                                                  });
+                    logger.log("AD completed " + watched);                                                                                                                  });
                 } else {
-                    console.log("AD NOT prepared");
+                    logger.log("AD NOT prepared");
                 }
             }, function() {
-                    console.log("AD expired");
+                    logger.log("AD expired");
             });
         }, null);
     }
     elements.item(elements.length - 1).addEventListener("select", function(event) {
-        console.log("Show content recommendation now!");
+        logger.log("Show content recommendation now!");
         playMedia("https://s3.amazonaws.com/colortv-testapp-data/0017.mp4", "video");
     }, null);
 }
@@ -102,11 +102,11 @@ function playMedia(videoURL, mediaType) {
     myPlayer.play();
     COLORAdController.sharedAdController().prepareRecommendationControllerForPlacementAndVideoIdWithCompletion("VideoStart", "0017", function(error) {
         if (error) {
-            console.log("Error while fetching recommendation for curent video");
+            logger.log("Error while fetching recommendation for curent video");
         }
     })
     myPlayer.addEventListener("stateDidChange", function(event) {
-        console.log("stateDidChange to " + event.state);
+        logger.log("stateDidChange to " + event.state);
         if (event.state == "paused") {
             COLORAdController.sharedAdController().showLastRecommendationWithCompletionHandler(function(newVideoId, newVideoURL) {
                 var newSingleVideo = MediaItem("video", newVideoURL);
@@ -114,17 +114,18 @@ function playMedia(videoURL, mediaType) {
                 newVideoList.push(newSingleVideo);
                 myPlayer.playlist = newVideoList;
                 myPlayer.play();
+                logger.log("oldvideo: " + videoURL + "     newVideo: " + newVideoURL);
+                setTimeout(playNewVideo, 0 , newVideoId, newVideoURL, myPlayer);
             });
         }
     });
 }
 
-
 App.onLaunch = function(options) {
 
     evaluateScripts([`${options.BASEURL}templates/hello-world.xml.js`], function(success) {
         if(!success) {
-            console.log('Error loading hello-world.xml.js');
+            logger.log('Error loading hello-world.xml.js');
             return;
         }
         configureAdController();
@@ -136,5 +137,5 @@ App.onLaunch = function(options) {
 }
 
 App.onExit = function() {
-    console.log('App finished');
+    logger.log('App finished');
 }

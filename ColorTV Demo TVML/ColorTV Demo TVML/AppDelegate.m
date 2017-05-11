@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 
+#import "Logger.h"
+
 @import COLORAdFramework;
 
 @interface AppDelegate ()
@@ -46,6 +48,7 @@
 
 -(void)appController:(TVApplicationController *)appController evaluateAppJavaScriptInContext:(JSContext *)jsContext {
     [COLORAdFrameworkLogger setDebugLevel:COLORAdFrameworkDebugLevelInfo];
+    jsContext[@"logger"] = [[Logger alloc] initWithJSContext:jsContext];
     [jsContext.globalObject setObject:[COLORAdController class] forKeyedSubscript:@"COLORAdController"];
     [jsContext.globalObject setObject:[COLORUserProfile class] forKeyedSubscript:@"COLORUserProfile"];
     

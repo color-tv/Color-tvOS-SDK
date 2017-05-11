@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BDEDA3051EC5A9B000F95788 /* Logger.m in Sources */ = {isa = PBXBuildFile; fileRef = BDEDA3041EC5A9B000F95788 /* Logger.m */; };
 		CB5275151C8F23FF002B804A /* client in Resources */ = {isa = PBXBuildFile; fileRef = CB5275141C8F23FF002B804A /* client */; };
 		CB9268B01C873E3400D5E8E4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9268AF1C873E3400D5E8E4 /* main.m */; };
 		CB9268B31C873E3400D5E8E4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9268B21C873E3400D5E8E4 /* AppDelegate.m */; };
@@ -52,6 +53,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BDEDA3031EC5A9B000F95788 /* Logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logger.h; sourceTree = "<group>"; };
+		BDEDA3041EC5A9B000F95788 /* Logger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Logger.m; sourceTree = "<group>"; };
 		CB5275141C8F23FF002B804A /* client */ = {isa = PBXFileReference; lastKnownFileType = folder; path = client; sourceTree = "<group>"; };
 		CB9268AB1C873E3400D5E8E4 /* ColorTV Demo TVML.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ColorTV Demo TVML.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB9268AF1C873E3400D5E8E4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -127,6 +130,8 @@
 				CB9268B21C873E3400D5E8E4 /* AppDelegate.m */,
 				CB9268B41C873E3400D5E8E4 /* ViewController.h */,
 				CB9268B51C873E3400D5E8E4 /* ViewController.m */,
+				BDEDA3031EC5A9B000F95788 /* Logger.h */,
+				BDEDA3041EC5A9B000F95788 /* Logger.m */,
 				CB9268B71C873E3400D5E8E4 /* Main.storyboard */,
 				CB9268BA1C873E3400D5E8E4 /* Assets.xcassets */,
 				CB9268BC1C873E3400D5E8E4 /* Info.plist */,
@@ -298,6 +303,7 @@
 				CB9268B61C873E3400D5E8E4 /* ViewController.m in Sources */,
 				CB9268B31C873E3400D5E8E4 /* AppDelegate.m in Sources */,
 				CB9268B01C873E3400D5E8E4 /* main.m in Sources */,
+				BDEDA3051EC5A9B000F95788 /* Logger.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
