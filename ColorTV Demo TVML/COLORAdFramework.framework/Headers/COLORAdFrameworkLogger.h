@@ -19,12 +19,12 @@ typedef NS_ENUM(NSInteger, COLORAdFrameworkDebugLevel) {
 
 +(void)setDebugLevel:(COLORAdFrameworkDebugLevel)level;
 
-+(void)logInfoWithFormat:(NSString*)format, ... NS_FORMAT_FUNCTION(1, 2);
++(void)logInfoWithFormat:(NSString *)format, ... NS_FORMAT_FUNCTION(1, 2);
 
-+(void)logNoticeWithFormat:(NSString*)format, ... NS_FORMAT_FUNCTION(1, 2);
++(void)logNoticeWithFormat:(NSString *)format, ... NS_FORMAT_FUNCTION(1, 2);
 
-+(void)logWarningWithFormat:(NSString*)format, ... NS_FORMAT_FUNCTION(1, 2);
++(void)logWarningWithFormat:(NSString *)format, ... NS_FORMAT_FUNCTION(1, 2);
 
-+(void)logErrorWithFormat:(NSString*)format, ... NS_FORMAT_FUNCTION(1, 2);
++(void)logErrorWithFormat:(NSString *)format, ... NS_FORMAT_FUNCTION(1, 2);
 
 @end
