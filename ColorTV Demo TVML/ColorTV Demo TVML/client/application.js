@@ -109,16 +109,17 @@ function playMedia(videoURL, mediaType) {
         logger.log("stateDidChange to " + event.state);
         if (event.state == "paused") {
             COLORAdController.sharedAdController().showLastRecommendationWithCompletionHandler(function(newVideoId, newVideoURL) {
-                var newSingleVideo = MediaItem("video", newVideoURL);
-                var newVideoList = new Playlist();
-                newVideoList.push(newSingleVideo);
-                myPlayer.playlist = newVideoList;
-                myPlayer.play();
                 logger.log("oldvideo: " + videoURL + "     newVideo: " + newVideoURL);
                 setTimeout(playNewVideo, 0 , newVideoId, newVideoURL, myPlayer);
+
             });
         }
     });
+}
+
+function playNewVideo(newVideoId, newVideoURL, myPlayer) {
+    myPlayer.stop();
+    playMedia(newVideoURL, "video")
 }
 
 App.onLaunch = function(options) {
