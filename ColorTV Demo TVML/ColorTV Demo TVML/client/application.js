@@ -110,6 +110,7 @@ function playMedia(videoURL, mediaType) {
         if (event.state == "paused") {
             COLORAdController.sharedAdController().showLastRecommendationWithCompletionHandler(function(newVideoId, newVideoURL) {
                 logger.log("oldvideo: " + videoURL + "     newVideo: " + newVideoURL);
+                //Setting timeout here is like doing dispach_async on main thread. Without this it would probably crash.
                 setTimeout(playNewVideo, 0 , newVideoId, newVideoURL, myPlayer);
 
             });
@@ -119,7 +120,8 @@ function playMedia(videoURL, mediaType) {
 
 function playNewVideo(newVideoId, newVideoURL, myPlayer) {
     myPlayer.stop();
-    playMedia(newVideoURL, "video")
+    //This implementation closes current video and then open new one. But actually it can be played using current player or added to playlist.
+    playMedia(newVideoURL, "video");
 }
 
 App.onLaunch = function(options) {
