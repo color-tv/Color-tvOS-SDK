@@ -106,20 +106,27 @@ function playMedia(videoURL, mediaType) {
         }
     })
     myPlayer.addEventListener("stateDidChange", function(event) {
-        logger.log("stateDidChange to " + event.state);
-        if (event.state == "paused") {
-            COLORAdController.sharedAdController().showLastRecommendationWithCompletionHandler(function(newVideoId, newVideoURL) {
-                logger.log("oldvideo: " + videoURL + "     newVideo: " + newVideoURL);
-                //Setting timeout here is like doing dispach_async on main thread. Without this it would probably crash.
-                setTimeout(playNewVideo, 0 , newVideoId, newVideoURL, myPlayer);
-
-            });
+        logger.log("stateDidChange from: " + event.oldState + " to: " + event.state);
+        if ((event.state == "paused" && event.oldState != "loading") || event.state == "end") {
+            showRecommendationsForPlayer(myPlayer);
         }
+    });
+}
+
+function showRecommendationsForPlayer(myPlayer) {
+    COLORAdController.sharedAdController().showLastRecommendationWithCompletionHandler(function(newVideoId, newVideoURL) {
+        if (!newVideoURL) {
+            return;
+        }
+        logger.log("newVideo: " + newVideoURL);
+        //Setting timeout here is like doing dispach_async on main thread. Without this it would probably crash.
+        setTimeout(playNewVideo, 0, newVideoId, newVideoURL, myPlayer);
     });
 }
 
 function playNewVideo(newVideoId, newVideoURL, myPlayer) {
     myPlayer.stop();
+    logger.log("playNewVideo");
     //This implementation closes current video and then open new one. But actually it can be played using current player or added to playlist.
     playMedia(newVideoURL, "video");
 }
