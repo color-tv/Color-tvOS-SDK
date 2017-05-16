@@ -104,11 +104,19 @@ function playMedia(videoURL, mediaType) {
         if (error) {
             logger.log("Error while fetching recommendation for curent video");
         }
-    })
+    });
     myPlayer.addEventListener("stateDidChange", function(event) {
         logger.log("stateDidChange from: " + event.oldState + " to: " + event.state);
-        if ((event.state == "paused" && event.oldState != "loading") || event.state == "end") {
+        if (event.state == "paused" && event.oldState != "loading")  {
             showRecommendationsForPlayer(myPlayer);
+        } else if (event.oldState == "loading" && event.state == "playing") {//Waiting until we will have MediaItem fetched
+            logger.log("duration: " + myPlayer.currentMediaItemDuration);
+            //Removing old listener if there was one
+            myPlayer.removeEventListener("timeBoundaryDidCross");
+            myPlayer.addEventListener("timeBoundaryDidCross", function(event) {
+                logger.log("timeBoundaryDidCross: " + event.boundary);
+                myPlayer.pause();
+            }, [myPlayer.currentMediaItemDuration - 1]);
         }
     });
 }
