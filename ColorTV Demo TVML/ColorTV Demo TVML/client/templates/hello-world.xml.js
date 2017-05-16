@@ -23,6 +23,9 @@ var Template = function(obj) { console.log(obj); return `<?xml version="1.0" enc
                     <menuItem>
                         <title>Random Ad</title>
                     </menuItem>
+                    <menuItem>
+                        <title>Content Recommendation</title>
+                    </menuItem>
                 </section>
             </menuBar>
         </mainTemplate>

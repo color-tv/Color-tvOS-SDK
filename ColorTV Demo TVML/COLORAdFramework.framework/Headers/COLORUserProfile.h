@@ -14,9 +14,9 @@
 +(instancetype)sharedProfile;
 -(void)reset;
 -(void)setAge:(NSUInteger)age;
--(void)setGender:(NSString*)gender;
--(void)addKeyword:(NSString*)keyword;
--(void)removeKeyword:(NSString*)keyword;
+-(void)setGender:(NSString *)gender;
+-(void)addKeyword:(NSString *)keyword;
+-(void)removeKeyword:(NSString *)keyword;
 
 @end
 
