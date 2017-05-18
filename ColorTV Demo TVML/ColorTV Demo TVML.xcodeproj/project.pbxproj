@@ -235,7 +235,7 @@
 				TargetAttributes = {
 					CB9268AA1C873E3400D5E8E4 = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = RW6DR85M92;
+						DevelopmentTeam = WK5HAJRWVR;
 					};
 					CB9268C01C873E3400D5E8E4 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -441,13 +441,14 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = WK5HAJRWVR;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "ColorTV Demo TVML/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.colortv.ColorTV-Demo-TVML";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pappApproved.colortv.ColorTV-Demo-TVML";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -460,13 +461,14 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = WK5HAJRWVR;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "ColorTV Demo TVML/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.colortv.ColorTV-Demo-TVML";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pappApproved.colortv.ColorTV-Demo-TVML";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

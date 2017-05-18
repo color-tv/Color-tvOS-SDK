@@ -230,7 +230,7 @@
 				TargetAttributes = {
 					177005041E797CFF00CEA751 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = RW6DR85M92;
+						DevelopmentTeam = WK5HAJRWVR;
 						ProvisioningStyle = Automatic;
 					};
 					CBF73A801C81039600C599A3 = {
@@ -344,7 +344,7 @@
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = RW6DR85M92;
+				DEVELOPMENT_TEAM = WK5HAJRWVR;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -352,7 +352,7 @@
 				INFOPLIST_FILE = "ColorTV Demo Objective-C iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.colortv.ColorTV-Demo-Objective-C-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pappApproved.colortv.ColorTV-Demo-Objective-C-iOS";
 				PRODUCT_NAME = "ColorTV Demo Objective-C";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -366,7 +366,7 @@
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = RW6DR85M92;
+				DEVELOPMENT_TEAM = WK5HAJRWVR;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -374,7 +374,7 @@
 				INFOPLIST_FILE = "ColorTV Demo Objective-C iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.colortv.ColorTV-Demo-Objective-C-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pappApproved.colortv.ColorTV-Demo-Objective-C-iOS";
 				PRODUCT_NAME = "ColorTV Demo Objective-C";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";

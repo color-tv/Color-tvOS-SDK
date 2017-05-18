@@ -6,9 +6,14 @@
 @import UIKit;
 @import Foundation;
 
+#import "COLORImageViewProtocol.h"
+
+@interface UIImageView() <COLORImageViewProtocol>
+@end
+
 @protocol COLORGridCell <NSObject>
 
-@property (nonatomic, readonly, weak) UIImageView *adImageView;
+@property (nonatomic, readonly, weak) UIView<COLORImageViewProtocol> *adImageView;
 
 -(void)prepareForFocusedState;
 -(void)prepareForUnfocusedState;
