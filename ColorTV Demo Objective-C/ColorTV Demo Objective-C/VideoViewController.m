@@ -127,19 +127,18 @@ static NSString *const kRateKeyPath = @"rate";
 - (void)setupPlayPauseButtonIfNeeded {
 #if TARGET_OS_IOS
     UIButton *playPauseButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [playPauseButton setTitle:@"|>" forState:UIControlStateNormal];
-    playPauseButton.backgroundColor = [UIColor redColor];
-    [playPauseButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    UIImage *image = [UIImage imageNamed:@"pause"];
+    [playPauseButton setImage:image forState:UIControlStateNormal];
+    playPauseButton.backgroundColor = [UIColor clearColor];
     [playPauseButton addTarget:self action:@selector(playPauseButtonClicked) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:playPauseButton];
-    
+    playPauseButton.layer.cornerRadius = 35.0f;
     playPauseButton.translatesAutoresizingMaskIntoConstraints = NO;
     [playPauseButton.widthAnchor constraintEqualToConstant:70.0f].active = YES;
     [playPauseButton.heightAnchor constraintEqualToConstant:70.0f].active = YES;
     [playPauseButton.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor constant:40.0f].active = YES;
     [playPauseButton.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor constant:-40.0f].active = YES;
 #endif
-
 }
 
 #pragma mark - Video
